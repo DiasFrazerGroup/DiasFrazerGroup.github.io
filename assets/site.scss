@@ -458,3 +458,11 @@ body { overflow-x: hidden; }
 // Quarto's headroom script slides the navbar away while scrolling down; clicks aimed at the menu
 // then land on the page instead. Keep it pinned.
 #quarto-header.headroom--unpinned { transform: none !important; }
+
+// ---------- Links: switch off zenscroll ----------
+// Quarto's zenscroll helper calls history.replaceState on every link click (to remember the scroll
+// position). In Chrome that can cancel the navigation the click just started: the page "shudders"
+// and a second click is needed. zenscroll stands down when the body has native smooth scrolling.
+body { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
