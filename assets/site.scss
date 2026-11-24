@@ -447,4 +447,9 @@ body { overflow-x: hidden; }
 .hero a.hiring .arr { color: var(--accent); }
 
 // ---------- People: photo of the group leaders ----------
-.duo { width: 100%; border-radius: 3px; margin: 0.5rem 0 1rem; }
+.leaders { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 1.8rem; align-items: center; margin: 1rem 0 0.5rem; }
+.leaders p:has(> img.duo) { margin: 0; }
+.duo { width: 100%; border-radius: 3px; display: block; }
+.leaders-text h3 { font-size: 1.7rem; margin: 0 0 0.7rem; }
+.leaders-text p { font-size: 0.95rem; color: var(--muted); }
+@media (max-width: 760px) { .leaders { grid-template-columns: 1fr; gap: 1rem; } }
