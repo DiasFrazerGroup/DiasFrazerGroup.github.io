@@ -29,7 +29,7 @@ A single, calibrated score for every possible missense variant in the human prot
 
 **Authors:** Rose Orenbuch, Courtney A. Shearer, Aaron W. Kollasch, Aviv D. Spinner, Thomas Hopf, Lood van Niekerk, Dinko Franceschi, Mafalda Dias, Jonathan Frazer & Debora S. Marks
 
-## In plain language
+## In brief
 
 When a child with a severe developmental disorder has their genome sequenced, the cause is often a single changed letter in one protein. Finding it means telling apart the one harmful change from thousands of harmless ones. Many tools can rank variants within a gene that is already known to cause disease, but their scores are not comparable between genes, so they struggle with the many patients whose disease gene has not been discovered yet.
 

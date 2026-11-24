@@ -24,7 +24,7 @@ An unsupervised model of evolution that predicts which human variants cause dise
 
 **Authors:** Jonathan Frazer, Pascal Notin, Mafalda Dias, Aidan Gomez, Joseph K. Min, Kelly Brock, Yarin Gal & Debora S. Marks
 
-## In plain language
+## In brief
 
 Genetic testing finds many variants in patients that nobody has seen before. For most of them, doctors cannot say whether they cause disease. Labelling them one by one, through clinical evidence or experiments, cannot keep pace with the number of possible variants.
 

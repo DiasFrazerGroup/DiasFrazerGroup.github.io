@@ -306,7 +306,36 @@ def trustable():
 
 
 
+# ---------------------------------------------------------------- Biodiversity Cell Atlas
+def bca():
+    fig, ax = canvas()
+    label(ax, 0.35, 5.35, "Cell atlases across the eukaryotic tree of life", INK, 12)
+    groups = ["animals", "fungi", "amoebae", "plants", "green algae", "red algae", "diatoms", "ciliates"]
+    ys = [4.7 - i * 0.55 for i in range(len(groups))]
+    tip = 3.2
+    def join(y1, y2, x, x1, x2):
+        ax.plot([x, x], [y1, y2], color=MUTED, lw=1.4)
+        ax.plot([x, x1], [y1, y1], color=MUTED, lw=1.4)
+        ax.plot([x, x2], [y2, y2], color=MUTED, lw=1.4)
+        return (y1 + y2) / 2
+    a = join(ys[0], ys[1], 2.7, tip, tip); b = join(a, ys[2], 2.2, 2.7, tip)
+    c = join(ys[3], ys[4], 2.7, tip, tip); d = join(c, ys[5], 2.2, 2.7, tip)
+    e = join(ys[6], ys[7], 2.5, tip, tip); f = join(d, e, 1.6, 2.2, 2.5)
+    r = join(b, f, 1.0, 2.2, 1.6); ax.plot([0.5, 1.0], [r, r], color=MUTED, lw=1.4)
+    for g, y in zip(groups, ys):
+        label(ax, 3.3, y - 0.08, g, MUTED, 10)
+        # a small single-cell embedding for each species: 3 coloured clusters
+        cx0 = 5.2
+        for k, col in enumerate([ACCENT, ACCENT2, WARM]):
+            mx, my = cx0 + k * 0.55 + 0.1 * rng.normal(), y + 0.06 * rng.normal()
+            pts = rng.normal(size=(9, 2)) * [0.09, 0.06] + [mx, my]
+            ax.scatter(pts[:, 0], pts[:, 1], s=5, color=col, lw=0)
+    label(ax, 5.1, 5.0, "cell types per species", MUTED, 10)
+    label(ax, 0.35, 0.35, "shared standards, high-quality genomes, phylogenetically informed sampling", MUTED, 10)
+    save(fig, "2025-biodiversity-cell-atlas")
+
+
 if __name__ == "__main__":
     # EVE, popEVE, LFB and Blending use real figures cropped from the papers (figure1.png).
-    for f in (review, comparative, trustable):
+    for f in (review, comparative, trustable, bca):
         f()

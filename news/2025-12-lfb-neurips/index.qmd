@@ -9,4 +9,4 @@ Our paper [From likelihood to fitness](../../papers/2025-likelihood-to-fitness/i
 
 Language models trained on protein and DNA sequences are increasingly used to predict which mutations are harmful, but the largest models have stopped improving at this task. The paper shows why: model likelihoods reflect the family tree of the sequences a model was trained on as well as natural selection. It introduces Likelihood-Fitness Bridging, a simple averaging strategy that removes this bias without retraining. With it, the largest models become the most accurate.
 
-Read the [plain-language summary](../../papers/2025-likelihood-to-fitness/index.qmd) or the [paper](https://doi.org/10.52202/085713-4359).
+Read the [summary](../../papers/2025-likelihood-to-fitness/index.qmd) or the [paper](https://doi.org/10.52202/085713-4359).

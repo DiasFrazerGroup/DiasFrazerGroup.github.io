@@ -30,7 +30,7 @@ Presented at NeurIPS 2025, the leading machine-learning conference. The first Ne
 Draft summary written from the abstract. The lead author should revise it before launch.
 :::
 
-## In plain language
+## In brief
 
 Language models trained on natural protein or DNA sequences are widely used to predict whether a mutation is harmful. The idea is that a sequence the model finds likely is one evolution would allow. That assumption often breaks down: how likely a sequence looks also reflects which species happened to be sequenced and how they are related, not only what natural selection permits. The problem grows as models get bigger, which is one reason larger protein language models have stopped improving at this task.
 

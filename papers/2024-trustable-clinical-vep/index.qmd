@@ -19,7 +19,7 @@ outreach: []      # threads, press and talks: add one "- url: ..." line per link
 What it takes for clinicians to trust machine-learning predictions of variant effects.
 :::
 
-## In plain language
+## In brief
 
 Models that predict the effect of missense variants, many of them built with deep learning on protein sequences, could make clinical variant annotation possible at the scale of whole patient cohorts. For that to happen, clinicians need reliable evidence of how well a model performs, which variants and genes it applies to, and how robust it is.
 

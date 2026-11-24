@@ -23,7 +23,7 @@ Why bigger protein models are not always better, why structure-based models conf
 Draft summary written from the abstract. The lead author should revise it before launch.
 :::
 
-## In plain language
+## In brief
 
 Deep learning has transformed how we predict the effects of mutations. Protein language models, trained on millions of natural sequences, score how evolution views any amino-acid change and have become fast, accurate predictors of fitness. Inverse-folding models add 3D structure and are used to estimate how mutations change a protein's stability.
 

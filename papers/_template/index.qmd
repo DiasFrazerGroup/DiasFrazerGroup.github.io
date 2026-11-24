@@ -27,7 +27,7 @@ One sentence that you would say to a friend.
 
 **Authors:** ...
 
-## In plain language
+## In brief
 
 Three short paragraphs: the problem, what we did, what it means. No jargon you would not use with a family member.
 

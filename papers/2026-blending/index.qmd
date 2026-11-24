@@ -23,7 +23,7 @@ Separating how a mutation affects a protein's stability from how it affects its 
 Draft summary written from the abstract. The lead author should revise it before launch.
 :::
 
-## In plain language
+## In brief
 
 Proteins have to do two things: fold into a stable shape, and then carry out a job, such as binding a partner or catalysing a reaction. A mutation can damage either. Most prediction tools return a single number for how harmful a mutation is, which hides *why* it is harmful, even though that difference matters for understanding disease and for designing proteins.
 

@@ -19,7 +19,7 @@ outreach: []      # threads, press and talks: add one "- url: ..." line per link
 Where comparative transcriptomics is heading: cell types, the whole tree of life, and models that read expression from sequence.
 :::
 
-## In plain language
+## In brief
 
 Comparing which genes are switched on, and how strongly, across species is one of the main ways to understand how molecular evolution produces differences between organisms. This review describes three directions in which the field is moving.
 

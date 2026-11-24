@@ -33,7 +33,7 @@ Do this on launch day, alongside your thread.
 1. Copy `papers/_template/` to `papers/YYYY-short-name/` (for example `papers/2026-diploid/`). Folders that start with `_` are never published.
 2. Fill in the front matter: `title`, `date`, `status` (`preprint`, `published`, or `blog` for a technical blog post with a DOI), `venue`, a two-sentence `summary` for non-specialists, and the links `paper`, `code` and `data`. Leave a link empty (`""`) if it does not exist yet. When a preprint is published, point `paper` at the journal and keep the preprint under `preprint`.
 3. Put the key figure in the same folder (PNG or JPG, about 1600 px wide) and set `image: figure.png`. Use a figure you are allowed to reuse: preprint figures are usually fine; for journal figures check the licence, or make a simplified version.
-4. Write the body: a one-line TL;DR, then "In plain language" (three short paragraphs, no jargon), then the key figure with a one-sentence caption.
+4. Write the body: a one-line TL;DR, then "In brief" (three short paragraphs, no jargon), then the key figure with a one-sentence caption.
 5. Add the BibTeX entry to `data/publications.bib`. For a preprint add `keywords = {preprint, post:papers/YYYY-short-name}`; for a blog post use `other` instead of `preprint`. When it is published, update the entry and remove `preprint`, and change `status` in the post.
 6. Add a news post (below) announcing it.
 

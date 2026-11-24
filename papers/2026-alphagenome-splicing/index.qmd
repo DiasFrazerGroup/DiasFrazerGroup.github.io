@@ -22,7 +22,7 @@ Teaching a large genomic model new outputs: splicing heads for AlphaGenome, trai
 
 **Authors:** Miquel Anglada-Girotto, Jonathan Frazer & Mafalda Dias
 
-## In plain language
+## In brief
 
 DeepMind's AlphaGenome reads a million letters of DNA and predicts thousands of signals, from gene expression to how RNA is spliced. Its code and weights are public, and community packages make it possible to fine-tune it in JAX ([alphagenome_ft](https://github.com/genomicsxai/alphagenome_ft)) and PyTorch ([alphagenome-pytorch](https://github.com/genomicsxai/alphagenome-pytorch)). Those packages handled coverage tracks, such as RNA-seq read depth, but not the outputs that describe splicing: where splice sites are, how often each is used, and which exons are joined together.
 
