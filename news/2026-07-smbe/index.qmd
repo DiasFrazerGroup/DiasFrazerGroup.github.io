@@ -1,0 +1,14 @@
+---
+title: "Three talks at SMBE 2026 in Copenhagen"
+date: 2026-07-02
+categories: [Talks]
+description: "Matteo, Paulina and Mafalda presented work on gene essentiality, mammal-wide variant effects and phylogeny-aware variant effect prediction at SMBE 2026."
+---
+
+The group gave three talks at [SMBE 2026](https://smbe2026.org), the annual meeting of the Society for Molecular Biology and Evolution, held in Copenhagen from 28 June to 2 July.
+
+- **Matteo Zambon**: *Decoding gene essentiality from cross-species transcriptional constraints*, with Manuel Irimia's lab at CRG. Read the related [review on comparative transcriptomics](../../papers/2025-comparative-transcriptomics/).
+- **Paulina Nuñez Valencia**: *Predicting mammal-wide variant pathogenicity, uncertainty, gene essentiality and genetic load*, a deep learning framework that brings variant effect prediction to conservation genomics. Read more about [genetic health beyond humans](../../research.qmd#genetic-health).
+- **Mafalda Dias**: *From likelihood to fitness: accounting for phylogeny to improve variant effect prediction*. Read the [NeurIPS paper summary](../../papers/2025-likelihood-to-fitness/).
+
+All abstracts are in the [SMBE 2026 oral abstract book](https://smbe2026.org/wp-content/uploads/2026/08/SMBE-2026_All-Oral-Abstracts.pdf).
