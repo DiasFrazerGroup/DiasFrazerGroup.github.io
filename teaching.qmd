@@ -1,0 +1,40 @@
+---
+title: Teaching
+description: "Open course materials on probabilistic and generative modelling for biologists."
+---
+
+Mafalda and Jonny teach short courses on building probabilistic models of biological data. The courses are aimed at PhD students and researchers in biology, assume no background in machine learning or Bayesian statistics, and put model building ahead of inference: how to write down a story of how the data could have been generated, and which assumptions let a model generalise. All materials are free to use and adapt.
+
+::: placeholder
+Add where and when each course has been taught (e.g. the CRG or BIST PhD programme, summer schools), and how to invite us to teach it.
+:::
+
+::: {.tool}
+### An Introduction to Probabilistic Model Building
+[2026 · three sessions · slides and Colab notebooks]{.what}
+
+*Or, thinking about models in the era of AI.* Four threads run through the course: Bayesian modelling as generative storytelling; inductive bias, including smoothness, sparsity and structural priors; latent variable models, from hierarchical models through variational autoencoders to diffusion models; and computer-aided experimental design, with Bayesian optimal experimental design and compressed sensing.
+
+| Session | Topic | Materials |
+|---|---|---|
+| 1 | Probabilistic modelling foundations | [Slides](https://github.com/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session%201%20-%20Intro%20to%20model%20building.pdf) · [Notebook](https://colab.research.google.com/github/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session1_Foundations_WithAnswers.ipynb) |
+| 2 | Latent variable models: hierarchical models, VAEs, diffusion | [Slides](https://github.com/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session%202%20-%20Latent%20variable%20models.pdf) · [Hierarchical models](https://colab.research.google.com/github/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session2a_HierarchicalModels_WithAnswers.ipynb) · [Protein VAE](https://colab.research.google.com/github/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session2b_ProteinVAE_WithAnswers.ipynb) |
+| 3 | Computer-aided experimental design | [Slides](https://github.com/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session%203%20-%20CAD.pdf) · [Bayesian experimental design](https://colab.research.google.com/github/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session3a_BOED_WithAnswers.ipynb) · [Compressed sensing](https://colab.research.google.com/github/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026/blob/main/Session3b_CompressedSensing_WithAnswers.ipynb) |
+
+Notebooks open directly in Google Colab and include worked solutions. Basic Python is enough.
+
+::: {.link-row}
+[Course repository](https://github.com/DiasFrazerGroup/Intro-to-probabilistic-modelling-2026)
+:::
+:::
+
+::: {.tool}
+### Intro to Bayesian Modelling
+[2023 · four hours · for incoming biology PhD students]{.what}
+
+A one-hour lecture followed by a three-hour hands-on tutorial in probabilistic programming with Pyro and NumPyro, run in Google Colab. The emphasis is on model-building decisions rather than inference algorithms, and no biology is assumed.
+
+::: {.link-row}
+[Course repository](https://github.com/DiasFrazerGroup/Intro-to-Bayesian-Modelling-Course) [Notebook](https://colab.research.google.com/github/DiasFrazerGroup/Intro-to-Bayesian-Modelling-Course/blob/main/BayesianModellingCourse_FirstStepsWithPyro.ipynb)
+:::
+:::

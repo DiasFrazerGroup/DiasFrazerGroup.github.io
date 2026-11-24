@@ -7,6 +7,8 @@ We are a computational group at the [Centre for Genomic Regulation](https://www.
 
 People join us from physics, statistics, computer science and biology. What they share is an interest in building models that are principled, well calibrated and useful to clinicians and experimental biologists. You do not need a background in genetics. You do need to enjoy thinking carefully about data.
 
+To get a feel for how we think about models, have a look at our [open course materials](teaching.qmd) on probabilistic and generative modelling.
+
 ## Open positions
 
 ::: placeholder

@@ -416,3 +416,8 @@ body { overflow-x: hidden; }
   pointer-events: none;
 }
 .hero h1, .hero p, .hero .eyebrow { position: relative; }
+
+// ---------- Tables (teaching) ----------
+.tool table { font-size: 0.9rem; margin: 1rem 0; }
+.tool table th { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 500; border-bottom-color: var(--rule); }
+.tool table td { border-color: var(--rule); vertical-align: top; }
