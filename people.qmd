@@ -17,10 +17,10 @@ listing:
 
 ### Mafalda Dias & Jonathan Frazer
 
-Mafalda and Jonny lead the group together. Both trained in theoretical physics, with PhDs from the University of Sussex, and worked at DESY and Harvard Medical School, where they developed EVE in Debora Marks's lab, before co-founding the group at CRG in 2022. Jonny also held positions at UCL and the University of the Basque Country.
+Mafalda and Jonathan lead the group together at the Centre for Genomic Regulation in Barcelona.
 
 ::: {.link-row}
-[Mafalda · ORCID](https://orcid.org/0000-0002-1804-8542) [Jonny · ORCID](https://orcid.org/0000-0001-6900-6484) [Email both](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu){.internal}
+[Mafalda · ORCID](https://orcid.org/0000-0002-1804-8542) [Jonathan · ORCID](https://orcid.org/0000-0001-6900-6484) [Email both](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu){.internal}
 :::
 :::
 :::

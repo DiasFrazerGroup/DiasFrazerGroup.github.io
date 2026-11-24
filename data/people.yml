@@ -1,4 +1,4 @@
-# One entry per person. (Mafalda and Jonny, the group leaders, are written directly in people.qmd.) `group` must be one of:
+# One entry per person. (Mafalda and Jonathan, the group leaders, are written directly in people.qmd.) `group` must be one of:
 #   Postdoctoral researchers | PhD students | Research staff | Visitors & students | Alumni
 # `photo`: put a square-ish JPG (~800px) in assets/img/people/ and reference it as below. Leave empty for an initials tile.
 # Links (all optional): website, scholar, orcid, github, bluesky, x, linkedin, email

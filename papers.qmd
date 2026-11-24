@@ -19,6 +19,6 @@ Group members in bold. This list is generated from [`data/publications.bib`](htt
 
 {{< publications file="data/publications.bib" highlight="Dias,Frazer,Galpern,Anglada-Girotto,Pugh,Billeci,Zambon,Nuñez-Valencia,Bening,Soler Sanchis" >}}
 
-Before moving into biology, Mafalda and Jonny worked in theoretical cosmology. Those papers are listed on their ORCID profiles: [Mafalda Dias](https://orcid.org/0000-0002-1804-8542) · [Jonathan Frazer](https://orcid.org/0000-0001-6900-6484).
+Before moving into biology, Mafalda and Jonathan worked in theoretical cosmology. Those papers are listed on their ORCID profiles: [Mafalda Dias](https://orcid.org/0000-0002-1804-8542) · [Jonathan Frazer](https://orcid.org/0000-0001-6900-6484).
 
 <!-- List built from both ORCID records, Crossref and OpenAlex on 24 Nov 2026. -->
