@@ -3,9 +3,9 @@ title: Research
 description: "We build generative models of life's data, and put them to work."
 ---
 
-Population-scale sequencing, reference genomes for all life on Earth, single-cell atlases and experiments that assay millions of variants: the information to transform how biological data is used in medicine, conservation and agriculture already exists. Extracting it needs models that capture how the data was generated, quantify their own uncertainty, and know when they might be wrong. We build those models, often deep generative and often Bayesian, and we apply them where the answer changes a decision.
+Population-scale sequencing, reference genomes for all life on Earth, single-cell atlases and experiments that assay millions of variants: the information to transform how biological data is used in medicine, conservation and agriculture already exists. What is needed are tools to extract this information. We build models, often deep generative and often Bayesian, to address this challenge.
 
-Our work falls into four themes that share methods, data and people.
+Our work falls into four themes.
 
 ::: {.research-theme #disease}
 [01]{.num}
