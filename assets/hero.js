@@ -227,7 +227,7 @@
     if (!narrow) box.w = Math.min(W - 24 - box.x, 620);
   }
 
-  let accent = "#8db0e6", muted = "#8a93a3";
+  let accent = "#6cb0ff", muted = "#8a93a3";
   function readColours() {
     const cs = getComputedStyle(document.documentElement);
     accent = (cs.getPropertyValue("--accent") || accent).trim() || accent;
