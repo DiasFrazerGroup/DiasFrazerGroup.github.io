@@ -13,7 +13,7 @@ listing:
   - id: latest-papers
     contents: papers/*/index.qmd
     template: assets/templates/papers.ejs
-    sort: ["status", "date desc"]
+    sort: "date desc"
     max-items: 2
     date-format: "MMM YYYY"
     fields: [title, date, image, path, status, venue, summary, paper, code, data, outreach]

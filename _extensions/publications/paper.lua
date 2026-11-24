@@ -78,7 +78,7 @@ return {
   ["paper-links"] = function(args, kwargs, meta)
     local h = { '<div class="link-row paper-header-links">' }
     local status = str(meta.status or "")
-    table.insert(h, button(str(meta.paper or ""), status == "preprint" and "Preprint" or "Paper"))
+    table.insert(h, button(str(meta.paper or ""), status == "preprint" and "Preprint" or status == "blog" and "Blog post" or "Paper"))
     local pre = str(meta.preprint or "")
     if pre ~= "" then table.insert(h, button(pre, "Preprint")) end
     local code, data = str(meta.code or ""), str(meta.data or "")

@@ -2,7 +2,7 @@
 # Copy this folder to papers/YYYY-short-name/ and fill in. Folders starting with "_" are not published.
 title: "Full paper title"
 date: 2026-01-31
-status: preprint            # preprint | published
+status: preprint            # preprint | published | blog
 venue: "bioRxiv"
 summary: "Two sentences for a non-specialist: what question, what we found, why it matters."
 image: figure.png           # put the key figure in this folder

@@ -251,7 +251,7 @@ section#threads-press:has(> p.placeholder) { display: none; }   // no threads or
   border-radius: 99px;
   border: 1px solid var(--rule);
 }
-.badge-status.preprint { color: var(--accent) !important; border-color: var(--accent); background: var(--accent-soft); }
+.badge-status.preprint, .badge-status.blog { color: var(--accent) !important; border-color: var(--accent); background: var(--accent-soft); }
 .paper-card h3 { margin: 0 0 0.5rem; font-size: 1.6rem; line-height: 1.25; }
 .paper-card h3 a { color: var(--ink); text-decoration: none; }
 .paper-card h3 a:hover { color: var(--accent); }

@@ -1,0 +1,10 @@
+---
+title: "Teaching AlphaGenome to predict splicing"
+date: 2026-07-24
+categories: [Blog post]
+description: "Miquel's guide to fine-tuning AlphaGenome's splicing heads from scratch, bugs and fixes included, is out on the Genomics x AI blog."
+---
+
+Miquel has written up how he fine-tuned AlphaGenome's splicing heads (splice sites, splice site usage and splice junctions) on new RNA-seq data, including the debugging along the way and a comparison of linear probing with LoRA. The post is on the [Genomics x AI blog](https://genomicsxai.github.io/blogs/2026-009/), has a DOI, and comes with all the code.
+
+Read our [summary](../../papers/2026-alphagenome-splicing/index.qmd) or try the [code](https://github.com/MiqG/alphagenome_finetuning_rna/tree/v1.0.2).

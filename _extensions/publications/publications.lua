@@ -1,5 +1,6 @@
 -- {{< publications file="data/publications.bib" highlight="Frazer,Dias" >}}
--- Renders a BibTeX file as a publication list: preprints first, then by year (newest first).
+-- Renders a BibTeX file as a publication list: preprints first, then by year (newest first),
+-- then "Other outputs" (entries with keyword "other", e.g. technical blog posts with a DOI).
 -- Uses pandoc's own BibTeX reader, so there are no extra dependencies.
 
 local str = pandoc.utils.stringify
@@ -117,10 +118,12 @@ return {
     for _, n in ipairs(split(str(kwargs["highlight"] or "Frazer,Dias"), ",")) do highlight[n] = true end
 
     local refs = pandoc.read(content, "bibtex").meta.references or {}
-    local preprints, by_year, years = {}, {}, {}
+    local preprints, others, by_year, years = {}, {}, {}, {}
     for _, ref in ipairs(refs) do
       local kw = str(ref.keyword or ""):lower()
-      if kw:find("preprint") then
+      if kw:find("%f[%w]other%f[%W]") or kw == "other" then
+        table.insert(others, ref)
+      elseif kw:find("preprint") then
         table.insert(preprints, ref)
       else
         local y = year_of(ref)
@@ -130,6 +133,7 @@ return {
     end
     table.sort(years, function(a, b) return a > b end)
     table.sort(preprints, function(a, b) return year_of(a) > year_of(b) end)
+    table.sort(others, function(a, b) return year_of(a) > year_of(b) end)
 
     local out = { '<div class="publications">' }
     local function section(label, list, cls)
@@ -139,6 +143,7 @@ return {
     end
     if #preprints > 0 then section("Preprints", preprints, "pub-preprints") end
     for _, y in ipairs(years) do section(y, by_year[y], "pub-year") end
+    if #others > 0 then section("Other outputs", others, "pub-other") end
     table.insert(out, "</div>")
     return pandoc.RawBlock("html", table.concat(out, "\n"))
   end

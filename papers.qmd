@@ -5,7 +5,7 @@ listing:
   id: paper-posts
   contents: papers/*/index.qmd
   template: assets/templates/papers.ejs
-  sort: ["status", "date desc"]
+  sort: "date desc"
   date-format: "MMM YYYY"
   fields: [title, date, image, path, status, venue, summary, paper, code, data, outreach]
 ---
