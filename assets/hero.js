@@ -270,15 +270,6 @@
       ctx.fillStyle = z > 0.55 ? accent : muted;
       ctx.beginPath(); ctx.arc(pos[i][0], pos[i][1], 1.2 + 1.6 * z, 0, TAU); ctx.fill();
     }
-    // caption, fading in once the structure has formed
-    const la = smooth(0.8, 1, a) * (narrow ? 0.45 : 0.75);
-    if (la > 0.01 && shape.label) {
-      ctx.globalAlpha = la;
-      ctx.fillStyle = muted;
-      ctx.font = '500 11px "JetBrains Mono", ui-monospace, monospace';
-      ctx.textAlign = "right";
-      ctx.fillText(shape.label.toUpperCase(), box.x + box.w, box.y + box.h + 18);
-    }
     ctx.globalAlpha = 1;
   }
 
