@@ -4,7 +4,7 @@ date: 2021-10-27
 status: published
 venue: "Nature"
 summary: "EVE learns from protein sequences across the tree of life which mutations nature tolerates, and uses that alone to predict which human variants cause disease. With no clinical labels at all, it matched or beat methods trained on them, and it scored tens of millions of variants across thousands of disease genes."
-image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure (check licence)
+image: figure.svg
 paper: https://doi.org/10.1038/s41586-021-04043-8
 preprint: https://doi.org/10.1101/2020.12.21.423785
 code: https://github.com/OATML-Markslab/EVE
@@ -39,7 +39,7 @@ Despite that, EVE classified known disease variants as accurately as methods tra
 ## Key figure
 
 ::: {.key-figure}
-![PLACEHOLDER: key figure with a one-sentence caption. Check the licence first.](../../assets/img/papers/placeholder-figure.svg)
+![Illustration of the paper's main idea (a schematic, not data from the paper).](figure.svg)
 :::
 
 ## Threads & press {#threads-press}

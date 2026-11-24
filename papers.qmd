@@ -1,6 +1,6 @@
 ---
 title: Papers
-description: "Preprints first. Every paper gets a plain-language summary, its key figure, and links to the code, the data and the authors' own thread."
+description: "Recent papers and preprints from the group"
 listing:
   id: paper-posts
   contents: papers/*/index.qmd
@@ -17,10 +17,8 @@ listing:
 
 Group members in bold. This list is generated from [`data/publications.bib`](https://github.com/DiasFrazerGroup/DiasFrazerGroup.github.io/blob/main/data/publications.bib).
 
-{{< publications file="data/publications.bib" highlight="Dias,Frazer,Galpern,Anglada Girotto,Pugh,Billeci,Zambon,Nuñez-Valencia,Bening,Soler Sanchis" >}}
+{{< publications file="data/publications.bib" highlight="Dias,Frazer,Galpern,Anglada-Girotto,Pugh,Billeci,Zambon,Nuñez-Valencia,Bening,Soler Sanchis" >}}
 
 Before moving into biology, Mafalda and Jonny worked in theoretical cosmology. Those papers are listed on their ORCID profiles: [Mafalda Dias](https://orcid.org/0000-0002-1804-8542) · [Jonathan Frazer](https://orcid.org/0000-0001-6900-6484).
 
-::: placeholder
-Built from both ORCID records, Crossref and OpenAlex on 24 Nov 2026. Check it against your Google Scholar profiles for anything missing.
-:::
+<!-- List built from both ORCID records, Crossref and OpenAlex on 24 Nov 2026. -->

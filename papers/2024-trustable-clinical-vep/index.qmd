@@ -4,7 +4,7 @@ date: 2024-12-01
 status: published
 venue: "American Journal of Human Genetics · Perspective"
 summary: "PLACEHOLDER: two plain-language sentences on what it takes for clinicians to trust machine-learning predictions of variant effects."
-image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure
+image: figure.svg
 paper: https://doi.org/10.1016/j.ajhg.2024.10.011
 code: ""
 data: ""
@@ -17,6 +17,12 @@ outreach: []      # threads, press and talks: add one "- url: ..." line per link
 
 ::: placeholder
 No abstract was available to draft from. Add a TL;DR and a short plain-language summary.
+:::
+
+## Key figure
+
+::: {.key-figure}
+![Illustration of the paper's main idea (a schematic, not data from the paper).](figure.svg)
 :::
 
 ## Threads & press {#threads-press}

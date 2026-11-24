@@ -4,7 +4,7 @@ date: 2025-10-01
 status: published
 venue: "Current Opinion in Genetics & Development · Review"
 summary: "PLACEHOLDER: two plain-language sentences on this review of how gene expression is compared across species, and the modelling frameworks that make it possible."
-image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure
+image: figure.svg
 paper: https://doi.org/10.1016/j.gde.2025.102387
 code: ""
 data: ""
@@ -17,6 +17,12 @@ outreach: []      # threads, press and talks: add one "- url: ..." line per link
 
 ::: placeholder
 No abstract was available to draft from. The lead author should add a TL;DR and a short plain-language summary.
+:::
+
+## Key figure
+
+::: {.key-figure}
+![Illustration of the paper's main idea (a schematic, not data from the paper).](figure.svg)
 :::
 
 ## Threads & press {#threads-press}

@@ -4,7 +4,7 @@ date: 2025-11-24
 status: published           # preprint | published
 venue: "Nature Genetics"
 summary: "popEVE combines evolution across species with human population data to score every possible missense variant on one scale, so that a score means the same thing in every gene. It finds likely causal variants in severe developmental disorders, even without the parents' DNA."
-image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure (check licence)
+image: figure.svg
 paper: https://doi.org/10.1038/s41588-025-02400-1
 code: https://github.com/DiasFrazerGroup/popEVE
 data: https://pop.evemodel.org                        # PLACEHOLDER: check URL
@@ -40,7 +40,7 @@ In a large cohort of children with severe developmental disorders, popEVE identi
 ## Key figure
 
 ::: {.key-figure}
-![PLACEHOLDER: add the paper's key figure here with a one-sentence caption. Check the licence first, or make a simplified version.](../../assets/img/papers/placeholder-figure.svg)
+![Illustration of the paper's main idea (a schematic, not data from the paper).](figure.svg)
 :::
 
 ## Threads & press {#threads-press}
