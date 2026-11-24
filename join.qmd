@@ -3,12 +3,6 @@ title: Join us
 description: "We are hiring three postdocs."
 ---
 
-We are a computational group at the [Centre for Genomic Regulation](https://www.crg.eu) in Barcelona, one of Europe's leading research institutes in the life sciences, on the seafront campus of the Barcelona Biomedical Research Park.
-
-People join us from physics, statistics, computer science and biology. What they share is an interest in building models that are principled, well calibrated and useful to clinicians and experimental biologists. You do not need a background in genetics. You do need to enjoy thinking carefully about data.
-
-To get a feel for how we think about models, have a look at our [open course materials](teaching.qmd) on probabilistic and generative modelling.
-
 ## Open postdoc positions {#positions}
 
 We have three postdoctoral positions open, one in each of our applied themes. All three involve building new generative and probabilistic models, so strong quantitative skills matter more than a background in the specific biology.
@@ -21,7 +15,7 @@ For each role, add the start date, contract length, closing date and the link to
 ### Virtual cell modelling
 [Postdoc · Cell models for therapy]{.what}
 
-Develop models that learn from large perturbation screens and single-cell data, and generalise to perturbations and cell types that have not been measured, with honest estimates of uncertainty. The aim is to search for therapeutic interventions computationally before they are tested in the lab. [Read about this theme →](research.qmd#cell-models)
+We are developing models to enable new therapeutic strategies and cell replacement therapy.
 
 ::: {.link-row}
 [Apply by email](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu?subject=Postdoc%20application%3A%20Virtual%20cell%20modelling){.internal}
@@ -32,7 +26,7 @@ Develop models that learn from large perturbation screens and single-cell data, 
 ### Conservation genomics and biodiversity
 [Postdoc · Genetic health beyond humans]{.what}
 
-Bring variant effect prediction to the rest of the tree of life. Score genetic variation across species, find likely harmful variants in small and endangered populations, and turn the results into tools that help conservation programmes and breeders manage genetic health. [Read about this theme →](research.qmd#genetic-health)
+We are developing models to monitor and manage the genetic health of endangered and domestic species.
 
 ::: {.link-row}
 [Apply by email](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu?subject=Postdoc%20application%3A%20Conservation%20genomics%20and%20biodiversity){.internal}
@@ -43,7 +37,7 @@ Bring variant effect prediction to the rest of the tree of life. Score genetic v
 ### Rare disease diagnosis
 [Postdoc · Rare and common disease]{.what}
 
-Build on EVE and popEVE to make genetic diagnosis more accurate: model both copies of every gene, score whole genotypes rather than single variants, and work with clinical sequencing cohorts to find causes of disease that current methods miss. [Read about this theme →](research.qmd#disease)
+In collaboration with Hospital Sant Joan de Déu (SJD) Barcelona, the postdoc will develop statistical models to aid the genetic diagnosis of patients with rare diseases. We are looking for someone with a strong background in statistics. [Read about this theme →](research.qmd#disease)
 
 ::: {.link-row}
 [Apply by email](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu?subject=Postdoc%20application%3A%20Rare%20disease%20diagnosis){.internal}
