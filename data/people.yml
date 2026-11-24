@@ -2,7 +2,7 @@
 #   Group leaders | Postdoctoral researchers | PhD students | Research staff | Visitors & students | Alumni
 # `photo`: put a square-ish JPG (~800px) in assets/img/people/ and reference it as below. Leave empty for an initials tile.
 # Links (all optional): website, scholar, orcid, github, bluesky, x, linkedin, email
-# PLACEHOLDER: all member bios and personal links below need filling in by each person (via pull request).
+# Bios and personal links are optional; each person can add their own by pull request.
 
 - name: Mafalda Dias
   group: Group leaders
@@ -23,39 +23,36 @@
 - name: Ezequiel Alejandro Galpern
   group: Postdoctoral researchers
   role: Postdoc
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
 
 - name: Miquel Anglada Girotto
   group: Postdoctoral researchers
   role: Postdoc
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+  photo: assets/img/people/miquel-anglada-girotto.jpg
 
 - name: Charles Pugh
   group: PhD students
   role: PhD student
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+  photo: assets/img/people/charles-pugh.jpg
 
 - name: Federico Billeci
   group: PhD students
   role: PhD student
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+  photo: assets/img/people/federico-billeci.jpg
 
 - name: Matteo Zambon
   group: PhD students
   role: PhD student
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+  photo: assets/img/people/matteo-zambon.jpg
 
 - name: Paulina Nuñez Valencia
   group: PhD students
   role: PhD student
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
 
 - name: Samantha Bening
   group: PhD students
   role: PhD student
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
 
 - name: Xavier Soler Sanchis
   group: PhD students
   role: PhD student
-  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+  photo: assets/img/people/xavier-soler-sanchis.jpg

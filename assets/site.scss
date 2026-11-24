@@ -91,6 +91,9 @@ hr { border-color: var(--rule); opacity: 1; }
 }
 div.placeholder { display: block; padding: 0.8rem 1rem; margin: 1.2rem 0; line-height: 1.5; }
 div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
+// Hidden on the public site; the "drafts" profile (_quarto-drafts.yml) shows them.
+.placeholder, .callout.placeholder { display: none; }
+section#threads-press:has(> p.placeholder) { display: none; }   // no threads or press yet
 
 // ---------- Home hero ----------
 .hero {
@@ -234,7 +237,8 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   border-radius: 3px;
   overflow: hidden;
 }
-.paper-fig img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.paper-fig { background: #fff; border-color: transparent; }
+.paper-fig img { width: 100%; height: 100%; object-fit: contain; padding: 5%; transition: transform 0.4s ease; }
 .paper-card:hover .paper-fig img { transform: scale(1.03); }
 .paper-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; align-items: center; margin-bottom: 0.4rem; }
 .paper-meta span { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
@@ -275,7 +279,7 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
 // ---------- Paper post page ----------
 .paper-header-links { margin: 1rem 0 2rem; }
 .key-figure { margin: 2rem 0; }
-.key-figure img { border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-raised); }
+.key-figure img { border-radius: 3px; background: #fff; padding: 1.2rem; }
 .key-figure figcaption, .figure-caption { font-size: 0.85rem; color: var(--muted); }
 .tldr {
   border-left: 2px solid var(--accent);

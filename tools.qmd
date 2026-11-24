@@ -13,7 +13,6 @@ Calibrated deleteriousness scores for every possible missense variant in the hum
 [Browse scores](https://pop.evemodel.org) [Code](https://github.com/DiasFrazerGroup/popEVE) [Paper](https://doi.org/10.1038/s41588-025-02400-1)
 :::
 
-[Check the portal URL]{.placeholder}
 :::
 
 ::: {.tool}
@@ -24,17 +23,6 @@ An unsupervised deep generative model trained on sequence alignments across spec
 
 ::: {.link-row}
 [Website](https://evemodel.org) [Code](https://github.com/OATML-Markslab/EVE) [Paper](https://doi.org/10.1038/s41586-021-04043-8)
-:::
-:::
-
-::: {.tool}
-### Vermut
-[Placeholder description]{.what}
-
-<span class="placeholder">two sentences on what Vermut is and who it is for</span>
-
-::: {.link-row}
-[Code]{.na} [Data]{.na} [Paper]{.na}
 :::
 :::
 

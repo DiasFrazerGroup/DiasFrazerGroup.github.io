@@ -1,0 +1,6 @@
+# Drafts profile: shows the yellow PLACEHOLDER boxes, which the public site hides.
+# Use it when previewing:  quarto preview --profile drafts   (the PR preview build uses it too)
+format:
+  html:
+    include-in-header:
+      text: "<style>.placeholder{display:revert !important} section#threads-press{display:block !important}</style>"

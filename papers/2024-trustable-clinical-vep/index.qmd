@@ -3,7 +3,7 @@ title: "Toward trustable use of machine learning models of variant effects in th
 date: 2024-12-01
 status: published
 venue: "American Journal of Human Genetics · Perspective"
-summary: "PLACEHOLDER: two plain-language sentences on what it takes for clinicians to trust machine-learning predictions of variant effects."
+summary: "Machine-learning models can now predict the effect of almost any missense variant, and clinical guidelines have begun to use them. We set out the principles that validation and calibration of these models need to follow so that their predictions can be trusted in diagnosis."
 image: figure.svg
 paper: https://doi.org/10.1016/j.ajhg.2024.10.011
 code: ""
@@ -15,8 +15,18 @@ outreach: []      # threads, press and talks: add one "- url: ..." line per link
 
 **Authors:** Mafalda Dias, Rose Orenbuch, Debora S. Marks & Jonathan Frazer
 
+::: {.tldr}
+What it takes for clinicians to trust machine-learning predictions of variant effects.
+:::
+
+## In plain language
+
+Models that predict the effect of missense variants, many of them built with deep learning on protein sequences, could make clinical variant annotation possible at the scale of whole patient cohorts. For that to happen, clinicians need reliable evidence of how well a model performs, which variants and genes it applies to, and how robust it is.
+
+The ClinGen Sequence Variant Interpretation Working Group recently proposed a way to validate and calibrate these predictions within the guidelines for variant classification. This perspective welcomes that step, sets out its remaining limitations, and proposes core principles and recommendations for using variant effect predictors more reliably, and with more impact, in the clinic.
+
 ::: placeholder
-No abstract was available to draft from. Add a TL;DR and a short plain-language summary.
+Summary drafted from the abstract. Check before launch.
 :::
 
 ## Key figure

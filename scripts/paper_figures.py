@@ -17,13 +17,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Polygon, Rectangle
 
-BG = "#141922"
-INK = "#d5d9e0"
-MUTED = "#8a93a3"
-FAINT = "#2a3140"
-ACCENT = "#6cb0ff"
-ACCENT2 = "#3a7fd8"
-WARM = "#e0a96d"
+# Figures sit on white "plates", like journal figures, alongside the real figures cropped from papers.
+BG = "#ffffff"
+INK = "#1b1d22"
+MUTED = "#6b707a"
+FAINT = "#e3e1db"
+ACCENT = "#1f5fb8"
+ACCENT2 = "#86aee3"
+WARM = "#b8712c"
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans",
@@ -305,5 +306,6 @@ def trustable():
 
 
 if __name__ == "__main__":
-    for f in (eve, popeve, lfb, blending, review, comparative, trustable):
+    # popEVE, LFB and Blending use real figures cropped from the papers (figure1.png).
+    for f in (eve, review, comparative, trustable):
         f()

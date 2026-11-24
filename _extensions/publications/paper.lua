@@ -84,13 +84,11 @@ return {
     local code, data = str(meta.code or ""), str(meta.data or "")
     if code ~= "" then table.insert(h, button(code, "Code")) end
     if data ~= "" then table.insert(h, button(data, "Data")) end
-    local any_thread = false
     for _, e in ipairs(entries(meta)) do
       if e.kind == "thread" then
-        table.insert(h, button(e.url, e.label, "thread")); any_thread = true
+        table.insert(h, button(e.url, e.label, "thread"))
       end
     end
-    if not any_thread then table.insert(h, button("", "Thread")) end
     table.insert(h, "</div>")
     return pandoc.RawBlock("html", table.concat(h, ""))
   end,
@@ -113,7 +111,7 @@ return {
       end
     end
     if #h == 0 then
-      return pandoc.RawBlock("html", '<p class="muted">No threads or coverage yet. Add links under <code>outreach:</code> in this page\'s front matter.</p>')
+      return pandoc.RawBlock("html", '<p class="placeholder">No threads or coverage yet. Add links under <code>outreach:</code> in this page\'s front matter.</p>')
     end
     return pandoc.RawBlock("html", '<div class="coverage">' .. table.concat(h, "") .. "</div>")
   end,

@@ -4,10 +4,10 @@ date: 2025-11-24
 status: published           # preprint | published
 venue: "Nature Genetics"
 summary: "popEVE combines evolution across species with human population data to score every possible missense variant on one scale, so that a score means the same thing in every gene. It finds likely causal variants in severe developmental disorders, even without the parents' DNA."
-image: figure.svg
+image: figure1.png
 paper: https://doi.org/10.1038/s41588-025-02400-1
 code: https://github.com/DiasFrazerGroup/popEVE
-data: https://pop.evemodel.org                        # PLACEHOLDER: check URL
+data: https://pop.evemodel.org
 outreach:
   - url: https://www.eurekalert.org/news-releases/1106854
     kind: press
@@ -18,7 +18,7 @@ outreach:
   - url: https://www.genengnews.com/topics/artificial-intelligence/proteome-wide-ai-model-supports-rare-disease-diagnosis-using-evolution/
     kind: press
     label: "GEN: Proteome-wide AI model supports rare disease diagnosis using evolution"
-  # PLACEHOLDER: add the authors' Bluesky / X / LinkedIn threads, e.g.  - url: https://bsky.app/profile/...
+  # To add: the authors' Bluesky / X / LinkedIn threads, e.g.  - url: https://bsky.app/profile/...
 ---
 
 ::: {.tldr}
@@ -40,7 +40,7 @@ In a large cohort of children with severe developmental disorders, popEVE identi
 ## Key figure
 
 ::: {.key-figure}
-![Illustration of the paper's main idea (a schematic, not data from the paper).](figure.svg)
+![**Figure 1.** popEVE combines variation across species, modelled with EVE and the ESM-1v language model, with variation in the human population, using a Gaussian process to learn the relationship between evolutionary scores and missense constraint. From Orenbuch et al., *Nature Genetics* (2025), [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).](figure1.png)
 :::
 
 ## Threads & press {#threads-press}

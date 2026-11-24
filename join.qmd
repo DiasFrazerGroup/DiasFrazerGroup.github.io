@@ -24,7 +24,7 @@ For each role, add the start date, contract length, closing date and the link to
 Develop models that learn from large perturbation screens and single-cell data, and generalise to perturbations and cell types that have not been measured, with honest estimates of uncertainty. The aim is to search for therapeutic interventions computationally before they are tested in the lab. [Read about this theme →](research.qmd#cell-models)
 
 ::: {.link-row}
-[Apply]{.na}
+[Apply by email](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu?subject=Postdoc%20application%3A%20Virtual%20cell%20modelling){.internal}
 :::
 :::
 
@@ -35,7 +35,7 @@ Develop models that learn from large perturbation screens and single-cell data, 
 Bring variant effect prediction to the rest of the tree of life. Score genetic variation across species, find likely harmful variants in small and endangered populations, and turn the results into tools that help conservation programmes and breeders manage genetic health. [Read about this theme →](research.qmd#genetic-health)
 
 ::: {.link-row}
-[Apply]{.na}
+[Apply by email](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu?subject=Postdoc%20application%3A%20Conservation%20genomics%20and%20biodiversity){.internal}
 :::
 :::
 
@@ -46,7 +46,7 @@ Bring variant effect prediction to the rest of the tree of life. Score genetic v
 Build on EVE and popEVE to make genetic diagnosis more accurate: model both copies of every gene, score whole genotypes rather than single variants, and work with clinical sequencing cohorts to find causes of disease that current methods miss. [Read about this theme →](research.qmd#disease)
 
 ::: {.link-row}
-[Apply]{.na}
+[Apply by email](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu?subject=Postdoc%20application%3A%20Rare%20disease%20diagnosis){.internal}
 :::
 :::
 

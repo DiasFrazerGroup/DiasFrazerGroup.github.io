@@ -1,0 +1,6 @@
+---
+title: "Page not found"
+description: "The page you were looking for has moved or does not exist."
+---
+
+Try the [home page](/), our [papers](/papers.html) or the [people](/people.html) in the group. If you followed a link from elsewhere, please let us know so we can fix it.

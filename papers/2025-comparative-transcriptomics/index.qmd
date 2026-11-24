@@ -3,7 +3,7 @@ title: "Evolution of comparative transcriptomics: biological scales, phylogeneti
 date: 2025-10-01
 status: published
 venue: "Current Opinion in Genetics & Development · Review"
-summary: "PLACEHOLDER: two plain-language sentences on this review of how gene expression is compared across species, and the modelling frameworks that make it possible."
+summary: "Comparing gene expression across species shows how molecular evolution shapes differences between organisms. This review follows the field from bulk tissues to single cells, from a few model species to broad sampling of the tree of life, and towards machine-learning models that predict expression from DNA sequence."
 image: figure.svg
 paper: https://doi.org/10.1016/j.gde.2025.102387
 code: ""
@@ -15,8 +15,18 @@ outreach: []      # threads, press and talks: add one "- url: ..." line per link
 
 **Authors:** Matteo Zambon, Federica Mantica, Mafalda Dias, Jonathan Frazer & Manuel Irimia
 
+::: {.tldr}
+Where comparative transcriptomics is heading: cell types, the whole tree of life, and models that read expression from sequence.
+:::
+
+## In plain language
+
+Comparing which genes are switched on, and how strongly, across species is one of the main ways to understand how molecular evolution produces differences between organisms. This review describes three directions in which the field is moving.
+
+First, technology: bulk RNA sequencing made it possible to compare tissues and organs, and single-cell and spatial methods are now shifting the focus to cell types. Second, breadth: studies that once centred on a few model organisms and close relatives of humans now sample far more widely across the tree of life, and more deeply within groups of species. Third, modelling: growing data and machine learning are producing new frameworks, from reconstructing the evolutionary history of cell types to predicting RNA levels directly from genome sequence.
+
 ::: placeholder
-No abstract was available to draft from. The lead author should add a TL;DR and a short plain-language summary.
+Summary drafted from the abstract. The lead author should check it before launch.
 :::
 
 ## Key figure

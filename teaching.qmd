@@ -5,10 +5,6 @@ description: "Open course materials on probabilistic and generative modelling fo
 
 Mafalda and Jonny teach short courses on building probabilistic models of biological data. The courses are aimed at PhD students and researchers in biology, assume no background in machine learning or Bayesian statistics, and put model building ahead of inference: how to write down a story of how the data could have been generated, and which assumptions let a model generalise. All materials are free to use and adapt.
 
-::: placeholder
-Add where and when each course has been taught (e.g. the CRG or BIST PhD programme, summer schools), and how to invite us to teach it.
-:::
-
 ::: {.tool}
 ### An Introduction to Probabilistic Model Building
 [2026 · three sessions · slides and Colab notebooks]{.what}

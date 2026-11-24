@@ -2,12 +2,12 @@
 
 The group's website, built with [Quarto](https://quarto.org). Every page is a Markdown (`.qmd`) file. The publication list is generated from a BibTeX file, and anyone in the lab can add a paper or news post by opening a pull request.
 
-Anything still to be filled in is marked **PLACEHOLDER** (yellow dashed boxes on the site, `# PLACEHOLDER` comments in files). Search for it before going live: `grep -rn PLACEHOLDER --include=*.qmd --include=*.yml --include=*.bib .`
+Anything still to be filled in is marked **PLACEHOLDER**: yellow dashed boxes (`::: placeholder` or `class="placeholder"`) and `# PLACEHOLDER` comments. The public build hides the boxes, so missing content simply does not show; run `quarto preview --profile drafts` to see them (the "Build preview" workflow uses that profile too). To list them all: `grep -rn PLACEHOLDER --include=*.qmd --include=*.yml --include=*.bib .`
 
 ## Run it locally
 
 1. Install Quarto (1.4 or newer): download from quarto.org, or `conda create -n quarto -c conda-forge quarto`.
-2. In this folder run `quarto preview`. It opens the site and rebuilds as you edit.
+2. In this folder run `quarto preview` (or `quarto preview --profile drafts` to also see the placeholder boxes). It opens the site and rebuilds as you edit.
 
 If `quarto preview` fails with a "disk I/O error" or "unable to open database file", the cause is OneDrive: Quarto keeps a small database in `.quarto/` and OneDrive syncing breaks it. Keep your clone of this repo outside OneDrive (for example `~/code/lab-website`). As a stopgap, `quarto render` followed by `python3 -m http.server -d _site 4321` also works.
 
@@ -95,7 +95,7 @@ Custom domain (optional):
 
 ## Before going public
 
-- Replace every PLACEHOLDER (search command above).
+- Check what is still hidden as a PLACEHOLDER (search command above). Hidden boxes are fine to launch with.
 - Check every entry in `data/publications.bib` (only popEVE has been checked against the published paper), or replace it with an export from ORCID or Zotero.
 - Add a 1200×630 image as `assets/img/og-card.png` and set it under `open-graph` in `_quarto.yml`. This is the preview image when someone shares a link.
 - CRG branding. We found no published CRG rule for group websites outside crg.eu, and other CRG groups link back to crg.eu and their official group page, as the footer here does. Before adding the CRG logo, or Severo Ochoa or CERCA acknowledgements, check with CRG Communications (comunicacio@crg.eu). Ask them too whether a site without cookies, analytics or forms needs its own legal notice. This site sets no cookies and has no analytics.

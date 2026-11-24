@@ -1,6 +1,6 @@
 ---
 title: People
-description: "Physicists, statisticians, computer scientists and biologists working on one question: what does a genetic variant do?"
+description: "Physicists, statisticians, computer scientists and biologists building generative models of life's data."
 listing:
   id: people
   contents: data/people.yml
@@ -13,5 +13,5 @@ listing:
 :::
 
 ::: placeholder
-Photos for everyone, and bios and personal links for each member. Members add their own entry in `data/people.yml` (see README).
+Photos still needed for Mafalda, Jonny, Ezequiel, Paulina and Samantha. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
 :::

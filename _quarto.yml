@@ -12,7 +12,8 @@ website:
   site-url: "https://diasfrazergroup.github.io"   # change if a custom domain is added
   favicon: assets/img/favicon.svg
   page-navigation: false
-  open-graph: true   # PLACEHOLDER: add a 1200x630 social card image (assets/img/og-card.png) and set image: here
+  image: assets/img/og-card.png   # social card for links (scripts/og_card.py); paper pages use their own figure
+  open-graph: true
   twitter-card: true
   navbar:
     title: "Dias & Frazer"

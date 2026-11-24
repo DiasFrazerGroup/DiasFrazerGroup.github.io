@@ -4,10 +4,10 @@ date: 2026-08-04
 status: preprint
 venue: "bioRxiv"
 summary: "A mutation can break a protein by making it unstable, or by disrupting what it does while leaving its shape intact. Combining physics with machine learning, we separate the two for every possible mutation, and find that cancer-driving mutations in oncogenes mostly leave proteins stable but disrupt their function."
-image: figure.svg
+image: figure1a.png
 paper: https://doi.org/10.64898/2026.07.30.741764
 code: https://github.com/DiasFrazerGroup/blend_and_disentangle
-data: ""          # PLACEHOLDER
+data: ""
 outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
 ---
 
@@ -34,7 +34,7 @@ Combining the blended stability model with an evolutionary language model, we sp
 ## Key figure
 
 ::: {.key-figure}
-![Illustration of the paper's main idea (a schematic, not data from the paper).](figure.svg)
+![**Figure 1.** Blending a physics-based model (AWSEM) with inverse folding models. **A**, the blend is a scale-matched weighted average of the two models' predictions. **B–G**, correlation with experimentally measured folding stability across 335 natural and de novo proteins, as a function of the blend weight. From Galpern et al., bioRxiv (2026), [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).](figure1.png)
 :::
 
 ## Threads & press {#threads-press}

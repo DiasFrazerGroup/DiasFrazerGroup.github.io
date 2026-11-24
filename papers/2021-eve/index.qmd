@@ -13,15 +13,11 @@ outreach:
   - url: https://www.broadinstitute.org/videos/interpreting-gene-variants-ab-libraries
     kind: talk
     label: "Broad Institute MIA Meeting: Large-scale clinical interpretation of genetic variants using evolutionary data and deep learning (Dias & Frazer)"
-  # PLACEHOLDER: add the other recorded talks, the 2021 press releases and the authors' threads.
+  # To add: other recorded talks, the 2021 press releases and the authors' threads.
 ---
 
 ::: {.tldr}
 An unsupervised model of evolution that predicts which human variants cause disease, as well as methods trained on clinical labels.
-:::
-
-::: placeholder
-Attention and talks: add the claims about EVE being one of Nature's most-read papers and the talks being the most-viewed on their sites here, each with its source (e.g. the Altmetric page, the Nature metrics tab, the view counts).
 :::
 
 {{< paper-links >}}

@@ -15,12 +15,12 @@ Our work falls into four themes that share methods, data and people.
 
 **We build models to reveal the genetic underpinnings of rare and common disease.**
 
-Most variants found in a patient have never been seen before, and experiments cannot keep up with the number of possible variants. Evolution has already run that experiment: across hundreds of millions of years, changes that broke a protein were removed by selection. **EVE** showed that a generative model of sequences across species can classify disease variants as well as models trained on clinical labels, and **popEVE** calibrates that signal with human population data so that a score means the same thing in every gene. **Vermut** <span class="placeholder">one sentence on what Vermut does</span>.
+Most variants found in a patient have never been seen before, and experiments cannot keep up with the number of possible variants. Evolution has already run that experiment: across hundreds of millions of years, changes that broke a protein were removed by selection. **EVE** showed that a generative model of sequences across species can classify disease variants as well as models trained on clinical labels, and **popEVE** calibrates that signal with human population data so that a score means the same thing in every gene.
 
 People carry two copies of each gene, and disease depends on the combination. We predict the mode of inheritance for every human gene and score whole genotypes rather than single variants, with the aim of finding recessive disorders that could be treated by restoring partial protein function. We also study variation beyond the coding genome, and somatic mutations that expand into clones in healthy blood, which measure variant effects inside living people.
 
 ::: {.related}
-Papers: [popEVE (Nature Genetics 2025)](papers/2025-popeve/) · EVE (Nature 2021) · Tools: [popEVE, EVE, Vermut](tools.qmd)
+Papers: [popEVE (Nature Genetics 2025)](papers/2025-popeve/) · [EVE (Nature 2021)](papers/2021-eve/) · [Trustable clinical use (AJHG 2024)](papers/2024-trustable-clinical-vep/) · Tools: [popEVE and EVE](tools.qmd)
 :::
 :::
 :::
@@ -67,6 +67,8 @@ The goal is to search for interventions computationally before testing them in t
 
 Biological sequences, cells and populations pose modelling problems unlike most data in machine learning. We work on the foundations: generative architectures for biological sequence and molecular data, sequence-to-function models, probabilistic methods that remain calibrated across the proteome, and the theory that tells us when a model can be trusted. We are also exploring how AI agents can take part in building and testing models themselves.
 
-<span class="placeholder">one or two concrete examples, e.g. a methods paper or open-source architecture</span>
+::: {.related}
+Papers: [Likelihood-Fitness Bridging (NeurIPS 2025)](papers/2025-likelihood-to-fitness/) · [Blending physics and inverse folding (preprint 2026)](papers/2026-blending/) · [Sequences and structures to fitness, folding and function (review, 2026)](papers/2026-fitness-folding-function/) · [Comparative transcriptomics (review, COGD 2025)](papers/2025-comparative-transcriptomics/)
+:::
 :::
 :::

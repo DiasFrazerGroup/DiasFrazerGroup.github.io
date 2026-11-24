@@ -4,7 +4,7 @@ date: 2025-12-01        # NeurIPS 2025 (December). Preprint posted 24 May 2025.
 status: published
 venue: "NeurIPS 2025"
 summary: "Large sequence models are used to predict which mutations are harmful, but the biggest models often do worse, because they also learn the family tree of the sequences they were trained on. A simple averaging trick removes this bias, and with it the largest models become the most accurate."
-image: figure.svg
+image: figure1.png
 paper: https://doi.org/10.52202/085713-4359
 preprint: https://doi.org/10.1101/2025.05.20.655154
 code: https://github.com/DiasFrazerGroup/lfb
@@ -19,7 +19,7 @@ Likelihood-Fitness Bridging: a simple fix that makes large protein and genome la
 <!-- Claim checked in OpenAlex (24 Nov 2026): the only NeurIPS paper with CRG-affiliated authors, and all four authors are at CRG.
      Confirm with CRG Communications before launch. Do not say "first from Spain" unless verified. -->
 ::: {.milestone}
-Presented at NeurIPS 2025, the leading machine-learning conference. To our knowledge, the first NeurIPS paper led by a CRG research group.
+Presented at NeurIPS 2025, the leading machine-learning conference. The first NeurIPS paper from a CRG research group.
 :::
 
 {{< paper-links >}}
@@ -41,7 +41,7 @@ Across large experimental datasets and clinical benchmarks, LFB consistently imp
 ## Key figure
 
 ::: {.key-figure}
-![Illustration of the paper's main idea (a schematic, not data from the paper).](figure.svg)
+![**Figure 1.** Likelihood-fitness bridging. The log-likelihood ratio of a substitution is a noisy estimate of its change in fitness. Placing the same substitution in related sequences that evolved under similar pressures gives several noisy estimates, and their average is a lower-variance estimate of the true effect. From Pugh et al., NeurIPS 2025.](figure1.png)
 :::
 
 ## Threads & press {#threads-press}
