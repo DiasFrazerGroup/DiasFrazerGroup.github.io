@@ -4,20 +4,19 @@
 body {
   background: var(--paper);
   color: var(--ink);
-  font-feature-settings: "kern", "liga";
-  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, .title {
-  font-family: var(--serif);
-  letter-spacing: -0.008em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.012em;
   color: var(--ink);
-  font-variant-numeric: lining-nums;
+  font-variation-settings: "opsz" 48;
 }
 h1, .title { font-size: clamp(2.5rem, 5vw, 3.4rem); line-height: 1.05; font-weight: 500; }
 h2 { font-size: 2rem; font-weight: 500; margin-top: 2.6rem; padding-bottom: 0; border-bottom: none; }
-h3 { font-size: 1.4rem; font-weight: 500; }
+h3 { font-size: 1.5rem; font-weight: 600; }
 
 a { text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { color: var(--ink); text-decoration-color: var(--accent); }
@@ -25,10 +24,9 @@ a:hover { color: var(--ink); text-decoration-color: var(--accent); }
 ::selection { background: var(--accent-soft); }
 
 .mono, .eyebrow, .meta {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -48,8 +46,7 @@ hr { border-color: var(--rule); opacity: 1; }
 }
 .navbar-brand img { max-height: 30px; height: 30px; }
 .navbar .nav-link {
-  font-family: var(--sans);
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   font-weight: 500;
   padding-left: 0.85rem !important;
   padding-right: 0.85rem !important;
@@ -57,23 +54,22 @@ hr { border-color: var(--rule); opacity: 1; }
   opacity: 0.8;
 }
 .navbar .nav-link:hover, .navbar .nav-link.active { opacity: 1; color: var(--accent) !important; }
-.navbar .nav-link.active { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 0.5em; text-decoration-thickness: 1px; }
+.navbar .nav-link.active { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 0.45em; text-decoration-thickness: 2px; }
 
 // ---------- Title block ----------
 #title-block-header { margin-bottom: 2rem; }
 #title-block-header .description, .quarto-title .subtitle {
-  font-family: var(--serif);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-style: italic;
   font-size: 1.45rem;
   line-height: 1.35;
   color: var(--muted);
   margin-top: 0.6rem;
 }
-.quarto-title-meta-heading { font-family: var(--sans); font-weight: 500; font-size: 0.7rem; letter-spacing: 0.06em; }
+.quarto-title-meta-heading { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; letter-spacing: 0.06em; }
 
 // ---------- Footer ----------
 .nav-footer {
-  font-family: var(--sans);
   border-top: 1px solid var(--rule);
   font-size: 0.82rem;
   color: var(--muted);
@@ -90,7 +86,7 @@ hr { border-color: var(--rule); opacity: 1; }
   border: 1px dashed currentColor;
   border-radius: 4px;
   padding: 0.05rem 0.4rem;
-  font-family: var(--sans); font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.78em;
 }
 div.placeholder { display: block; padding: 0.8rem 1rem; margin: 1.2rem 0; line-height: 1.5; }
@@ -103,19 +99,18 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   margin-bottom: 2.5rem;
 }
 .hero h1 {
-  font-size: clamp(2.6rem, 6.4vw, 4.2rem);
-  font-weight: 400;
-  line-height: 1.04;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  line-height: 1.0;
+  letter-spacing: -0.022em;
   margin: 0 0 1.4rem;
   max-width: 17ch;
 }
 .hero h1 em { color: var(--accent); font-style: italic; }
-.hero p { font-size: 1.14rem; line-height: 1.6; max-width: 58ch; }
+.hero p { font-size: 1.12rem; max-width: 60ch; }
 @media (max-width: 640px) { .hero { padding-top: 1.5rem; } }
 
 .seq {
-  font-family: var(--sans); font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.82rem;
   letter-spacing: 0.32em;
   color: var(--muted);
@@ -149,7 +144,7 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   margin: 3rem 0 1.2rem;
 }
 .section-head h2 { margin: 0; font-size: 1.75rem; }
-.section-head a { font-family: var(--sans); font-size: 0.8rem; text-decoration: none; }
+.section-head a { font-size: 0.85rem; text-decoration: none; }
 
 // ---------- Theme cards (home + research) ----------
 .themes {
@@ -164,11 +159,11 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   border-bottom: 1px solid var(--rule);
 }
 .theme:nth-child(2n) { padding-left: 1.4rem; padding-right: 0; border-left: 1px solid var(--rule); }
-.theme .num { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--accent); }
+.theme .num { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--accent); }
 .theme h3 { margin: 0.3rem 0 0.5rem; font-size: 1.45rem; }
 .theme h3 a { color: var(--ink); text-decoration: none; }
 .theme h3 a:hover { color: var(--accent); }
-.theme p { font-size: 0.98rem; color: var(--muted); margin: 0; }
+.theme p { font-size: 0.93rem; color: var(--muted); margin: 0; }
 
 @media (max-width: 640px) {
   .themes { grid-template-columns: 1fr; }
@@ -185,7 +180,7 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   margin-top: 2.4rem;
 }
 .research-theme .num {
-  font-family: var(--serif);
+  font-family: "Cormorant Garamond", serif;
   font-size: 3rem;
   line-height: 1;
   color: var(--accent);
@@ -213,12 +208,12 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   padding: 1.1rem 0;
   border-bottom: 1px solid var(--rule);
 }
-.news-item .date { font-family: var(--sans); font-weight: 500; font-size: 0.75rem; color: var(--muted); padding-top: 0.3rem; }
+.news-item .date { font-family: "JetBrains Mono", monospace; font-size: 0.75rem; color: var(--muted); padding-top: 0.3rem; }
 .news-item h3 { font-size: 1.4rem; margin: 0 0 0.25rem; }
 .news-item h3 a { color: var(--ink); text-decoration: none; }
 .news-item h3 a:hover { color: var(--accent); }
 .news-item p { margin: 0; font-size: 0.93rem; color: var(--muted); }
-.news-item .tag { font-family: var(--sans); font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-right: 0.5rem; }
+.news-item .tag { font-family: "JetBrains Mono", monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-right: 0.5rem; }
 @media (max-width: 560px) { .news-item { grid-template-columns: 1fr; gap: 0.2rem; } }
 
 // ---------- Listings: paper cards ----------
@@ -242,38 +237,38 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
 .paper-fig img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .paper-card:hover .paper-fig img { transform: scale(1.03); }
 .paper-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; align-items: center; margin-bottom: 0.4rem; }
-.paper-meta span { font-family: var(--sans); font-weight: 500; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+.paper-meta span { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
 .badge-status {
-  font-family: var(--sans); font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.66rem !important;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0.18rem 0.5rem;
-  border-radius: 2px;
+  border-radius: 99px;
   border: 1px solid var(--rule);
 }
 .badge-status.preprint { color: var(--accent) !important; border-color: var(--accent); background: var(--accent-soft); }
 .paper-card h3 { margin: 0 0 0.5rem; font-size: 1.6rem; line-height: 1.25; }
 .paper-card h3 a { color: var(--ink); text-decoration: none; }
 .paper-card h3 a:hover { color: var(--accent); }
-.paper-card p.summary { font-size: 1rem; color: var(--muted); margin-bottom: 0.8rem; }
+.paper-card p.summary { font-size: 0.95rem; color: var(--muted); margin-bottom: 0.8rem; }
 @media (max-width: 680px) { .paper-card { grid-template-columns: 1fr; gap: 0.9rem; } }
 
 .link-row { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .link-row a, .link-row span.na {
-  font-family: var(--sans); font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.72rem;
   letter-spacing: 0.03em;
   text-decoration: none;
   padding: 0.3rem 0.65rem;
   border: 1px solid var(--rule);
-  border-radius: 2px;
+  border-radius: 3px;
   color: var(--ink);
-  background: transparent;
+  background: var(--paper-raised);
   transition: border-color 0.15s, color 0.15s;
 }
 .link-row a:hover { border-color: var(--accent); color: var(--accent); }
-.link-row a::after { content: " ↗"; opacity: 0.45; }
+.link-row a::after { content: " ↗"; opacity: 0.5; }
 .link-row a.internal::after { content: " →"; }
 .link-row span.na { color: var(--muted); border-style: dashed; }
 
@@ -286,7 +281,7 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   border-left: 2px solid var(--accent);
   padding: 0.3rem 0 0.3rem 1.2rem;
   margin: 1.5rem 0 2rem;
-  font-family: var(--serif);
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.55rem;
   line-height: 1.35;
 }
@@ -294,9 +289,9 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
 // ---------- Publication list (shortcode) ----------
 .pub-group { margin-top: 2.2rem; }
 .pub-group-label {
-  font-family: var(--sans); font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
   border-bottom: 1px solid var(--rule);
@@ -306,22 +301,22 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
 .pub-list { list-style: none; padding: 0; margin: 0; }
 .pub { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
 .pub:last-child { border-bottom: none; }
-.pub-title { font-family: var(--serif); font-size: 1.32rem; line-height: 1.35; font-weight: 500; }
+.pub-title { font-family: "Cormorant Garamond", serif; font-size: 1.32rem; line-height: 1.35; font-weight: 500; }
 .pub-title a { color: var(--ink); text-decoration: none; }
 .pub-title a:hover { color: var(--accent); }
-.pub-authors { font-size: 0.92rem; color: var(--muted); margin-top: 0.2rem; }
+.pub-authors { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
 .pub-me { color: var(--ink); font-weight: 600; }
 .pub-etal { font-size: 0.78rem; }
-.pub-venue { font-size: 0.92rem; margin-top: 0.15rem; color: var(--muted); }
+.pub-venue { font-size: 0.85rem; margin-top: 0.15rem; color: var(--muted); }
 .pub-venue em { color: var(--ink); }
 .pub-post { font-weight: 500; }
 
 // ---------- People ----------
 .people-group { margin-top: 2.6rem; }
 .people-group h2 {
-  font-family: var(--sans); font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
   border-bottom: 1px solid var(--rule);
@@ -341,11 +336,11 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   justify-content: center;
 }
 .person .photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.15); }
-.person .initials { font-family: var(--serif); font-size: 3rem; color: var(--accent); opacity: 0.75; }
+.person .initials { font-family: "Cormorant Garamond", serif; font-size: 3rem; color: var(--accent); opacity: 0.75; }
 .people-grid.pis .person .photo { aspect-ratio: 4 / 3; }
 .person h3 { font-size: 1.4rem; margin: 0; }
-.person .role { font-family: var(--sans); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin: 0.15rem 0 0.5rem; }
-.person .bio { font-size: 0.95rem; color: var(--muted); margin-bottom: 0.6rem; }
+.person .role { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0.15rem 0 0.5rem; }
+.person .bio { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.6rem; }
 .person .link-row a { font-size: 0.66rem; padding: 0.2rem 0.5rem; }
 
 // ---------- Tools ----------
@@ -357,8 +352,8 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
   background: var(--paper-raised);
 }
 .tool h3 { margin: 0 0 0.2rem; font-size: 1.7rem; }
-.tool .what { font-family: var(--sans); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.7rem; }
-.tool p { font-size: 1rem; }
+.tool .what { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.7rem; }
+.tool p { font-size: 0.95rem; }
 
 // ---------- Join ----------
 .callout-join {
@@ -373,7 +368,7 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
 
 // ---------- Brand ----------
 .navbar-title {
-  font-family: var(--serif);
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: 0;
@@ -397,7 +392,7 @@ div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
 
 // ---------- Threads & press ----------
 .coverage { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem 2rem; margin: 0.6rem 0 1.5rem; }
-.coverage-label { font-family: var(--sans); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.4rem; }
+.coverage-label { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.4rem; }
 .coverage-list { list-style: none; padding: 0; margin: 0; }
 .coverage-list li { padding: 0.35rem 0; border-bottom: 1px solid var(--rule); font-size: 0.93rem; }
 .coverage-list li:last-child { border-bottom: none; }
@@ -424,34 +419,25 @@ body { overflow-x: hidden; }
 
 // ---------- Tables (teaching) ----------
 .tool table { font-size: 0.9rem; margin: 1rem 0; }
-.tool table th { font-family: var(--sans); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 500; border-bottom-color: var(--rule); }
+.tool table th { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 500; border-bottom-color: var(--rule); }
 .tool table td { border-color: var(--rule); vertical-align: top; }
 
 // ---------- Hiring link (home hero) ----------
 .hero a.hiring {
   position: relative;
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.7rem;
-  margin-top: 0.8rem;
-  padding: 0.15rem 0 0.15rem 0.9rem;
-  font-size: 1rem;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
   color: var(--ink);
   text-decoration: none;
-  border-left: 2px solid var(--accent);
+  border: 1px solid var(--rule);
+  border-radius: 99px;
+  background: var(--paper);
+  transition: border-color 0.15s, color 0.15s;
 }
-.hero a.hiring:hover { color: var(--accent); }
-.hero a.hiring .dot {
-  font-family: var(--sans); font-weight: 600; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--accent); flex: none;
-}
-.hero a.hiring .dot::before { content: "Open positions"; }
+.hero a.hiring:hover { border-color: var(--accent); color: var(--accent); }
+.hero a.hiring .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); flex: none; }
 .hero a.hiring .arr { color: var(--accent); }
-
-// ---------- Academic refinements ----------
-.link-row a, .link-row span.na, .badge-status, .paper-meta span, .news-item .date, .person .role { font-variant-numeric: lining-nums; }
-#title-block-header .title { font-weight: 400; }
-#title-block-header .description { font-size: 1.35rem; }
-.quarto-title-meta, .quarto-title-meta-contents { font-family: var(--sans); font-size: 0.85rem; }
-.callout-join h3 { font-weight: 500; }
-blockquote { font-style: italic; border-left-color: var(--rule); }

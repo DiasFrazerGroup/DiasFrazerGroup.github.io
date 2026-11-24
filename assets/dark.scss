@@ -1,33 +1,31 @@
 /*-- scss:defaults --*/
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-$body-bg: #11151c;
-$body-color: #e6e4df;
-$link-color: #8db8f0;
-$navbar-bg: #11151c;
-$navbar-fg: #e6e4df;
-$navbar-hl: #8db8f0;
-$footer-bg: #11151c;
-$footer-fg: #979ba3;
-$font-family-sans-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
-$font-family-monospace: ui-monospace, "SF Mono", Menlo, monospace;
-$headings-font-family: "Newsreader", Georgia, serif;
+$body-bg: #0d1015;
+$body-color: #e4e7ec;
+$link-color: #6cb0ff;
+$navbar-bg: #0d1015;
+$navbar-fg: #e4e7ec;
+$navbar-hl: #6cb0ff;
+$footer-bg: #0d1015;
+$footer-fg: #8a93a3;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, monospace;
+$headings-font-family: "Cormorant Garamond", Georgia, serif;
 $headings-font-weight: 500;
-$font-size-root: 18px;
-$line-height-base: 1.6;
-$border-color: #262b34;
+$font-size-root: 17px;
+$line-height-base: 1.65;
+$border-color: #222833;
 
 /*-- scss:rules --*/
 :root {
-  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --paper: #11151c;
-  --paper-raised: #171c25;
-  --ink: #e6e4df;
-  --muted: #979ba3;
-  --rule: #262b34;
-  --accent: #8db8f0;
-  --accent-soft: #1a2638;
+  --paper: #0d1015;
+  --paper-raised: #141922;
+  --ink: #e4e7ec;
+  --muted: #8a93a3;
+  --rule: #222833;
+  --accent: #6cb0ff;
+  --accent-soft: #132640;
   --placeholder-bg: #2e2810;
   --placeholder-ink: #f2d27a;
 }
