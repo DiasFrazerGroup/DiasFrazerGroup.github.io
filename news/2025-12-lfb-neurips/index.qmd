@@ -5,8 +5,8 @@ categories: [Paper]
 description: "Charlie and Paulina's work on making large sequence models better at predicting variant effects appears at NeurIPS, the first NeurIPS paper from a CRG group."
 ---
 
-Our paper [From likelihood to fitness](../../papers/2025-likelihood-to-fitness/), led by PhD students Charles Pugh and Paulina Nuñez-Valencia, appears at NeurIPS 2025, the leading conference in machine learning. It is the first NeurIPS paper from a CRG research group.
+Our paper [From likelihood to fitness](../../papers/2025-likelihood-to-fitness/index.qmd), led by PhD students Charles Pugh and Paulina Nuñez-Valencia, appears at NeurIPS 2025, the leading conference in machine learning. It is the first NeurIPS paper from a CRG research group.
 
 Language models trained on protein and DNA sequences are increasingly used to predict which mutations are harmful, but the largest models have stopped improving at this task. The paper shows why: model likelihoods reflect the family tree of the sequences a model was trained on as well as natural selection. It introduces Likelihood-Fitness Bridging, a simple averaging strategy that removes this bias without retraining. With it, the largest models become the most accurate.
 
-Read the [plain-language summary](../../papers/2025-likelihood-to-fitness/) or the [paper](https://doi.org/10.52202/085713-4359).
+Read the [plain-language summary](../../papers/2025-likelihood-to-fitness/index.qmd) or the [paper](https://doi.org/10.52202/085713-4359).

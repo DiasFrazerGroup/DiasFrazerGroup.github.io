@@ -6,4 +6,4 @@ categories: [Preprint]       # Preprint | Paper | Award | Talk | People | Softwa
 description: "One sentence that appears in the news list."
 ---
 
-Two or three short paragraphs. Link the paper page (`../../papers/YYYY-short-name/`) and the lead author's thread.
+Two or three short paragraphs. Link the paper page (`../../papers/YYYY-short-name/index.qmd`) and the lead author's thread.

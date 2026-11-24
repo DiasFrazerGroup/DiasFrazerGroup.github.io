@@ -97,7 +97,7 @@ local function render_item(ref, highlight)
   if venue ~= "" then table.insert(h, "<em>" .. esc(venue) .. "</em> &middot; ") end
   table.insert(h, year_of(ref))
   if post then
-    table.insert(h, ' &middot; <a class="pub-post" href="/' .. esc(post) .. '/">Plain-language summary &rarr;</a>')
+    table.insert(h, ' &middot; <a class="pub-post" href="' .. esc(post) .. '/index.html">Plain-language summary &rarr;</a>')
   end
   table.insert(h, "</div></li>")
   return table.concat(h, "")

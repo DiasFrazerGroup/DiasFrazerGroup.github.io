@@ -9,4 +9,4 @@ Mafalda was one of the finalists for the 2026 Premi Vanguardia Ciència, the sci
 
 *La Vanguardia* published [a feature on her research](https://www.lavanguardia.com/ciencia/20260613/11563080/diagnosticamos-enfermedades-raras-analizando-millones-anos-evolucion.html) (in Spanish).
 
-Read more about this work in the [popEVE](../../papers/2025-popeve/) and [EVE](../../papers/2021-eve/) summaries.
+Read more about this work in the [popEVE](../../papers/2025-popeve/index.qmd) and [EVE](../../papers/2021-eve/index.qmd) summaries.
