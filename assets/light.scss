@@ -1,31 +1,33 @@
 /*-- scss:defaults --*/
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap');
 
-$body-bg: #fbfbfc;
-$body-color: #14171c;
-$link-color: #1d63c4;
-$navbar-bg: #fbfbfc;
-$navbar-fg: #14171c;
-$navbar-hl: #1d63c4;
-$footer-bg: #fbfbfc;
-$footer-fg: #5f6773;
-$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-$font-family-monospace: "JetBrains Mono", ui-monospace, monospace;
-$headings-font-family: "Cormorant Garamond", Georgia, serif;
+$body-bg: #fbfaf8;
+$body-color: #1b1d22;
+$link-color: #1a4f9c;
+$navbar-bg: #fbfaf8;
+$navbar-fg: #1b1d22;
+$navbar-hl: #1a4f9c;
+$footer-bg: #fbfaf8;
+$footer-fg: #5d626c;
+$font-family-sans-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+$font-family-monospace: ui-monospace, "SF Mono", Menlo, monospace;
+$headings-font-family: "Newsreader", Georgia, serif;
 $headings-font-weight: 500;
-$font-size-root: 17px;
-$line-height-base: 1.65;
-$border-color: #e3e6ea;
+$font-size-root: 18px;
+$line-height-base: 1.6;
+$border-color: #e2e0da;
 
 /*-- scss:rules --*/
 :root {
-  --paper: #fbfbfc;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --paper: #fbfaf8;
   --paper-raised: #ffffff;
-  --ink: #14171c;
-  --muted: #5f6773;
-  --rule: #e3e6ea;
-  --accent: #1d63c4;
-  --accent-soft: #e4eefb;
+  --ink: #1b1d22;
+  --muted: #5d626c;
+  --rule: #e2e0da;
+  --accent: #1a4f9c;
+  --accent-soft: #e6edf7;
   --placeholder-bg: #fff6d6;
   --placeholder-ink: #7a5a00;
 }

@@ -17,16 +17,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Polygon, Rectangle
 
-BG = "#141922"
-INK = "#d5d9e0"
-MUTED = "#8a93a3"
-FAINT = "#2a3140"
-ACCENT = "#6cb0ff"
-ACCENT2 = "#3a7fd8"
-WARM = "#e0a96d"
+BG = "#ffffff"
+INK = "#1b1d22"
+MUTED = "#6b707a"
+FAINT = "#e3e1db"
+ACCENT = "#1a4f9c"
+ACCENT2 = "#7ea6dc"
+WARM = "#b8712c"
 
 plt.rcParams.update({
-    "font.family": "DejaVu Sans",
+    "font.family": ["Helvetica Neue", "Helvetica", "Arial", "DejaVu Sans"],
     "font.size": 13,
     "text.color": INK,
     "axes.labelcolor": MUTED,

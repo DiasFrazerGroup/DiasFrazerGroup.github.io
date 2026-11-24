@@ -46,9 +46,9 @@ language:
 format:
   html:
     theme:
-      dark: [default, assets/dark.scss, assets/site.scss]
       light: [default, assets/light.scss, assets/site.scss]
-    respect-user-color-scheme: false   # dark is the default; the toggle switches to light
+      dark: [default, assets/dark.scss, assets/site.scss]
+    respect-user-color-scheme: false   # light is the default; the toggle switches to dark
     toc: false
     smooth-scroll: true
     anchor-sections: false
