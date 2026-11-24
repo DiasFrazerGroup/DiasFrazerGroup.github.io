@@ -227,7 +227,7 @@
     if (!narrow) box.w = Math.min(W - 24 - box.x, 620);
   }
 
-  let accent = "#7cc7bb", muted = "#8a93a3";
+  let accent = "#8db0e6", muted = "#8a93a3";
   function readColours() {
     const cs = getComputedStyle(document.documentElement);
     accent = (cs.getPropertyValue("--accent") || accent).trim() || accent;
@@ -250,7 +250,7 @@
       pos[i][1] = sa * ty + (1 - sa) * cy + sn * g[1] * spread * (1 - 0.85 * a);
     }
     ctx.clearRect(0, 0, W, H);
-    const base = narrow ? 0.32 : 0.9;
+    const base = narrow ? 0.42 : 0.95;
     const behindText = (x, y) => textRects.some(([l, t, r, b]) => x > l && x < r && y > t && y < b);
     const fade = (x, y) => (behindText(x, y) ? (narrow ? 0.5 : 0.14) : 1);
 

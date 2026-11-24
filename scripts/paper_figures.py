@@ -21,8 +21,8 @@ BG = "#141922"
 INK = "#d5d9e0"
 MUTED = "#8a93a3"
 FAINT = "#2a3140"
-ACCENT = "#7cc7bb"
-ACCENT2 = "#3f9d90"
+ACCENT = "#8db0e6"
+ACCENT2 = "#4f78b8"
 WARM = "#e0a96d"
 
 plt.rcParams.update({
