@@ -92,7 +92,7 @@ hr { border-color: var(--rule); opacity: 1; }
 div.placeholder { display: block; padding: 0.8rem 1rem; margin: 1.2rem 0; line-height: 1.5; }
 div.placeholder::before { content: "PLACEHOLDER · "; font-weight: 600; }
 // Hidden on the public site; the "drafts" profile (_quarto-drafts.yml) shows them.
-.placeholder, .callout.placeholder { display: none; }
+.placeholder, div.placeholder, .callout.placeholder { display: none !important; }
 section#threads-press:has(> p.placeholder) { display: none; }   // no threads or press yet
 
 // ---------- Home hero ----------
@@ -453,3 +453,8 @@ body { overflow-x: hidden; }
 .leaders-text h3 { font-size: 1.7rem; margin: 0 0 0.7rem; }
 .leaders-text p { font-size: 0.95rem; color: var(--muted); }
 @media (max-width: 760px) { .leaders { grid-template-columns: 1fr; gap: 1rem; } }
+
+// ---------- Navbar always visible ----------
+// Quarto's headroom script slides the navbar away while scrolling down; clicks aimed at the menu
+// then land on the page instead. Keep it pinned.
+#quarto-header.headroom--unpinned { transform: none !important; }

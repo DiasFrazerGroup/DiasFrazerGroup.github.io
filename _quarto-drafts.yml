@@ -3,4 +3,4 @@
 format:
   html:
     include-in-header:
-      text: "<style>.placeholder{display:revert !important} section#threads-press{display:block !important}</style>"
+      text: "<style>html body .placeholder{display:revert !important} html body section#threads-press{display:block !important}</style>"
