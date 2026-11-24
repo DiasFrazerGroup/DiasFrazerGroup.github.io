@@ -1,0 +1,47 @@
+---
+title: "Beyond coverage tracks: fine-tuning AlphaGenome's splicing heads from scratch"
+date: 2026-07-24
+status: preprint
+venue: "Genomics x AI Blog"
+summary: "AlphaGenome predicts thousands of genomic signals from DNA sequence, but community tools for fine-tuning it only handled coverage tracks. We trained its splicing heads from scratch on new RNA-seq data, share the whole process, bugs and fixes included, and compare two fine-tuning strategies."
+image: figure1.png
+paper: https://doi.org/10.5281/zenodo.21535144
+code: https://github.com/MiqG/alphagenome_finetuning_rna/tree/v1.0.2
+outreach:
+  - url: https://genomicsxai.github.io/blogs/2026-009/
+    kind: press
+    label: "Full post on the Genomics x AI blog"
+data: ""
+---
+
+::: {.tldr}
+Teaching a large genomic model new outputs: splicing heads for AlphaGenome, trained from scratch and tested on held-out regions of the genome.
+:::
+
+{{< paper-links >}}
+
+**Authors:** Miquel Anglada-Girotto, Jonathan Frazer & Mafalda Dias
+
+## In plain language
+
+DeepMind's AlphaGenome reads a million letters of DNA and predicts thousands of signals, from gene expression to how RNA is spliced. Its code and weights are public, and community packages make it possible to fine-tune it in JAX ([alphagenome_ft](https://github.com/genomicsxai/alphagenome_ft)) and PyTorch ([alphagenome-pytorch](https://github.com/genomicsxai/alphagenome-pytorch)). Those packages handled coverage tracks, such as RNA-seq read depth, but not the outputs that describe splicing: where splice sites are, how often each is used, and which exons are joined together.
+
+Adding them looked like a simple extension, and turned into a useful lesson in how large genomic models learn and how to debug a new output head. The post walks through preprocessing the data, building data loaders, overfitting a single genomic interval as a sanity check, and the bugs found along the way. We then fine-tuned the splicing heads and gene expression on RNA-seq from two samples, one carrying the SF3B1 K700E mutation, which disrupts a core splicing factor, and one without it, and evaluated on genomic intervals held out from training.
+
+We compared two strategies: training only the new heads on a frozen model (linear probing), and also adapting the model's trunk with low-rank adapters (LoRA). On held-out intervals both predicted gene expression equally well (Pearson r of about 0.9), while LoRA did better for splice site usage (0.66 versus 0.65) and splice junctions (0.81 versus 0.79). Each run took about a week on one GPU.
+
+The code is on [GitHub](https://github.com/MiqG/alphagenome_finetuning_rna/tree/v1.0.2), and the splicing heads are being merged into alphagenome-pytorch.
+
+## Key figure
+
+::: {.key-figure}
+![**Figure 1.** AlphaGenome's splicing heads: from one megabase of DNA, the model predicts RNA-seq coverage, splice site class, splice site usage and splice junction counts. From the [Genomics x AI blog post](https://genomicsxai.github.io/blogs/2026-009/).](figure1.png)
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Anglada-Girotto M, Frazer J, Dias M. Beyond coverage tracks: fine-tuning AlphaGenome's splicing heads from scratch. *Genomics x AI Blog* (2026). [doi:10.5281/zenodo.21535144](https://doi.org/10.5281/zenodo.21535144)

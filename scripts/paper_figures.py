@@ -305,6 +305,7 @@ def trustable():
     save(fig, "2024-trustable-clinical-vep")
 
 
+
 if __name__ == "__main__":
     # EVE, popEVE, LFB and Blending use real figures cropped from the papers (figure1.png).
     for f in (review, comparative, trustable):

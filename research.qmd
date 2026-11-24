@@ -68,7 +68,7 @@ The goal is to search for interventions computationally before testing them in t
 Biological sequences, cells and populations pose modelling problems unlike most data in machine learning. We work on the foundations: generative architectures for biological sequence and molecular data, sequence-to-function models, probabilistic methods that remain calibrated across the proteome, and the theory that tells us when a model can be trusted. We are also exploring how AI agents can take part in building and testing models themselves.
 
 ::: {.related}
-Papers: [Likelihood-Fitness Bridging (NeurIPS 2025)](papers/2025-likelihood-to-fitness/index.qmd) · [Blending physics and inverse folding (preprint 2026)](papers/2026-blending/index.qmd) · [Sequences and structures to fitness, folding and function (review, 2026)](papers/2026-fitness-folding-function/index.qmd) · [Comparative transcriptomics (review, COGD 2025)](papers/2025-comparative-transcriptomics/index.qmd)
+Papers: [Likelihood-Fitness Bridging (NeurIPS 2025)](papers/2025-likelihood-to-fitness/index.qmd) · [Blending physics and inverse folding (preprint 2026)](papers/2026-blending/index.qmd) · [Sequences and structures to fitness, folding and function (review, 2026)](papers/2026-fitness-folding-function/index.qmd) · [Comparative transcriptomics (review, COGD 2025)](papers/2025-comparative-transcriptomics/index.qmd) · [AlphaGenome splicing heads (2026)](papers/2026-alphagenome-splicing/index.qmd) · Tools: [Blend and Disentangle, LFB, AlphaGenome fine-tuning](tools.qmd)
 :::
 :::
 :::

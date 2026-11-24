@@ -26,6 +26,39 @@ An unsupervised deep generative model trained on sequence alignments across spec
 :::
 :::
 
+::: {.tool}
+### Blend and Disentangle
+[Protein stability and "dark energy"]{.what}
+
+Blends a physics-based energy model (AWSEM) with a learned inverse-folding model (PottsMPNN) into one calibrated prediction of how mutations change folding stability, then separates each mutation's evolutionary cost into a stability part and a "dark energy" part that captures functional constraints beyond folding. Runs from a UniProt ID; MIT licence.
+
+::: {.link-row}
+[Code](https://github.com/DiasFrazerGroup/blend_and_disentangle) [Data](https://doi.org/10.5281/zenodo.21241135) [Summary](papers/2026-blending/index.qmd){.internal} [Preprint](https://doi.org/10.64898/2026.07.30.741764)
+:::
+:::
+
+::: {.tool}
+### LFB
+[Likelihood-Fitness Bridging]{.what}
+
+Improves variant effect predictions from protein language models (ESM, ProGen) and genome language models (Evo 2) without retraining, by averaging a model's scores across related sequences that evolved under similar pressures. Works with any Hugging Face ESM-style model; MIT licence.
+
+::: {.link-row}
+[Code](https://github.com/DiasFrazerGroup/lfb) [Summary](papers/2025-likelihood-to-fitness/index.qmd){.internal} [Paper](https://doi.org/10.52202/085713-4359)
+:::
+:::
+
+::: {.tool}
+### AlphaGenome splicing fine-tuning
+[Splicing heads for AlphaGenome]{.what}
+
+Pipelines and code to fine-tune AlphaGenome's splice site, splice site usage and splice junction heads on new RNA-seq data, in PyTorch, with linear probing or LoRA. The splicing heads are being merged into the community package alphagenome-pytorch.
+
+::: {.link-row}
+[Code](https://github.com/MiqG/alphagenome_finetuning_rna/tree/v1.0.2) [Blog post](https://genomicsxai.github.io/blogs/2026-009/) [Summary](papers/2026-alphagenome-splicing/index.qmd){.internal}
+:::
+:::
+
 ::: placeholder
 Add other resources here as they are released (e.g. mode-of-inheritance predictions for all human genes).
 :::

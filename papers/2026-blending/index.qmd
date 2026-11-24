@@ -7,7 +7,7 @@ summary: "A mutation can break a protein by making it unstable, or by disrupting
 image: figure1a.png
 paper: https://doi.org/10.64898/2026.07.30.741764
 code: https://github.com/DiasFrazerGroup/blend_and_disentangle
-data: ""
+data: https://doi.org/10.5281/zenodo.21241135
 outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
 ---
 
