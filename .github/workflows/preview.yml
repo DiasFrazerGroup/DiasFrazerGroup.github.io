@@ -1,0 +1,25 @@
+# Builds the site on every push and pull request and attaches it as a downloadable zip
+# ("site-preview" under the run's Artifacts). Nothing is published.
+# To view: download, unzip, then run  python3 -m http.server -d site-preview 4321  and open http://localhost:4321
+name: Build preview
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: quarto render
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: _site
+          retention-days: 14

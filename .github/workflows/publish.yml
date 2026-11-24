@@ -1,10 +1,11 @@
-# Builds the site on every push to main and publishes it to GitHub Pages.
-# One-time setup: in the GitHub repo, Settings -> Pages -> Source: "GitHub Actions".
+# Publishes the site to GitHub Pages. Manual-only while the site is not public.
+# At launch: make the repo public (or use a plan that allows Pages from private repos),
+# set Settings -> Pages -> Source: "GitHub Actions", then uncomment the push trigger below.
 name: Publish site
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 permissions:

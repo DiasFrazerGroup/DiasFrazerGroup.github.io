@@ -73,15 +73,18 @@ Edit your entry in `data/people.yml`: role, a one- or two-line bio, and any of `
 2. Commit only source files. `_site/` and `.quarto/` are build output and are ignored.
 3. Open a pull request. The checklist in the PR template covers what reviewers look for. Mafalda or Jonny merges it, and the site updates itself a minute or two later.
 
-## Deploying to GitHub Pages
+## Previewing and deploying
 
-The site deploys automatically with GitHub Actions (`.github/workflows/publish.yml`): every push to `main` builds the site and publishes `_site/`.
+The repository is **private** and the site is **not public yet**.
 
-One-time setup:
+**Previews.** Every push and pull request runs the "Build preview" workflow (`.github/workflows/preview.yml`), which builds the site and attaches it as a zip. Open the run under the Actions tab, download `site-preview` from Artifacts, unzip it, and run `python3 -m http.server -d site-preview 4321`, then open http://localhost:4321. Or run `quarto preview` on your own clone.
 
-1. Create a repository on GitHub (ideally under a lab organisation, so it does not depend on one person's account) and push this folder to `main`.
-2. In the repository go to Settings → Pages and set Source to **GitHub Actions**.
-3. The first push publishes the site at `https://<org>.github.io/<repo>/`.
+**Going live** (only when Mafalda and Jonny agree):
+
+1. GitHub Pages sites are always public, and free organisations can only publish Pages from public repositories. So either make this repository public (Settings → General → Danger zone → Change visibility), or move the organisation to a plan that allows Pages from private repositories (GitHub offers free Team plans to academic organisations through GitHub Education).
+2. Settings → Pages → Source: **GitHub Actions**.
+3. In `.github/workflows/publish.yml`, uncomment the `push:` trigger so every merge to `main` republishes the site. Then run the workflow once from the Actions tab.
+4. Because the repository is named `DiasFrazerGroup.github.io`, the site appears at `https://diasfrazergroup.github.io/`.
 
 Custom domain (optional):
 
