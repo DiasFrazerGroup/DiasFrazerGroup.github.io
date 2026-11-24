@@ -4,6 +4,7 @@ project:
   resources:
     - CNAME
     - assets/img/**
+    - assets/hero.js
 
 website:
   title: "Dias & Frazer Group"

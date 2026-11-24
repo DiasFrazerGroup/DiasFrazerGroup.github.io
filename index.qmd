@@ -23,9 +23,9 @@ listing:
 <section class="hero">
   <span class="eyebrow">Centre for Genomic Regulation · Barcelona</span>
   <h1>We build <em>generative</em> models of life&rsquo;s data.</h1>
-  <div class="seq" aria-hidden="true"><span>M K T A Y I A K Q R Q I S F V K S H F S R Q L E E R L G L I E V </span><b>P</b><span> A P I L S R V G D G T Q D N L S G A E K A V Q V K V K A L P D A</span></div>
   <p>We combine deep learning and Bayesian statistics to model biological data, from protein sequences to single cells and whole populations. Our work is built for immediate use in rare-disease diagnosis, therapeutic discovery and conservation genomics, and we develop the theory and architectures that will enable the next generation of models.</p>
 </section>
+<script src="assets/hero.js" defer></script>
 ```
 
 ::: {.section-head}
