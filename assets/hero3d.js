@@ -1,8 +1,8 @@
 // EXPERIMENT: 3D version of the home-page hero animation (assets/hero.js is the 2D original).
 // Same tiny diffusion model, but every shape is a 3D point cloud with many more points, and the
 // scene turns slowly in perspective, so depth reads from size, brightness and parallax.
-// Shapes: double helix (spinning on its axis), a branching 3D tree, the vaquita, a 3D single-cell
-// atlas and the black rhino. The animals are "inflated" from their 2D silhouettes: each point inside
+// Shapes: double helix (spinning on its axis), a branching 3D tree, the vaquita, a cell (membrane,
+// nucleus, mitochondria, ER) and the black rhino. The animals are "inflated" from their 2D silhouettes: each point inside
 // the outline gets the height of the union of the largest discs that fit inside the shape, which
 // turns legs into thin limbs and the body into a rounded barrel.
 (function () {
@@ -81,19 +81,34 @@
     return { pts: fill(pts, () => { const t = tips[Math.floor(rnd() * tips.length)]; return [t[0] + 0.008 * gauss(), t[1] + 0.008 * gauss(), t[2] + 0.008 * gauss()]; }) };
   }
 
-  // ---------- single-cell atlas: anisotropic 3D clusters, two joined by a trajectory ----------
-  function clusters() {
-    const C = [
-      [0.16, 0.38, -0.08, 0.07, 0.05, 0.06], [0.40, 0.70, 0.10, 0.06, 0.07, 0.05], [0.62, 0.34, 0.05, 0.08, 0.05, 0.07],
-      [0.86, 0.60, -0.06, 0.05, 0.07, 0.05], [0.80, 0.22, 0.12, 0.04, 0.04, 0.04],
-    ];
+  // ---------- a eukaryotic cell: membrane, nucleus, nucleolus, mitochondria, ER ----------
+  function cell() {
     const pts = [];
-    const nTraj = Math.floor(N * 0.12);
-    for (let k = 0; k < nTraj; k++) {
-      const u = k / (nTraj - 1);
-      pts.push([0.16 + 0.46 * u + 0.012 * gauss(), 0.38 - 0.14 * Math.sin(Math.PI * u) + 0.012 * gauss(), -0.08 + 0.13 * u + 0.05 * Math.sin(Math.PI * u) + 0.012 * gauss()]);
+    const sph = () => { const z = 2 * rnd() - 1, a = rnd() * TAU, r = Math.sqrt(1 - z * z); return [r * Math.cos(a), r * Math.sin(a), z]; };
+    const nMem = Math.floor(N * 0.34), nNuc = Math.floor(N * 0.2), nNo = Math.floor(N * 0.06), nMito = Math.floor(N * 0.2), nER = Math.floor(N * 0.2);
+    // a 4th coordinate marks how a point is drawn: 0 = faint membrane, 1 = bright organelle
+    for (let k = 0; k < nMem; k++) {                 // wavy oblate membrane: a crisp rim seen face-on, plus a faint shell
+      const rim = k % 2 === 0;
+      let [u, v, w] = sph();
+      if (rim) { const a = (k / nMem) * TAU; u = Math.cos(a); v = Math.sin(a); w = 0.04 * gauss(); }
+      const a = Math.atan2(v, u), wob = 1 + 0.05 * Math.sin(3 * a) + 0.03 * Math.sin(5 * a + 1) + 0.03 * Math.sin(4 * w);
+      pts.push([0.5 + 0.42 * wob * u, 0.5 + 0.27 * wob * v, 0.24 * wob * w, rim ? 0.85 : 0]);
     }
-    return { pts: fill(pts, () => { const c = C[Math.floor(rnd() * C.length)]; return [c[0] + gauss() * c[3], c[1] + gauss() * c[4], c[2] + gauss() * c[5]]; }) };
+    for (let k = 0; k < nNuc; k++) { const [u, v, w] = sph(); pts.push([0.42 + 0.13 * u, 0.5 + 0.11 * v, 0.02 + 0.11 * w, 1]); }
+    for (let k = 0; k < nNo; k++) pts.push([0.45 + 0.022 * gauss(), 0.48 + 0.02 * gauss(), 0.05 + 0.02 * gauss(), 1]);
+    const mitos = [[0.71, 0.37, 0.08, 0.4, 0.3], [0.74, 0.62, -0.06, -0.3, -0.4], [0.24, 0.67, 0.05, 0.2, 0.6], [0.62, 0.5, 0.15, 1.2, 0.1]];
+    for (let k = 0; k < nMito; k++) {                // capsules: points on a stretched sphere, rotated
+      const [cx, cy, cz, r1, r2] = mitos[k % mitos.length], [u, v, w] = sph();
+      let x = 0.065 * u, y = 0.024 * v, z = 0.024 * w;
+      const x1 = x * Math.cos(r1) - y * Math.sin(r1), y1 = x * Math.sin(r1) + y * Math.cos(r1);
+      const x2 = x1 * Math.cos(r2) - z * Math.sin(r2), z2 = x1 * Math.sin(r2) + z * Math.cos(r2);
+      pts.push([cx + x2, cy + y1, cz + z2, 1]);
+    }
+    for (let k = 0; k < nER; k++) {                  // ER: folded shells around one side of the nucleus
+      const R = k % 2 ? 0.175 : 0.205, a = -1.1 + 2.2 * rnd(), b = -0.9 + 1.8 * rnd(), f = R * (1 + 0.06 * Math.sin(9 * a + 4 * b));
+      pts.push([0.42 + f * Math.cos(a) * Math.cos(b) * 1.15, 0.5 + f * Math.sin(a) * 0.95, 0.02 + f * Math.cos(a) * Math.sin(b), 1]);
+    }
+    return { pts: fill(pts, () => { const [u, v, w] = sph(); return [0.42 + 0.13 * u, 0.5 + 0.11 * v, 0.02 + 0.11 * w, 1]; }), animal: true };
   }
 
   // ---------- animals: inflate a 2D silhouette into a 3D surface ----------
@@ -199,7 +214,7 @@
     [0.315, 0.578], [0.245, 0.552], [0.16, 0.545], [0.095, 0.53], [0.058, 0.522],
   ], { thick: 0.9 });
 
-  const shapes = [helix(), tree(), vaquita, clusters(), rhino];
+  const shapes = [helix(), tree(), vaquita, cell(), rhino];
   // Shuffle which point goes where in each shape, so points travel when the shape changes.
   shapes.forEach((s) => {
     for (let i = N - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [s.pts[i], s.pts[j]] = [s.pts[j], s.pts[i]]; }
@@ -289,9 +304,11 @@
     for (const i of order) {
       const [x, y, d] = P[i];
       const f = behindText(x, y) ? (narrow ? 0.5 : 0.12) : 1;
-      ctx.globalAlpha = base * (0.18 + 0.72 * d) * f;
-      ctx.fillStyle = d > 0.5 ? accent : muted;
-      const r = 0.55 + 1.35 * d;
+      const e = shape.pts[i][3];                       // emphasis (cell only): fades in as the shape forms
+      const em = e === undefined ? 0.5 : 0.5 + (e - 0.5) * a;
+      ctx.globalAlpha = base * (0.18 + 0.72 * d) * f * (e === undefined ? 1 : 0.45 + 0.9 * em);
+      ctx.fillStyle = d > 0.5 || em > 0.75 ? accent : muted;
+      const r = (0.55 + 1.35 * d) * (e === undefined ? 1 : 0.75 + 0.5 * em);
       ctx.beginPath(); ctx.arc(x, y, r, 0, TAU); ctx.fill();
     }
     ctx.globalAlpha = 1;

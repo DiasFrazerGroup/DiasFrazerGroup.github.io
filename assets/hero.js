@@ -1,6 +1,6 @@
 // Home-page hero animation: a tiny diffusion model.
 // Points start as Gaussian noise, "denoise" into a structure (double helix -> phylogenetic tree ->
-// single-cell clusters), hold, then diffuse back to noise and form the next one.
+// a cell, endangered animals), hold, then diffuse back to noise and form the next one.
 // Each point's noise drifts as an Ornstein-Uhlenbeck process, so the noise cloud itself moves gently.
 // Respects prefers-reduced-motion (draws one still frame) and pauses when off-screen or in a hidden tab.
 (function () {
@@ -89,24 +89,34 @@
     return { pts, edges, leaves };
   }
 
-  function clusters() {
-    // Single-cell-atlas-like embedding: a few anisotropic clusters, two joined by a trajectory.
-    const C = [
-      [0.18, 0.32, 0.07, 0.05, 0.4], [0.40, 0.72, 0.06, 0.08, -0.3], [0.62, 0.30, 0.08, 0.05, 0.9],
-      [0.85, 0.62, 0.05, 0.07, 0.2], [0.80, 0.18, 0.04, 0.04, 0.0],
-    ];
-    const pts = [];
-    const nTraj = Math.floor(N * 0.14);
-    for (let k = 0; k < nTraj; k++) {               // a differentiation trajectory from cluster 0 to 2
-      const u = k / (nTraj - 1);
-      pts.push([0.18 + 0.44 * u + 0.012 * gauss(), 0.32 - 0.12 * Math.sin(Math.PI * u) + 0.012 * gauss(), 0.5]);
+  // A eukaryotic cell: wavy membrane, nucleus with nucleolus, mitochondria and endoplasmic reticulum.
+  function cell() {
+    const pts = [], edges = [];
+    function loop(n, f, z) {                          // closed outline of n points
+      const s0 = pts.length;
+      for (let k = 0; k < n; k++) { const [x, y] = f((k / n) * TAU); pts.push([x, y, z]); if (k > 0) edges.push([pts.length - 2, pts.length - 1]); }
+      edges.push([pts.length - 1, s0]);
     }
-    while (pts.length < N) {
-      const c = C[Math.floor(rnd() * C.length)];
-      const gx = gauss() * c[2], gy = gauss() * c[3], r = c[4];
-      pts.push([c[0] + gx * Math.cos(r) - gy * Math.sin(r), c[1] + gx * Math.sin(r) + gy * Math.cos(r), 0.5]);
+    loop(64, (a) => { const w = 1 + 0.05 * Math.sin(3 * a) + 0.03 * Math.sin(5 * a + 1); return [0.5 + 0.42 * w * Math.cos(a), 0.5 + 0.27 * w * Math.sin(a)]; }, 0.85);
+    loop(32, (a) => [0.42 + 0.13 * Math.cos(a), 0.5 + 0.11 * Math.sin(a)], 1);
+    for (let k = 0; k < 10; k++) pts.push([0.45 + 0.025 * gauss(), 0.48 + 0.02 * gauss(), 1]);   // nucleolus
+    for (const [mx, my, r] of [[0.71, 0.37, 0.4], [0.74, 0.62, -0.3], [0.24, 0.67, 0.2]]) {         // mitochondria
+      loop(12, (a) => { const x = 0.065 * Math.cos(a), y = 0.026 * Math.sin(a); return [mx + x * Math.cos(r) - y * Math.sin(r), my + x * Math.sin(r) + y * Math.cos(r)]; }, 0.7);
     }
-    return { pts, edges: [] };
+    for (const R of [0.175, 0.205]) {                 // ER: two wavy arcs hugging the nucleus
+      const s0 = pts.length;
+      for (let k = 0; k < 18; k++) {
+        const a = -1.1 + (2.2 * k) / 17, w = R * (1 + 0.06 * Math.sin(9 * a));
+        pts.push([0.42 + w * Math.cos(a) * 1.15, 0.5 + w * Math.sin(a) * 0.95, 0.5]);
+        if (k > 0) edges.push([pts.length - 2, pts.length - 1]);
+      }
+    }
+    while (pts.length < N) {                          // a little cytoplasm
+      const a = rnd() * TAU, r = Math.sqrt(rnd()) * 0.9;
+      const x = 0.5 + 0.4 * r * Math.cos(a), y = 0.5 + 0.25 * r * Math.sin(a);
+      if (Math.hypot((x - 0.42) / 0.15, (y - 0.5) / 0.13) > 1) pts.push([x, y, 0.3]);
+    }
+    return { pts, edges, keepAspect: true };
   }
 
   // Animal silhouettes: points along the outline (with edges) plus a light fill. Coordinates are in
@@ -201,7 +211,7 @@
 
   const H_ = helix(); H_.label = "DNA";
   const T_ = tree(); T_.label = "Phylogeny";
-  const C_ = clusters(); C_.label = "Single-cell atlas";
+  const C_ = cell(); C_.label = "Cell";
   const shapes = [H_, T_, vaquita, C_, rhino];
   // Shuffle which point goes where in each shape, so points travel when the shape changes.
   shapes.forEach((s) => {
