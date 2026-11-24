@@ -24,6 +24,7 @@ listing:
   <span class="eyebrow">Centre for Genomic Regulation · Barcelona</span>
   <h1>We build <em>generative</em> models of life&rsquo;s data.</h1>
   <p>We combine deep learning and Bayesian statistics to model biological data, from protein sequences to single cells and whole populations. Our work is built for immediate use in rare-disease diagnosis, therapeutic discovery and conservation genomics, and we develop the theory and architectures that will enable the next generation of models.</p>
+  <a class="hiring" href="join.html#positions"><span class="dot"></span>We're hiring three postdocs: virtual cells, conservation genomics and rare disease diagnosis <span class="arr">&rarr;</span></a>
 </section>
 <script src="assets/hero.js" defer></script>
 ```

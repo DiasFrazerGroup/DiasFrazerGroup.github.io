@@ -216,7 +216,7 @@
     const h1 = hero.querySelector("h1");
     textRight = h1 ? h1.getBoundingClientRect().right - r.left : W * 0.5;
     // text blocks the animation should sit quietly behind
-    textRects = [...hero.querySelectorAll("h1, p, .eyebrow")].map((el) => {
+    textRects = [...hero.querySelectorAll("h1, p, .eyebrow, .hiring")].map((el) => {
       const b = el.getBoundingClientRect();
       return [b.left - r.left - 14, b.top - r.top - 10, b.right - r.left + 14, b.bottom - r.top + 10];
     });

@@ -1,6 +1,6 @@
 ---
 title: Join us
-description: "We are building a team and hiring at all levels."
+description: "We are hiring three postdocs."
 ---
 
 We are a computational group at the [Centre for Genomic Regulation](https://www.crg.eu) in Barcelona, one of Europe's leading research institutes in the life sciences, on the seafront campus of the Barcelona Biomedical Research Park.
@@ -9,22 +9,57 @@ People join us from physics, statistics, computer science and biology. What they
 
 To get a feel for how we think about models, have a look at our [open course materials](teaching.qmd) on probabilistic and generative modelling.
 
-## Open positions
+## Open postdoc positions {#positions}
+
+We have three postdoctoral positions open, one in each of our applied themes. All three involve building new generative and probabilistic models, so strong quantitative skills matter more than a background in the specific biology.
 
 ::: placeholder
-List current openings with a deadline and a link, or remove this box. CRG vacancies are advertised on the CRG careers pages.
+For each role, add the start date, contract length, closing date and the link to the official CRG vacancy.
 :::
 
-## PhD students
+::: {.tool}
+### Virtual cell modelling
+[Postdoc · Cell models for therapy]{.what}
 
-CRG recruits PhD students through its international PhD programme, with calls usually opening once a year. If you are interested in working with us, write to us before applying so we can talk about possible projects.
+Develop models that learn from large perturbation screens and single-cell data, and generalise to perturbations and cell types that have not been measured, with honest estimates of uncertainty. The aim is to search for therapeutic interventions computationally before they are tested in the lab. [Read about this theme →](research.qmd#cell-models)
 
-## Postdocs
+::: {.link-row}
+[Apply]{.na}
+:::
+:::
 
-We welcome enquiries from postdocs interested in applying for fellowships (for example Marie Skłodowska-Curie, EMBO or La Caixa Junior Leader) to join the group. Get in touch well before the deadline.
+::: {.tool}
+### Conservation genomics and biodiversity
+[Postdoc · Genetic health beyond humans]{.what}
+
+Bring variant effect prediction to the rest of the tree of life. Score genetic variation across species, find likely harmful variants in small and endangered populations, and turn the results into tools that help conservation programmes and breeders manage genetic health. [Read about this theme →](research.qmd#genetic-health)
+
+::: {.link-row}
+[Apply]{.na}
+:::
+:::
+
+::: {.tool}
+### Rare disease diagnosis
+[Postdoc · Rare and common disease]{.what}
+
+Build on EVE and popEVE to make genetic diagnosis more accurate: model both copies of every gene, score whole genotypes rather than single variants, and work with clinical sequencing cohorts to find causes of disease that current methods miss. [Read about this theme →](research.qmd#disease)
+
+::: {.link-row}
+[Apply]{.na}
+:::
+:::
+
+## PhD and master's students
+
+We are not taking new PhD or master's students at the moment. This page will be updated when that changes.
+
+## Fellowships
+
+We are also happy to support strong candidates applying for postdoctoral fellowships (for example Marie Skłodowska-Curie, EMBO or "la Caixa") to join the group. Get in touch well before the deadline.
 
 ::: {.callout-join}
 ### Get in touch
 
-Email [Mafalda Dias](mailto:mafalda.dias@crg.eu) and [Jonathan Frazer](mailto:jonathan.frazer@crg.eu) with a CV and a few lines about what you would like to work on.
+For any of the positions, email [Mafalda Dias](mailto:mafalda.dias@crg.eu) and [Jonathan Frazer](mailto:jonathan.frazer@crg.eu) with a CV and a few lines on which role interests you and why.
 :::

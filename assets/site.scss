@@ -421,3 +421,23 @@ body { overflow-x: hidden; }
 .tool table { font-size: 0.9rem; margin: 1rem 0; }
 .tool table th { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 500; border-bottom-color: var(--rule); }
 .tool table td { border-color: var(--rule); vertical-align: top; }
+
+// ---------- Hiring link (home hero) ----------
+.hero a.hiring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  border-radius: 99px;
+  background: var(--paper);
+  transition: border-color 0.15s, color 0.15s;
+}
+.hero a.hiring:hover { border-color: var(--accent); color: var(--accent); }
+.hero a.hiring .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); flex: none; }
+.hero a.hiring .arr { color: var(--accent); }
