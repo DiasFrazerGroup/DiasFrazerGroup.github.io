@@ -26,7 +26,10 @@ listing:
   <p>We combine deep learning and Bayesian statistics to model biological data, from protein sequences to single cells and whole populations. Our work is built for immediate use in rare-disease diagnosis, therapeutic discovery and conservation genomics, and we develop the theory and architectures that will enable the next generation of models.</p>
   <a class="hiring" href="join.html#positions"><span class="dot"></span>We're hiring three postdocs: virtual cells, conservation genomics and rare disease diagnosis <span class="arr">&rarr;</span></a>
 </section>
-<script src="assets/hero.js" defer></script>
+<script>
+  // Experiment: add ?hero=3d to the address to try the 3D animation (assets/hero3d.js).
+  (function () { var s = document.createElement("script"); s.src = /[?&]hero=3d/.test(location.search) ? "assets/hero3d.js" : "assets/hero.js"; document.currentScript.after(s); })();
+</script>
 ```
 
 ::: {.section-head}

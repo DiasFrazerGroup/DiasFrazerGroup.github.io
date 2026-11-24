@@ -5,6 +5,7 @@ project:
     - CNAME
     - assets/img/**
     - assets/hero.js
+    - assets/hero3d.js
 
 website:
   title: "Dias & Frazer Group"

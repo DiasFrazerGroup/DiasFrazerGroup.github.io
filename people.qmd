@@ -9,9 +9,11 @@ listing:
   fields: [name, group, role, photo, bio, website, scholar, orcid, github, bluesky, x, linkedin, email]
 ---
 
+![](assets/img/people/dias-frazer.jpg){.duo fig-alt="Mafalda Dias and Jonathan Frazer on a balcony at the CRG building in Barcelona"}
+
 ::: {#people}
 :::
 
 ::: placeholder
-Photos still needed for Mafalda, Jonny, Ezequiel, Paulina and Samantha. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
+Photos still needed for Paulina and Samantha. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
 :::

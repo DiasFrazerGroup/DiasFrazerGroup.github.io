@@ -445,3 +445,6 @@ body { overflow-x: hidden; }
 .hero a.hiring:hover { border-color: var(--accent); color: var(--accent); }
 .hero a.hiring .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); flex: none; }
 .hero a.hiring .arr { color: var(--accent); }
+
+// ---------- People: photo of the group leaders ----------
+.duo { width: 100%; border-radius: 3px; margin: 0.5rem 0 1rem; }

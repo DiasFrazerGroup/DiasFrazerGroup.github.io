@@ -7,7 +7,7 @@
 - name: Mafalda Dias
   group: Group leaders
   role: Group Leader
-  photo: ""
+  photo: assets/img/people/mafalda-dias.jpg
   bio: "Mafalda trained in theoretical physics (PhD, University of Sussex) and worked at DESY and Harvard Medical School before co-founding the group at CRG in 2022."
   orcid: https://orcid.org/0000-0002-1804-8542
   email: mafalda.dias@crg.eu
@@ -15,7 +15,7 @@
 - name: Jonathan Frazer
   group: Group leaders
   role: Group Leader
-  photo: ""
+  photo: assets/img/people/jonathan-frazer.jpg
   bio: "Jonny trained in theoretical physics (PhD, University of Sussex) and worked at UCL, the University of the Basque Country, DESY and Harvard Medical School before co-founding the group at CRG in 2022."
   orcid: https://orcid.org/0000-0001-6900-6484
   email: jonathan.frazer@crg.eu
@@ -23,6 +23,7 @@
 - name: Ezequiel Alejandro Galpern
   group: Postdoctoral researchers
   role: Postdoc
+  photo: assets/img/people/ezequiel-galpern.jpg
 
 - name: Miquel Anglada Girotto
   group: Postdoctoral researchers
