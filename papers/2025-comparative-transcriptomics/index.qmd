@@ -1,0 +1,28 @@
+---
+title: "Evolution of comparative transcriptomics: biological scales, phylogenetic spans, and modeling frameworks"
+date: 2025-10-01
+status: published
+venue: "Current Opinion in Genetics & Development · Review"
+summary: "PLACEHOLDER: two plain-language sentences on this review of how gene expression is compared across species, and the modelling frameworks that make it possible."
+image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure
+paper: https://doi.org/10.1016/j.gde.2025.102387
+code: ""
+data: ""
+outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
+---
+
+{{< paper-links >}}
+
+**Authors:** Matteo Zambon, Federica Mantica, Mafalda Dias, Jonathan Frazer & Manuel Irimia
+
+::: placeholder
+No abstract was available to draft from. The lead author should add a TL;DR and a short plain-language summary.
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Zambon M, Mantica F, Dias M, Frazer J, Irimia M. Evolution of comparative transcriptomics: biological scales, phylogenetic spans, and modeling frameworks. *Current Opinion in Genetics & Development* **94**, 102387 (2025). [doi:10.1016/j.gde.2025.102387](https://doi.org/10.1016/j.gde.2025.102387)

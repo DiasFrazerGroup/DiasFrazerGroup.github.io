@@ -1,0 +1,9 @@
+---
+# Copy to news/YYYY-MM-short-name/index.qmd. One post per paper launch, plus anything else worth telling.
+title: "Headline in sentence case"
+date: 2026-01-31
+categories: [Preprint]       # Preprint | Paper | Award | Talk | People | Software
+description: "One sentence that appears in the news list."
+---
+
+Two or three short paragraphs. Link the paper page (`../../papers/YYYY-short-name/`) and the lead author's thread.

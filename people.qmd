@@ -1,0 +1,17 @@
+---
+title: People
+description: "Physicists, statisticians, computer scientists and biologists working on one question: what does a genetic variant do?"
+listing:
+  id: people
+  contents: data/people.yml
+  template: assets/templates/people.ejs
+  sort: false
+  fields: [name, group, role, photo, bio, website, scholar, orcid, github, bluesky, x, linkedin, email]
+---
+
+::: {#people}
+:::
+
+::: placeholder
+Photos for everyone, and bios and personal links for each member. Members add their own entry in `data/people.yml` (see README).
+:::

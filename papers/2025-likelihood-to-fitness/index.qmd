@@ -1,0 +1,53 @@
+---
+title: "From likelihood to fitness: improving variant effect prediction in protein and genome language models"
+date: 2025-12-01        # NeurIPS 2025 (December). Preprint posted 24 May 2025.
+status: published
+venue: "NeurIPS 2025"
+summary: "Large sequence models are used to predict which mutations are harmful, but the biggest models often do worse, because they also learn the family tree of the sequences they were trained on. A simple averaging trick removes this bias, and with it the largest models become the most accurate."
+image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure
+paper: https://doi.org/10.52202/085713-4359
+preprint: https://doi.org/10.1101/2025.05.20.655154
+code: https://github.com/DiasFrazerGroup/lfb
+data: ""
+outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
+---
+
+::: {.tldr}
+Likelihood-Fitness Bridging: a simple fix that makes large protein and genome language models better at predicting variant effects, with no retraining.
+:::
+
+<!-- Claim checked in OpenAlex (24 Nov 2026): the only NeurIPS paper with CRG-affiliated authors, and all four authors are at CRG.
+     Confirm with CRG Communications before launch. Do not say "first from Spain" unless verified. -->
+::: {.milestone}
+Presented at NeurIPS 2025, the leading machine-learning conference. To our knowledge, the first NeurIPS paper led by a CRG research group.
+:::
+
+{{< paper-links >}}
+
+**Authors:** Charles W. J. Pugh, Paulina G. Nuñez-Valencia, Mafalda Dias & Jonathan Frazer
+
+::: placeholder
+Draft summary written from the abstract. The lead author should revise it before launch.
+:::
+
+## In plain language
+
+Language models trained on natural protein or DNA sequences are widely used to predict whether a mutation is harmful. The idea is that a sequence the model finds likely is one evolution would allow. That assumption often breaks down: how likely a sequence looks also reflects which species happened to be sequenced and how they are related, not only what natural selection permits. The problem grows as models get bigger, which is one reason larger protein language models have stopped improving at this task.
+
+We introduce Likelihood-Fitness Bridging (LFB). Instead of scoring a mutation in one sequence, LFB averages the model's score across related sequences that face similar selective pressures. Under a standard model of evolution this cancels out the effects of random genetic drift. LFB works with existing protein and genome language models, needs no retraining, and adds little computation.
+
+Across large experimental datasets and clinical benchmarks, LFB consistently improves predictions for every model family and size we tested. It also reverses the performance plateau: with LFB, the largest protein language models become the most accurate.
+
+## Key figure
+
+::: {.key-figure}
+![PLACEHOLDER: key figure with a one-sentence caption.](../../assets/img/papers/placeholder-figure.svg)
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Pugh CWJ, Nuñez-Valencia PG, Dias M, Frazer J. From likelihood to fitness: improving variant effect prediction in protein and genome language models. *Advances in Neural Information Processing Systems 38* (NeurIPS 2025), 145043–145074. [doi:10.52202/085713-4359](https://doi.org/10.52202/085713-4359)

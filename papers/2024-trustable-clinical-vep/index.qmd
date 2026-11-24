@@ -1,0 +1,28 @@
+---
+title: "Toward trustable use of machine learning models of variant effects in the clinic"
+date: 2024-12-01
+status: published
+venue: "American Journal of Human Genetics · Perspective"
+summary: "PLACEHOLDER: two plain-language sentences on what it takes for clinicians to trust machine-learning predictions of variant effects."
+image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure
+paper: https://doi.org/10.1016/j.ajhg.2024.10.011
+code: ""
+data: ""
+outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
+---
+
+{{< paper-links >}}
+
+**Authors:** Mafalda Dias, Rose Orenbuch, Debora S. Marks & Jonathan Frazer
+
+::: placeholder
+No abstract was available to draft from. Add a TL;DR and a short plain-language summary.
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Dias M, Orenbuch R, Marks DS, Frazer J. Toward trustable use of machine learning models of variant effects in the clinic. *American Journal of Human Genetics* **111**, 2589–2593 (2024). [doi:10.1016/j.ajhg.2024.10.011](https://doi.org/10.1016/j.ajhg.2024.10.011)

@@ -1,0 +1,61 @@
+# One entry per person. `group` must be one of:
+#   Group leaders | Postdoctoral researchers | PhD students | Research staff | Visitors & students | Alumni
+# `photo`: put a square-ish JPG (~800px) in assets/img/people/ and reference it as below. Leave empty for an initials tile.
+# Links (all optional): website, scholar, orcid, github, bluesky, x, linkedin, email
+# PLACEHOLDER: all member bios and personal links below need filling in by each person (via pull request).
+
+- name: Mafalda Dias
+  group: Group leaders
+  role: Group Leader
+  photo: ""
+  bio: "Mafalda trained in theoretical physics (PhD, University of Sussex) and worked at DESY and Harvard Medical School before co-founding the group at CRG in 2022."
+  orcid: https://orcid.org/0000-0002-1804-8542
+  email: mafalda.dias@crg.eu
+
+- name: Jonathan Frazer
+  group: Group leaders
+  role: Group Leader
+  photo: ""
+  bio: "Jonny trained in theoretical physics (PhD, University of Sussex) and worked at UCL, the University of the Basque Country, DESY and Harvard Medical School before co-founding the group at CRG in 2022."
+  orcid: https://orcid.org/0000-0001-6900-6484
+  email: jonathan.frazer@crg.eu
+
+- name: Ezequiel Alejandro Galpern
+  group: Postdoctoral researchers
+  role: Postdoc
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+
+- name: Miquel Anglada Girotto
+  group: Postdoctoral researchers
+  role: Postdoc
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+
+- name: Charles Pugh
+  group: PhD students
+  role: PhD student
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+
+- name: Federico Billeci
+  group: PhD students
+  role: PhD student
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+
+- name: Matteo Zambon
+  group: PhD students
+  role: PhD student
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+
+- name: Paulina Nuñez Valencia
+  group: PhD students
+  role: PhD student
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+
+- name: Samantha Bening
+  group: PhD students
+  role: PhD student
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"
+
+- name: Xavier Soler Sanchis
+  group: PhD students
+  role: PhD student
+  bio: "<span class='placeholder'>one or two lines on research focus</span>"

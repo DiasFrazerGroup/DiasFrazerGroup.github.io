@@ -1,0 +1,46 @@
+---
+title: "Blending physics-based and inverse folding models to disentangle variant effects on stability and function"
+date: 2026-08-04
+status: preprint
+venue: "bioRxiv"
+summary: "A mutation can break a protein by making it unstable, or by disrupting what it does while leaving its shape intact. Combining physics with machine learning, we separate the two for every possible mutation, and find that cancer-driving mutations in oncogenes mostly leave proteins stable but disrupt their function."
+image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure
+paper: https://doi.org/10.64898/2026.07.30.741764
+code: https://github.com/DiasFrazerGroup/blend_and_disentangle
+data: ""          # PLACEHOLDER
+outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
+---
+
+::: {.tldr}
+Separating how a mutation affects a protein's stability from how it affects its function, at proteome scale and without labelled data.
+:::
+
+{{< paper-links >}}
+
+**Authors:** Ezequiel A. Galpern, Xavier Soler Sanchis, Charles W. J. Pugh, Federico Billeci, Jonathan Frazer & Mafalda Dias
+
+::: placeholder
+Draft summary written from the abstract. The lead author should revise it before launch.
+:::
+
+## In plain language
+
+Proteins have to do two things: fold into a stable shape, and then carry out a job, such as binding a partner or catalysing a reaction. A mutation can damage either. Most prediction tools return a single number for how harmful a mutation is, which hides *why* it is harmful, even though that difference matters for understanding disease and for designing proteins.
+
+Inverse-folding models, which learn which sequences fit a given 3D structure, are fast predictors of how mutations change stability. But because they learn from natural sequences, they can mistake a residue that is conserved for functional reasons for one that is needed for stability. We show that blending these models with a simple physics-based energy model gives better stability predictions and removes much of this bias at functional sites.
+
+Combining the blended stability model with an evolutionary language model, we split the evolutionary cost of each mutation into a stability part and a "dark energy" part, which captures functional constraints beyond folding. Without any training labels, this separates gain-of-function from loss-of-function disease mutations. Cancer-driving mutations in oncogenes tend to keep the protein stable while scoring high on dark energy, whereas mutations in tumour suppressors mostly destabilise the protein.
+
+## Key figure
+
+::: {.key-figure}
+![PLACEHOLDER: key figure with a one-sentence caption.](../../assets/img/papers/placeholder-figure.svg)
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Galpern EA, Soler Sanchis X, Pugh CWJ, Billeci F, Frazer J, Dias M. Blending physics-based and inverse folding models to disentangle variant effects on stability and function. *bioRxiv* (2026). [doi:10.64898/2026.07.30.741764](https://doi.org/10.64898/2026.07.30.741764)

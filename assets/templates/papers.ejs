@@ -1,0 +1,35 @@
+```{=html}
+<%
+const platforms = [[/bsky\.app/, "Bluesky"], [/(^|\/\/|\.)x\.com/, "X"], [/twitter\.com/, "X"], [/linkedin\.com/, "LinkedIn"], [/mastodon/, "Mastodon"], [/youtube\.com|youtu\.be/, "Video"]];
+const cov = (item) => (item.outreach || []).filter(c => c && c.url).map(c => {
+  const p = (platforms.find(([re]) => re.test(c.url)) || [null, null])[1];
+  const kind = c.kind || (p === "Video" ? "talk" : p ? "thread" : "press");
+  const label = c.label || (kind === "thread" ? (p || "Social") + " thread" : kind === "talk" ? "Talk" : c.url.replace(/^\w+:\/\/(www\.)?/, "").split("/")[0]);
+  return { url: c.url, kind, label };
+});
+%>
+<div class="paper-list">
+<% for (const item of items) { const c = cov(item); const threads = c.filter(x => x.kind === "thread"); const press = c.filter(x => x.kind !== "thread"); %>
+  <article class="paper-card" <%= metadataAttrs(item) %>>
+    <a class="paper-fig" href="<%- item.path %>"><% if (item.image) { %><img src="<%- item.image %>" alt="Key figure: <%= item.title %>"><% } %></a>
+    <div>
+      <div class="paper-meta">
+        <span class="badge-status <%= item.status %>"><%= item.status %></span>
+        <% if (item.venue) { %><span><%= item.venue %></span><% } %>
+        <span><%= item.date %></span>
+      </div>
+      <h3><a href="<%- item.path %>"><%= item.title %></a></h3>
+      <% if (item.summary) { %><p class="summary"><%= item.summary %></p><% } %>
+      <div class="link-row">
+        <a class="internal" href="<%- item.path %>">Summary</a>
+        <% if (item.paper) { %><a href="<%- item.paper %>"><%= item.status === "preprint" ? "Preprint" : "Paper" %></a><% } %>
+        <% if (item.code) { %><a href="<%- item.code %>">Code</a><% } %>
+        <% if (item.data) { %><a href="<%- item.data %>">Data</a><% } %>
+        <% for (const t of threads) { %><a href="<%- t.url %>"><%= t.label %></a><% } %>
+        <% if (press.length) { %><a class="internal press" href="<%- item.path %>#threads-press"><%= press.length %> press &amp; talks</a><% } %>
+      </div>
+    </div>
+  </article>
+<% } %>
+</div>
+```

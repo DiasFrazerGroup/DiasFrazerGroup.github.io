@@ -1,0 +1,46 @@
+---
+# Copy this folder to papers/YYYY-short-name/ and fill in. Folders starting with "_" are not published.
+title: "Full paper title"
+date: 2026-01-31
+status: preprint            # preprint | published
+venue: "bioRxiv"
+summary: "Two sentences for a non-specialist: what question, what we found, why it matters."
+image: figure.png           # put the key figure in this folder
+paper: https://doi.org/...
+code: https://github.com/...
+data: https://zenodo.org/...
+outreach:                     # threads, press and talks; delete the examples you don't use
+  - url: https://bsky.app/profile/your.handle/post/abc123     # kind and label are detected from the URL
+  - url: https://www.linkedin.com/posts/...                    # -> "LinkedIn thread"
+  - url: https://www.eurekalert.org/news-releases/...
+    kind: press                                                 # thread | press | talk
+    label: "CRG press release: headline"
+  - url: https://www.youtube.com/watch?v=...                   # -> "Talk"
+    label: "Seminar at ... (2026)"
+---
+
+::: {.tldr}
+One sentence that you would say to a friend.
+:::
+
+{{< paper-links >}}
+
+**Authors:** ...
+
+## In plain language
+
+Three short paragraphs: the problem, what we did, what it means. No jargon you would not use with a family member.
+
+## Key figure
+
+::: {.key-figure}
+![One-sentence caption.](figure.png)
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+...

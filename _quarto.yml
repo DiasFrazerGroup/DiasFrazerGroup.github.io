@@ -1,0 +1,55 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - CNAME
+    - assets/img/**
+
+website:
+  title: "Dias & Frazer Group"
+  description: "We build generative models of life's data. Dias & Frazer Group, Centre for Genomic Regulation (CRG), Barcelona."
+  site-url: "https://diasfrazergroup.github.io"   # change if a custom domain is added
+  favicon: assets/img/favicon.svg
+  page-navigation: false
+  open-graph: true   # PLACEHOLDER: add a 1200x630 social card image (assets/img/og-card.png) and set image: here
+  twitter-card: true
+  navbar:
+    title: "Dias & Frazer"
+    logo: assets/img/mark.svg
+    logo-alt: "Dias & Frazer Group mark"
+    collapse-below: lg
+    right:
+      - text: Research
+        href: research.qmd
+      - text: Papers
+        href: papers.qmd
+      - text: People
+        href: people.qmd
+      - text: Tools & data
+        href: tools.qmd
+      - text: News
+        href: news.qmd
+      - text: Join us
+        href: join.qmd
+  page-footer:
+    left: |
+      **Dias & Frazer Group** · [Centre for Genomic Regulation (CRG)](https://www.crg.eu), Barcelona
+    right: |
+      [Official CRG group page](https://www.crg.eu/en/programmes-groups/dias-frazer-lab) · [GitHub](https://github.com/DiasFrazerGroup) · Built with [Quarto](https://quarto.org)
+
+language:
+  title-block-published: "Posted"
+
+format:
+  html:
+    theme:
+      dark: [default, assets/dark.scss, assets/site.scss]
+      light: [default, assets/light.scss, assets/site.scss]
+    respect-user-color-scheme: false   # dark is the default; the toggle switches to light
+    toc: false
+    smooth-scroll: true
+    anchor-sections: false
+    link-external-newwindow: false
+    title-block-banner: false
+    grid:
+      body-width: 760px

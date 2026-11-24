@@ -1,0 +1,80 @@
+---
+pagetitle: "Generative models of life's data"
+page-layout: article
+title-block-style: none
+listing:
+  - id: latest-news
+    contents: news/*/index.qmd
+    template: assets/templates/news.ejs
+    sort: "date desc"
+    max-items: 3
+    date-format: "D MMM YYYY"
+    fields: [title, date, description, categories, path]
+  - id: latest-papers
+    contents: papers/*/index.qmd
+    template: assets/templates/papers.ejs
+    sort: ["status", "date desc"]
+    max-items: 2
+    date-format: "MMM YYYY"
+    fields: [title, date, image, path, status, venue, summary, paper, code, data, outreach]
+---
+
+```{=html}
+<section class="hero">
+  <span class="eyebrow">Centre for Genomic Regulation · Barcelona</span>
+  <h1>We build <em>generative</em> models of life&rsquo;s data.</h1>
+  <div class="seq" aria-hidden="true"><span>M K T A Y I A K Q R Q I S F V K S H F S R Q L E E R L G L I E V </span><b>P</b><span> A P I L S R V G D G T Q D N L S G A E K A V Q V K V K A L P D A</span></div>
+  <p>We combine deep learning and Bayesian statistics to model biological data, from protein sequences to single cells and whole populations. Our work is built for immediate use in rare-disease diagnosis, therapeutic discovery and conservation genomics, and we develop the theory and architectures that will enable the next generation of models.</p>
+</section>
+```
+
+::: {.section-head}
+## Research
+[All research →](research.qmd)
+:::
+
+::: {.themes}
+::: {.theme}
+[01]{.num}
+
+### [Rare and common disease](research.qmd#disease)
+Models that reveal the genetic underpinnings of rare and common disease.
+:::
+
+::: {.theme}
+[02]{.num}
+
+### [Genetic health beyond humans](research.qmd#genetic-health)
+Monitoring and managing genetic health in critically endangered, domestic and model organisms.
+:::
+
+::: {.theme}
+[03]{.num}
+
+### [Cell models for therapy](research.qmd#cell-models)
+Cell-type-specific models for therapeutic discovery and cell replacement therapy.
+:::
+
+::: {.theme}
+[04]{.num}
+
+### [New ways to build models](research.qmd#methods)
+Novel model-building strategies and architectures for biological data.
+:::
+:::
+
+::: {.section-head}
+## Latest papers
+[All papers →](papers.qmd)
+:::
+
+::: {#latest-papers}
+:::
+
+::: {.section-head}
+## News
+[All news →](news.qmd)
+:::
+
+::: {#latest-news}
+:::

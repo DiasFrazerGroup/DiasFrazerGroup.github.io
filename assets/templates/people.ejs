@@ -1,0 +1,28 @@
+```{=html}
+<%
+const order = ["Group leaders", "Postdoctoral researchers", "PhD students", "Research staff", "Visitors & students", "Alumni"];
+const groups = {};
+for (const item of items) { const g = item.group || "Members"; (groups[g] = groups[g] || []).push(item); }
+const keys = order.filter(k => groups[k]).concat(Object.keys(groups).filter(k => !order.includes(k)));
+const initials = n => (n || "").split(/\s+/).filter(Boolean).map(w => w[0]).filter((c, i, a) => i === 0 || i === a.length - 1).join("");
+const linkNames = { website: "Website", scholar: "Scholar", orcid: "ORCID", github: "GitHub", bluesky: "Bluesky", x: "X", linkedin: "LinkedIn", email: "Email" };
+%>
+<% for (const g of keys) { %>
+<section class="people-group">
+  <h2><%= g %></h2>
+  <div class="people-grid <%= g === 'Group leaders' ? 'pis' : '' %>">
+  <% for (const p of groups[g]) { %>
+    <div class="person">
+      <div class="photo"><% if (p.photo) { %><img src="<%- p.photo %>" alt="<%= p.name %>"><% } else { %><span class="initials"><%= initials(p.name) %></span><% } %></div>
+      <h3><%= p.name %></h3>
+      <div class="role"><%= p.role %></div>
+      <% if (p.bio) { %><div class="bio"><%- p.bio %></div><% } %>
+      <div class="link-row">
+      <% for (const k of Object.keys(linkNames)) { if (p[k]) { %><a href="<%- k === 'email' ? 'mailto:' + p[k] : p[k] %>"><%= linkNames[k] %></a><% } } %>
+      </div>
+    </div>
+  <% } %>
+  </div>
+</section>
+<% } %>
+```

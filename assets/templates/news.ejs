@@ -1,0 +1,13 @@
+```{=html}
+<ul class="news-list">
+<% for (const item of items) { %>
+  <li class="news-item" <%= metadataAttrs(item) %>>
+    <div class="date"><%= item.date %></div>
+    <div>
+      <h3><a href="<%- item.path %>"><% if (item.categories && item.categories.length) { %><span class="tag"><%= item.categories[0] %></span><% } %><%= item.title %></a></h3>
+      <% if (item.description) { %><p><%= item.description %></p><% } %>
+    </div>
+  </li>
+<% } %>
+</ul>
+```

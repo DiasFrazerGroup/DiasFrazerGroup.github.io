@@ -1,0 +1,52 @@
+---
+title: "Proteome-wide model for human disease genetics"
+date: 2025-11-24
+status: published           # preprint | published
+venue: "Nature Genetics"
+summary: "popEVE combines evolution across species with human population data to score every possible missense variant on one scale, so that a score means the same thing in every gene. It finds likely causal variants in severe developmental disorders, even without the parents' DNA."
+image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure (check licence)
+paper: https://doi.org/10.1038/s41588-025-02400-1
+code: https://github.com/DiasFrazerGroup/popEVE
+data: https://pop.evemodel.org                        # PLACEHOLDER: check URL
+outreach:
+  - url: https://www.eurekalert.org/news-releases/1106854
+    kind: press
+    label: "CRG press release: AI learns from the tree of life to support rare disease diagnosis"
+  - url: https://hms.harvard.edu/news/new-artificial-intelligence-model-could-speed-rare-disease-diagnosis
+    kind: press
+    label: "Harvard Medical School: New AI model could speed rare disease diagnosis"
+  - url: https://www.genengnews.com/topics/artificial-intelligence/proteome-wide-ai-model-supports-rare-disease-diagnosis-using-evolution/
+    kind: press
+    label: "GEN: Proteome-wide AI model supports rare disease diagnosis using evolution"
+  # PLACEHOLDER: add the authors' Bluesky / X / LinkedIn threads, e.g.  - url: https://bsky.app/profile/...
+---
+
+::: {.tldr}
+A single, calibrated score for every possible missense variant in the human proteome.
+:::
+
+{{< paper-links >}}
+
+**Authors:** Rose Orenbuch, Courtney A. Shearer, Aaron W. Kollasch, Aviv D. Spinner, Thomas Hopf, Lood van Niekerk, Dinko Franceschi, Mafalda Dias, Jonathan Frazer & Debora S. Marks
+
+## In plain language
+
+When a child with a severe developmental disorder has their genome sequenced, the cause is often a single changed letter in one protein. Finding it means telling apart the one harmful change from thousands of harmless ones. Many tools can rank variants within a gene that is already known to cause disease, but their scores are not comparable between genes, so they struggle with the many patients whose disease gene has not been discovered yet.
+
+popEVE combines two sources of information. The first is evolution: by modelling the sequences of a protein across hundreds of species, our earlier model EVE learns which changes nature has tolerated and which it has removed. The second is human population data, which tells us how strongly each human gene is protected from damaging changes. Together they put every possible missense variant on one proteome-wide scale.
+
+In a large cohort of children with severe developmental disorders, popEVE identified variants in 442 genes, including 123 that had not previously been linked to disease. It also ranked likely causal variants highly using only the child's exome, which matters wherever sequencing both parents is not possible.
+
+## Key figure
+
+::: {.key-figure}
+![PLACEHOLDER: add the paper's key figure here with a one-sentence caption. Check the licence first, or make a simplified version.](../../assets/img/papers/placeholder-figure.svg)
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Orenbuch R, Shearer CA, Kollasch AW, et al. Proteome-wide model for human disease genetics. *Nature Genetics* **57**, 3165–3174 (2025). [doi:10.1038/s41588-025-02400-1](https://doi.org/10.1038/s41588-025-02400-1)

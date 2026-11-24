@@ -1,0 +1,28 @@
+---
+title: Join us
+description: "We are building a team and hiring at all levels."
+---
+
+We are a computational group at the [Centre for Genomic Regulation](https://www.crg.eu) in Barcelona, one of Europe's leading research institutes in the life sciences, on the seafront campus of the Barcelona Biomedical Research Park.
+
+People join us from physics, statistics, computer science and biology. What they share is an interest in building models that are principled, well calibrated and useful to clinicians and experimental biologists. You do not need a background in genetics. You do need to enjoy thinking carefully about data.
+
+## Open positions
+
+::: placeholder
+List current openings with a deadline and a link, or remove this box. CRG vacancies are advertised on the CRG careers pages.
+:::
+
+## PhD students
+
+CRG recruits PhD students through its international PhD programme, with calls usually opening once a year. If you are interested in working with us, write to us before applying so we can talk about possible projects.
+
+## Postdocs
+
+We welcome enquiries from postdocs interested in applying for fellowships (for example Marie Skłodowska-Curie, EMBO or La Caixa Junior Leader) to join the group. Get in touch well before the deadline.
+
+::: {.callout-join}
+### Get in touch
+
+Email [Mafalda Dias](mailto:mafalda.dias@crg.eu) and [Jonathan Frazer](mailto:jonathan.frazer@crg.eu) with a CV and a few lines about what you would like to work on.
+:::

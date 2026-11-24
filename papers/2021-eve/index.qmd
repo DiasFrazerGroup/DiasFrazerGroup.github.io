@@ -1,0 +1,51 @@
+---
+title: "Disease variant prediction with deep generative models of evolutionary data"
+date: 2021-10-27
+status: published
+venue: "Nature"
+summary: "EVE learns from protein sequences across the tree of life which mutations nature tolerates, and uses that alone to predict which human variants cause disease. With no clinical labels at all, it matched or beat methods trained on them, and it scored tens of millions of variants across thousands of disease genes."
+image: ../../assets/img/papers/placeholder-figure.svg   # PLACEHOLDER: key figure (check licence)
+paper: https://doi.org/10.1038/s41586-021-04043-8
+preprint: https://doi.org/10.1101/2020.12.21.423785
+code: https://github.com/OATML-Markslab/EVE
+data: https://evemodel.org
+outreach:
+  - url: https://www.broadinstitute.org/videos/interpreting-gene-variants-ab-libraries
+    kind: talk
+    label: "Broad Institute MIA Meeting: Large-scale clinical interpretation of genetic variants using evolutionary data and deep learning (Dias & Frazer)"
+  # PLACEHOLDER: add the other recorded talks, the 2021 press releases and the authors' threads.
+---
+
+::: {.tldr}
+An unsupervised model of evolution that predicts which human variants cause disease, as well as methods trained on clinical labels.
+:::
+
+::: placeholder
+Attention and talks: add the claims about EVE being one of Nature's most-read papers and the talks being the most-viewed on their sites here, each with its source (e.g. the Altmetric page, the Nature metrics tab, the view counts).
+:::
+
+{{< paper-links >}}
+
+**Authors:** Jonathan Frazer, Pascal Notin, Mafalda Dias, Aidan Gomez, Joseph K. Min, Kelly Brock, Yarin Gal & Debora S. Marks
+
+## In plain language
+
+Genetic testing finds many variants in patients that nobody has seen before. For most of them, doctors cannot say whether they cause disease. Labelling them one by one, through clinical evidence or experiments, cannot keep pace with the number of possible variants.
+
+EVE takes a different route. For each human protein, it learns from the matching proteins in a huge range of other species which amino acids are tolerated at each position over evolutionary time. Changes that evolution has never allowed are likely to break the protein. The model is a Bayesian variational autoencoder, a deep generative model, and it never sees a clinical label.
+
+Despite that, EVE classified known disease variants as accurately as methods trained on clinical labels, and its predictions agreed well with high-throughput experiments. We used it to score tens of millions of variants across thousands of disease-associated genes, giving evidence for many variants that were previously of uncertain significance. EVE is the foundation for later models from the group, including popEVE.
+
+## Key figure
+
+::: {.key-figure}
+![PLACEHOLDER: key figure with a one-sentence caption. Check the licence first.](../../assets/img/papers/placeholder-figure.svg)
+:::
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Frazer J, Notin P, Dias M, Gomez A, Min JK, Brock K, Gal Y, Marks DS. Disease variant prediction with deep generative models of evolutionary data. *Nature* **599**, 91–95 (2021). [doi:10.1038/s41586-021-04043-8](https://doi.org/10.1038/s41586-021-04043-8)

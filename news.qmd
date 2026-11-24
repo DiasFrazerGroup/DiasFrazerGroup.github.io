@@ -1,0 +1,15 @@
+---
+title: News
+description: "Papers, preprints, people and talks."
+listing:
+  id: news-all
+  contents: news/*/index.qmd
+  template: assets/templates/news.ejs
+  sort: "date desc"
+  date-format: "D MMM YYYY"
+  fields: [title, date, description, categories, path]
+  feed: true
+---
+
+::: {#news-all}
+:::

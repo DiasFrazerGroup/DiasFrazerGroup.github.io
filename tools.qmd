@@ -1,0 +1,43 @@
+---
+title: Tools & data
+description: "Scores, models and code from the group, free to use."
+---
+
+::: {.tool}
+### popEVE
+[Proteome-wide variant scores]{.what}
+
+Calibrated deleteriousness scores for every possible missense variant in the human proteome, combining evolutionary and population data. Designed to compare variants across genes, which makes it useful for discovering new disease genes and for interpreting cases without parental sequencing.
+
+::: {.link-row}
+[Browse scores](https://pop.evemodel.org) [Code](https://github.com/DiasFrazerGroup/popEVE) [Paper](https://doi.org/10.1038/s41588-025-02400-1)
+:::
+
+[Check the portal URL]{.placeholder}
+:::
+
+::: {.tool}
+### EVE
+[Evolutionary model of variant effect]{.what}
+
+An unsupervised deep generative model trained on sequence alignments across species, which classifies human disease variants without being trained on clinical labels.
+
+::: {.link-row}
+[Website](https://evemodel.org) [Code](https://github.com/OATML-Markslab/EVE) [Paper](https://doi.org/10.1038/s41586-021-04043-8)
+:::
+:::
+
+::: {.tool}
+### Vermut
+[Placeholder description]{.what}
+
+<span class="placeholder">two sentences on what Vermut is and who it is for</span>
+
+::: {.link-row}
+[Code]{.na} [Data]{.na} [Paper]{.na}
+:::
+:::
+
+::: placeholder
+Add other resources here as they are released (e.g. mode-of-inheritance predictions for all human genes).
+:::

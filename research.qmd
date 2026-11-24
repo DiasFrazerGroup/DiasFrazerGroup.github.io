@@ -1,0 +1,72 @@
+---
+title: Research
+description: "We build generative models of life's data, and put them to work."
+---
+
+Population-scale sequencing, reference genomes for all life on Earth, single-cell atlases and experiments that assay millions of variants: the information to transform how biological data is used in medicine, conservation and agriculture already exists. Extracting it needs models that capture how the data was generated, quantify their own uncertainty, and know when they might be wrong. We build those models, often deep generative and often Bayesian, and we apply them where the answer changes a decision.
+
+Our work falls into four themes that share methods, data and people.
+
+::: {.research-theme #disease}
+[01]{.num}
+
+::: {}
+## Rare and common disease
+
+**We build models to reveal the genetic underpinnings of rare and common disease.**
+
+Most variants found in a patient have never been seen before, and experiments cannot keep up with the number of possible variants. Evolution has already run that experiment: across hundreds of millions of years, changes that broke a protein were removed by selection. **EVE** showed that a generative model of sequences across species can classify disease variants as well as models trained on clinical labels, and **popEVE** calibrates that signal with human population data so that a score means the same thing in every gene. **Vermut** <span class="placeholder">one sentence on what Vermut does</span>.
+
+People carry two copies of each gene, and disease depends on the combination. We predict the mode of inheritance for every human gene and score whole genotypes rather than single variants, with the aim of finding recessive disorders that could be treated by restoring partial protein function. We also study variation beyond the coding genome, and somatic mutations that expand into clones in healthy blood, which measure variant effects inside living people.
+
+::: {.related}
+Papers: [popEVE (Nature Genetics 2025)](papers/2025-popeve/) · EVE (Nature 2021) · Tools: [popEVE, EVE, Vermut](tools.qmd)
+:::
+:::
+:::
+
+::: {.research-theme #genetic-health}
+[02]{.num}
+
+::: {}
+## Genetic health beyond humans
+
+**We build models for monitoring and managing genetic health in critically endangered, domestic and model organisms.**
+
+The question of whether a variant matters is asked throughout biology: by a veterinarian treating a sick puppy, by a breeder whose cattle fail to carry calves to term, and by conservation managers deciding which of the last few hundred animals of a species to pair. The evolutionary record that makes variant effect prediction work in humans is shared by every mammal, so the same models can answer these questions too.
+
+We are scoring variants across mammalian proteomes and using those scores to find likely recessive lethal variants, measure how harmful variation is purged or accumulates in small populations, and inform breeding decisions. Current work spans species including the vaquita, black-footed ferret, black rhino, clouded leopard and Iberian lynx, alongside domestic animals.
+
+<span class="placeholder">add collaborators and any public resources, with their OK</span>
+:::
+:::
+
+::: {.research-theme #cell-models}
+[03]{.num}
+
+::: {}
+## Cell models for therapy
+
+**We develop cell-type-specific models for therapeutic discovery and cell replacement therapy.**
+
+A variant or a drug acts in a particular cell type, and large perturbation screens now measure how cells respond when individual genes are switched off. We build models that learn from these experiments and generalise to perturbations and cell types that have not been measured, with honest estimates of uncertainty.
+
+The goal is to search for interventions computationally before testing them in the lab: genes whose loss pushes leukaemic cells to differentiate, or ways to improve stem-cell-derived cells made for replacement therapy, such as insulin-producing β-cells.
+
+<span class="placeholder">name collaborators and funders only with their OK</span>
+:::
+:::
+
+::: {.research-theme #methods}
+[04]{.num}
+
+::: {}
+## New ways to build models
+
+**We develop novel model-building strategies and architectures.**
+
+Biological sequences, cells and populations pose modelling problems unlike most data in machine learning. We work on the foundations: generative architectures for biological sequence and molecular data, sequence-to-function models, probabilistic methods that remain calibrated across the proteome, and the theory that tells us when a model can be trusted. We are also exploring how AI agents can take part in building and testing models themselves.
+
+<span class="placeholder">one or two concrete examples, e.g. a methods paper or open-source architecture</span>
+:::
+:::
