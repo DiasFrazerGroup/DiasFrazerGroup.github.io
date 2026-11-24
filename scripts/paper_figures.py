@@ -306,6 +306,6 @@ def trustable():
 
 
 if __name__ == "__main__":
-    # popEVE, LFB and Blending use real figures cropped from the papers (figure1.png).
-    for f in (eve, review, comparative, trustable):
+    # EVE, popEVE, LFB and Blending use real figures cropped from the papers (figure1.png).
+    for f in (review, comparative, trustable):
         f()
