@@ -119,7 +119,25 @@
     }
     return c;
   }
-  function silhouette(poly, extras, label) {
+  // Closed Catmull-Rom spline through the control points. A point written [x, y, 1] is a corner:
+  // the curve meets it with straight tangents, so horn tips, fin tips and feet stay sharp.
+  function smoothPoly(ctrl, per = 8) {
+    const n = ctrl.length, out = [];
+    const at = (i) => ctrl[(i + n) % n];
+    for (let i = 0; i < n; i++) {
+      const p1 = at(i), p2 = at(i + 1);
+      const p0 = p1[2] ? p1 : at(i - 1), p3 = p2[2] ? p2 : at(i + 2);
+      for (let k = 0; k < per; k++) {
+        const t = k / per, t2 = t * t, t3 = t2 * t;
+        const f = (a, b, c, d) => 0.5 * (2 * b + (-a + c) * t + (2 * a - 5 * b + 4 * c - d) * t2 + (-a + 3 * b - 3 * c + d) * t3);
+        out.push([f(p0[0], p1[0], p2[0], p3[0]), f(p0[1], p1[1], p2[1], p3[1])]);
+      }
+    }
+    return out;
+  }
+
+  function silhouette(ctrl, extras, label) {
+    const poly = smoothPoly(ctrl);
     const pts = [], edges = [];
     const nExtra = extras.reduce((n, e) => n + e.n, 0);
     const nOutline = Math.floor((N - nExtra) * 0.72);
@@ -155,20 +173,30 @@
   // Small, chubby porpoise: rounded head with no beak, broad low triangular fin set mid-back.
   const vaquita = silhouette([
     [0.03, 0.53], [0.04, 0.46], [0.08, 0.40], [0.15, 0.355], [0.26, 0.325], [0.40, 0.31], [0.45, 0.305],
-    [0.535, 0.215], [0.555, 0.22], [0.60, 0.32], [0.70, 0.36], [0.80, 0.42], [0.875, 0.46], [0.945, 0.375],
-    [0.985, 0.38], [0.945, 0.5], [0.985, 0.62], [0.945, 0.625], [0.875, 0.54], [0.80, 0.57], [0.70, 0.63],
-    [0.56, 0.68], [0.40, 0.695], [0.32, 0.69], [0.30, 0.78], [0.265, 0.785], [0.24, 0.685], [0.14, 0.66],
+    [0.535, 0.215, 1], [0.555, 0.22, 1], [0.60, 0.32], [0.70, 0.36], [0.80, 0.42], [0.875, 0.46], [0.945, 0.375, 1],
+    [0.985, 0.38, 1], [0.945, 0.5, 1], [0.985, 0.62, 1], [0.945, 0.625, 1], [0.875, 0.54], [0.80, 0.57], [0.70, 0.63],
+    [0.56, 0.68], [0.40, 0.695], [0.32, 0.69], [0.30, 0.78, 1], [0.265, 0.785, 1], [0.24, 0.685], [0.14, 0.66],
     [0.07, 0.62],
   ], [{ x: 0.115, y: 0.47, r: 0.03, n: 10 }], "Vaquita · Phocoena sinus · critically endangered");
 
-  // Black rhinoceros (Diceros bicornis), facing left: hooked lip, two horns, shoulder hump, four legs.
+  // Black rhinoceros (Diceros bicornis), facing left. Head carried fairly high, hooked upper lip,
+  // long front horn curving back and a shorter second horn, rounded ears, level back with a slight
+  // dip behind the shoulder, sagging belly, four short legs (the far pair a little shorter).
   const rhino = silhouette([
-    [0.035, 0.56], [0.05, 0.47], [0.085, 0.44], [0.035, 0.235], [0.075, 0.25], [0.135, 0.405], [0.165, 0.39],
-    [0.165, 0.305], [0.2, 0.37], [0.245, 0.35], [0.255, 0.27], [0.285, 0.33], [0.33, 0.315], [0.40, 0.265],
-    [0.52, 0.27], [0.66, 0.285], [0.78, 0.29], [0.88, 0.335], [0.935, 0.41], [0.95, 0.47], [0.925, 0.55],
-    [0.915, 0.79], [0.855, 0.79], [0.845, 0.64], [0.78, 0.66], [0.74, 0.79], [0.685, 0.79], [0.68, 0.655],
-    [0.50, 0.67], [0.43, 0.665], [0.42, 0.79], [0.365, 0.79], [0.36, 0.66], [0.31, 0.655], [0.30, 0.79],
-    [0.245, 0.79], [0.245, 0.62], [0.17, 0.62], [0.10, 0.62], [0.06, 0.6],
+    [0.035, 0.505, 1], [0.05, 0.47], [0.078, 0.445],                                   // hooked lip, nose
+    [0.09, 0.43], [0.06, 0.215, 1], [0.13, 0.40],                                      // front horn
+    [0.148, 0.39], [0.172, 0.285, 1], [0.195, 0.372],                                      // second horn
+    [0.22, 0.35], [0.238, 0.322], [0.247, 0.252, 1], [0.276, 0.306],                     // forehead, ear
+    [0.305, 0.312], [0.355, 0.298], [0.42, 0.268], [0.50, 0.282], [0.58, 0.29],          // neck, shoulder, back
+    [0.68, 0.276], [0.79, 0.285], [0.875, 0.325], [0.912, 0.375],                         // back, rump
+    [0.938, 0.42], [0.936, 0.535, 1], [0.922, 0.45],                                     // tail
+    [0.924, 0.5], [0.914, 0.585], [0.9, 0.7], [0.902, 0.8, 1], [0.842, 0.8, 1],          // near hind leg
+    [0.84, 0.7], [0.826, 0.655],
+    [0.814, 0.69], [0.81, 0.778, 1], [0.766, 0.778, 1], [0.77, 0.68], [0.72, 0.665],     // far hind leg
+    [0.62, 0.675], [0.545, 0.672],                                                       // belly
+    [0.526, 0.69], [0.521, 0.778, 1], [0.477, 0.778, 1], [0.472, 0.7], [0.46, 0.672],    // far front leg
+    [0.454, 0.72], [0.451, 0.8, 1], [0.386, 0.8, 1], [0.386, 0.7], [0.376, 0.622],       // near front leg
+    [0.315, 0.578], [0.245, 0.552], [0.16, 0.545], [0.095, 0.53], [0.058, 0.522],        // dewlap, jaw, chin
   ], [], "Black rhinoceros · Diceros bicornis · critically endangered");
 
   const H_ = helix(); H_.label = "DNA";
@@ -241,10 +269,11 @@
     const shape = shapes[si];
     const sa = Math.sqrt(a), sn = Math.sqrt(1 - a * 0.985);
     const cx = box.x + box.w / 2, cy = box.y + box.h / 2, spread = Math.min(box.w, box.h) * 0.32;
-    const s = Math.min(box.w, box.h / 0.62);
+    const s = Math.min(box.w, box.h / 0.62) * 0.86;
+    const acx = narrow ? cx : box.x + box.w - s / 2 - 8;      // animals hug the right edge
     for (let i = 0; i < N; i++) {
       const p = shape.pts[i], g = noise[i];
-      const tx = shape.keepAspect ? cx + (p[0] - 0.5) * s : box.x + p[0] * box.w;
+      const tx = shape.keepAspect ? acx + (p[0] - 0.5) * s : box.x + p[0] * box.w;
       const ty = shape.keepAspect ? cy + (p[1] - 0.5) * s : box.y + p[1] * box.h;
       pos[i][0] = sa * tx + (1 - sa) * cx + sn * g[0] * spread * (1 - 0.85 * a);
       pos[i][1] = sa * ty + (1 - sa) * cy + sn * g[1] * spread * (1 - 0.85 * a);
