@@ -478,3 +478,18 @@ html { scroll-behavior: smooth; }
 .leader-links a::after { content: " ↗"; opacity: 0.5; }
 .leader-links a.internal::after { content: " →"; }
 .link-row a, .link-row span.na { white-space: nowrap; }
+
+// ---------- Full-page layout and calmer hero (after Arc Institute) ----------
+.page-layout-full main.content, .page-layout-full #title-block-header, .page-layout-full .nav-footer .nav-footer-left {
+  max-width: 1200px;
+}
+.page-layout-full main.content, .page-layout-full #title-block-header { margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem; }
+// prose stays readable on text pages
+.page-layout-full main.content > p, .page-layout-full main.content > ul, .page-layout-full main.content > ol,
+.page-layout-full main.content > section > p, .page-layout-full main.content > section > ul { max-width: 46rem; }
+.hero { padding: 3rem 0 2.5rem; }
+.hero h1 { font-size: clamp(2.1rem, 3.6vw, 3.1rem); font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; color: var(--accent); max-width: 20ch; margin: 0 0 1.6rem; }
+.hero p { font-size: 1rem; line-height: 1.65; max-width: 34rem; margin-bottom: 0.9rem; }
+.hero a.hiring { display: inline; padding: 0; border: none; border-radius: 0; background: none; color: var(--accent); font-weight: 500; text-decoration: none; }
+.hero a.hiring:hover { text-decoration: underline; }
+@media (max-width: 640px) { .page-layout-full main.content, .page-layout-full #title-block-header { padding-left: 1rem; padding-right: 1rem; } }

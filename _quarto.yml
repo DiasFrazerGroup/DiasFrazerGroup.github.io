@@ -54,6 +54,7 @@ format:
       dark: [default, assets/dark.scss, assets/site.scss]
     respect-user-color-scheme: false   # light is the default (listed first); the toggle switches to dark
     toc: false
+    page-layout: full
     include-after-body: assets/analytics.html   # GoatCounter visitor counts
     smooth-scroll: true
     anchor-sections: false

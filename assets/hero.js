@@ -253,8 +253,7 @@
     W = r.width; H = r.height;
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const h1 = hero.querySelector("h1");
-    textRight = h1 ? h1.getBoundingClientRect().right - r.left : W * 0.5;
+        textRight = Math.max(W * 0.3, ...[...hero.querySelectorAll("h1, p")].map((el) => el.getBoundingClientRect().right - r.left));
     // text blocks the animation should sit quietly behind
     textRects = [...hero.querySelectorAll("h1, p, .eyebrow, .hiring")].map((el) => {
       const b = el.getBoundingClientRect();
