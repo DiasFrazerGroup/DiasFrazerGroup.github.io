@@ -19,8 +19,12 @@ listing:
 
 Mafalda and Jonathan lead the group together at the Centre for Genomic Regulation in Barcelona.
 
-::: {.link-row}
-[Mafalda · ORCID](https://orcid.org/0000-0002-1804-8542) [Jonathan · ORCID](https://orcid.org/0000-0001-6900-6484) [Email both](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu){.internal}
+::: {.leader-links}
+[Mafalda]{.who} [ORCID](https://orcid.org/0000-0002-1804-8542)
+
+[Jonathan]{.who} [ORCID](https://orcid.org/0000-0001-6900-6484) [Bluesky](https://bsky.app/profile/jonnyfrazer.bsky.social) [X](https://x.com/Jonnygfrazer) [LinkedIn](https://www.linkedin.com/in/jonathan-frazer-6b1391236/)
+
+[Email us both](mailto:mafalda.dias@crg.eu,jonathan.frazer@crg.eu){.internal}
 :::
 :::
 :::

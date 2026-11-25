@@ -469,3 +469,12 @@ html { scroll-behavior: smooth; }
 
 .person .fellowship { font-size: 0.85rem; color: var(--accent); margin: -0.3rem 0 0.5rem; }
 .person .joint { font-size: 0.85rem; color: var(--muted); margin: -0.3rem 0 0.5rem; }
+
+// group-leader links: one row per person
+.leader-links p { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0 0 0.45rem; }
+.leader-links .who { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); width: 5.6rem; }
+.leader-links a { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; text-decoration: none; padding: 0.25rem 0.6rem; border: 1px solid var(--rule); border-radius: 3px; color: var(--ink); white-space: nowrap; }
+.leader-links a:hover { border-color: var(--accent); color: var(--accent); }
+.leader-links a::after { content: " ↗"; opacity: 0.5; }
+.leader-links a.internal::after { content: " →"; }
+.link-row a, .link-row span.na { white-space: nowrap; }
