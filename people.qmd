@@ -6,7 +6,7 @@ listing:
   contents: data/people.yml
   template: assets/templates/people.ejs
   sort: false
-  fields: [name, group, role, fellowship, photo, bio, website, scholar, orcid, github, bluesky, x, linkedin, email]
+  fields: [name, group, role, fellowship, joint, photo, bio, website, scholar, orcid, github, bluesky, x, linkedin, email]
 ---
 
 ::: {.leaders}
@@ -29,5 +29,5 @@ Mafalda and Jonathan lead the group together at the Centre for Genomic Regulatio
 :::
 
 ::: placeholder
-Photos still needed for Paulina and Samantha. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
+Photos still needed for Paulina, Samantha and Cristina. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
 :::

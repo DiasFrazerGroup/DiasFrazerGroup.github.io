@@ -1,6 +1,7 @@
 # One entry per person. (Mafalda and Jonathan, the group leaders, are written directly in people.qmd.) `group` must be one of:
 #   Postdoctoral researchers | PhD students | Research staff | Visitors & students | Alumni
 # `photo`: put a square-ish JPG (~800px) in assets/img/people/ and reference it as below. Leave empty for an initials tile.
+# `joint` (optional): e.g. "Joint PhD with Lars Velten's lab (CRG)".
 # `fellowship` (optional): e.g. "Marie Skłodowska-Curie fellow", shown under the role.
 # Links (all optional): website, scholar, orcid, github, bluesky, x, linkedin, email
 # Bios and personal links are optional; each person can add their own by pull request.
@@ -31,6 +32,7 @@
   group: PhD students
   role: PhD student
   fellowship: "EvoMG fellow"
+  joint: "Joint PhD with Manuel Irimia's lab (CRG)"
   photo: assets/img/people/matteo-zambon.jpg
 
 - name: Paulina Nuñez Valencia
@@ -48,3 +50,9 @@
   role: PhD student
   fellowship: "FPI fellow"
   photo: assets/img/people/xavier-soler-sanchis.jpg
+
+- name: Cristina Araiz Sancho
+  group: PhD students
+  role: PhD student
+  fellowship: "FPI fellow"
+  joint: "Joint PhD with Lars Velten's lab (CRG)"

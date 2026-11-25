@@ -17,6 +17,7 @@ const linkNames = { website: "Website", scholar: "Scholar", orcid: "ORCID", gith
       <h3><%= p.name %></h3>
       <div class="role"><%= p.role %></div>
       <% if (p.fellowship) { %><div class="fellowship"><%= p.fellowship %></div><% } %>
+      <% if (p.joint) { %><div class="joint"><%= p.joint %></div><% } %>
       <% if (p.bio) { %><div class="bio"><%- p.bio %></div><% } %>
       <div class="link-row">
       <% for (const k of Object.keys(linkNames)) { if (p[k]) { %><a href="<%- k === 'email' ? 'mailto:' + p[k] : p[k] %>"><%= linkNames[k] %></a><% } } %>
