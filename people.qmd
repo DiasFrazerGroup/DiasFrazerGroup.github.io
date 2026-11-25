@@ -34,5 +34,5 @@ Mafalda is the co-chair of the [Barcelona Collaboratorium for Modelling and Pred
 :::
 
 ::: placeholder
-Photos still needed for Paulina and Cristina. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
+Photos still needed for Paulina. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
 :::
