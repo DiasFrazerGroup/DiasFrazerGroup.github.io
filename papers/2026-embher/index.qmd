@@ -8,8 +8,8 @@ venue: "bioRxiv"
 thumb: assets/img/logos/biorxiv.png   # Papers page thumbnail (bioRxiv logo); falls back to `image` if absent
 summary: "Sequence-to-function models learn rich internal descriptions of genetic variants, but they struggle to explain how gene expression varies among people. We show that internal model representations for each individual, rather than its output, capture much of the inherited variation in gene expression across individuals, including the part due to rare variants that standard genetics struggles to measure."
 paper: https://doi.org/10.64898/2026.11.23.768687
-code: ""
-data: ""
+code: https://github.com/TheBil99/EMBHER
+data: https://doi.org/10.5281/zenodo.24246557
 outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
 ---
 

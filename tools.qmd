@@ -27,6 +27,17 @@ An unsupervised deep generative model trained on sequence alignments across spec
 :::
 
 ::: {.tool}
+### EMBHER
+[Embedding-based heritability]{.what}
+
+A Python package that measures how much of the inherited variation in a trait, such as gene expression, is captured by the internal embeddings of a sequence-to-function model applied to each person's genome. It extracts per-layer embeddings from Borzoi/Flashzoi, Enformer or AlphaGenome for personal genomes and estimates heritability from them with REML or Haseman-Elston regression. A separate repository holds the full analysis pipeline for the paper. MIT licence.
+
+::: {.link-row}
+[Code](https://github.com/TheBil99/EMBHER) [Paper pipeline](https://github.com/TheBil99/EMBHER_publication) [Data](https://doi.org/10.5281/zenodo.24246557) [Summary](papers/2026-embher/index.qmd){.internal} [Preprint](https://doi.org/10.64898/2026.11.23.768687)
+:::
+:::
+
+::: {.tool}
 ### Blend and Disentangle
 [Protein stability and "dark energy"]{.what}
 
