@@ -12,7 +12,7 @@ Our work falls into four themes.
 [01]{.num}
 
 ::: {}
-## Rare and common disease
+## Genetics of disease
 
 **We build models to reveal the genetic underpinnings of rare and common disease.**
 
@@ -46,7 +46,7 @@ We are scoring variants across mammalian proteomes and using those scores to fin
 [03]{.num}
 
 ::: {}
-## Cell models for therapy
+## Cell-type specific modelling
 
 **We develop cell-type-specific models for therapeutic discovery and cell replacement therapy.**
 

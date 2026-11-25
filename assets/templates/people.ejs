@@ -5,6 +5,8 @@ const groups = {};
 for (const item of items) { const g = item.group || "Members"; (groups[g] = groups[g] || []).push(item); }
 const keys = order.filter(k => groups[k]).concat(Object.keys(groups).filter(k => !order.includes(k)));
 const initials = n => (n || "").split(/\s+/).filter(Boolean).map(w => w[0]).filter((c, i, a) => i === 0 || i === a.length - 1).join("");
+// Every postdoc and PhD student in the group is a Barcelona Collaboratorium fellow; shown under each of them.
+const collabGroups = ["Postdoctoral researchers", "PhD students"];
 const linkNames = { website: "Website", scholar: "Scholar", orcid: "ORCID", github: "GitHub", bluesky: "Bluesky", x: "X", linkedin: "LinkedIn", email: "Email" };
 %>
 <% for (const g of keys) { %>
@@ -17,6 +19,7 @@ const linkNames = { website: "Website", scholar: "Scholar", orcid: "ORCID", gith
       <h3><%= p.name %></h3>
       <div class="role"><%= p.role %></div>
       <% if (p.fellowship) { %><div class="fellowship"><%= p.fellowship %></div><% } %>
+      <% if (collabGroups.includes(p.group)) { %><div class="fellowship collab"><a href="https://barcelonacollaboratorium.com/">Fellow of Barcelona Collaboratorium</a></div><% } %>
       <% if (p.joint) { %><div class="joint"><%= p.joint %></div><% } %>
       <% if (p.bio) { %><div class="bio"><%- p.bio %></div><% } %>
       <div class="link-row">

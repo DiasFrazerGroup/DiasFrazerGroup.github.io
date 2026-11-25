@@ -1,0 +1,42 @@
+---
+title: "Sequence-to-function embeddings across individuals capture rare and common variant heritability"
+authors: ["Federico Billeci", "Miquel Anglada-Girotto", "Alexander Gusev", "Jonathan Frazer", "Mafalda Dias"]   # from bioRxiv
+date: 2026-11-24
+home: true                  # shown under "Selected papers" on the home page
+status: preprint
+venue: "bioRxiv"
+thumb: assets/img/logos/biorxiv.png   # Papers page thumbnail (bioRxiv logo); falls back to `image` if absent
+summary: "Sequence-to-function models learn rich internal descriptions of genetic variants, but they struggle to explain how gene expression varies among people. We show that internal model representations for each individual, rather than its output, capture much of the inherited variation in gene expression across individuals, including the part due to rare variants that standard genetics struggles to measure."
+paper: https://doi.org/10.64898/2026.11.23.768687
+code: ""
+data: ""
+outreach: []      # threads, press and talks: add one "- url: ..." line per link (see README)
+---
+
+::: {.tldr}
+Using what a DNA sequence model has learned to explain how gene activity is inherited, including from rare variants.
+:::
+
+{{< paper-links >}}
+
+**Authors:** Federico Billeci, Miquel Anglada-Girotto, Alexander Gusev, Jonathan Frazer & Mafalda Dias
+
+::: placeholder
+Draft summary written from the abstract. The lead author should revise it before launch, and add the key figure (put it in this folder and set `image:` above).
+:::
+
+## In brief
+
+There are two ways to learn how DNA controls gene activity. Statistical genetics compares many people and asks which genetic differences go with differences in gene expression. Sequence-to-function models, such as Borzoi, instead learn from the genome itself, predicting molecular readouts directly from DNA sequence. Along the way, these models build up internal descriptions of each stretch of sequence, called embeddings, that might describe genetic variants in terms of what they do. Whether those embeddings capture differences *between people* was not known.
+
+We introduce EMBHER (Embedding-based Heritability), a method that measures how much of the inherited variation in gene expression these embeddings can explain. Applied to Borzoi and whole blood, the embeddings recover much of the heritability explained by people's genotypes, and far more than the model's final predictions do. Deeper layers of the model focus increasingly on functional, evolutionarily constrained sequence, and carry less information about ancestry than genotypes do.
+
+The embeddings also explain more of the heritability due to rare variants than genotypes do. That fits with the model sharing information across variants that are each too rare to study on their own. EMBHER brings sequence-to-function models and statistical genetics together, a first step towards models that connect population variation to function.
+
+## Threads & press {#threads-press}
+
+{{< outreach >}}
+
+## Cite
+
+Billeci F, Anglada-Girotto M, Gusev A, Frazer J, Dias M. Sequence-to-function embeddings across individuals capture rare and common variant heritability. *bioRxiv* (2026). [doi:10.64898/2026.11.23.768687](https://doi.org/10.64898/2026.11.23.768687)

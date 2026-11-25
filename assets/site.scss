@@ -118,6 +118,7 @@ section#threads-press:has(> p.placeholder) { display: none; }   // no threads or
   max-width: 100%;
 }
 .hero h1 em { color: inherit; font-style: normal; }
+@media (max-width: 640px) { .hero h1 br.br-wide { display: none; } }   // phones: let the headline wrap naturally
 .hero p { font-size: 1.12rem; max-width: 60ch; }
 @media (max-width: 640px) { .hero { padding-top: 1.5rem; } }
 
@@ -508,6 +509,8 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 .person .fellowship { font-size: 0.85rem; color: var(--ink); margin: -0.3rem 0 0.5rem; }
+.person .fellowship.collab a { color: inherit; text-decoration: none; }
+.person .fellowship.collab a:hover { color: var(--accent); text-decoration: underline; }
 .person .joint { font-size: 0.85rem; color: var(--muted); margin: -0.3rem 0 0.5rem; }
 
 // ---------- Home page: everyone in one photo grid (assets/templates/home-people.ejs) ----------
@@ -536,7 +539,7 @@ html { scroll-behavior: smooth; }
 .hp-person .name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; line-height: 1.2; }
 .hp-link:hover .name { color: var(--accent); }
 .hp-person .role { font-family: "JetBrains Mono", monospace; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-top: 0.2rem; }
-.hp-person .fellowship { font-size: 0.82rem; line-height: 1.35; color: var(--ink); margin-top: 0.3rem; }// Group leaders: two columns wide, photo shown whole at its own shape (1400×994), nothing cropped.
+// Group leaders: two columns wide, photo shown whole at its own shape (1400×994), nothing cropped.
 .hp-leaders { grid-column: span 2; }
 .hp-leaders .photo { aspect-ratio: 1400 / 994; }
 @media (max-width: 991px) { .home-people { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

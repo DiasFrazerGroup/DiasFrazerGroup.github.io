@@ -1,8 +1,8 @@
 // Home-page hero animation, 3D version (the default; assets/hero.js is the 2D original, shown with ?hero=2d).
 // Same tiny diffusion model, but every shape is a 3D point cloud with many more points, and the
 // scene turns slowly in perspective, so depth reads from size, brightness and parallax.
-// Shapes: double helix (spinning on its axis), a branching 3D tree, the vaquita, a cell (membrane,
-// nucleus, mitochondria, ER) and the black rhino. The animals are "inflated" from their 2D silhouettes: each point inside
+// Shapes: double helix (spinning on its axis), a branching 3D tree, a cell (membrane,
+// nucleus, mitochondria, ER) and the black rhino. The rhino is "inflated" from its 2D silhouette: each point inside
 // the outline gets the height of the union of the largest discs that fit inside the shape, which
 // turns legs into thin limbs and the body into a rounded barrel.
 (function () {
@@ -171,7 +171,7 @@
       const p = poly[i], q = poly[(i + 1) % poly.length], f = d / seg[i];
       pts.push([p[0] + (q[0] - p[0]) * f, p[1] + (q[1] - p[1]) * f, 0]);
     }
-    // ... features such as the vaquita's eye ring, on both flanks ...
+    // ... features such as an eye ring, on both flanks ...
     for (const e of opts.extras || []) for (let k = 0; k < e.n; k++) {
       const a = (k / e.n) * TAU, x = e.x + e.r * Math.cos(a), y = e.y + e.r * 0.8 * Math.sin(a);
       const i = clamp(Math.floor((x - x0) / c), 0, GX - 1), j = clamp(Math.floor((y - y0) / c), 0, GY - 1);
@@ -186,40 +186,75 @@
       const z = Hh[q] * thick;
       pts.push([x, y, rnd() < 0.5 ? z : -z]);
     }
+    // Legs in depth (opts.legs): the outline shows each pair side-on as one leg (the near leg hiding the far one).
+    // Every point below the belly line in a leg's x-range goes to the near or the far leg of the pair, on the
+    // surface of a round column at depth ±off, so the pair lines up side-on and separates as the scene turns.
+    // Just above each pair the inflated body narrows to a keel along the belly, which would leave the leg tops
+    // floating; so over a band above the legs the underside is widened out to the leg columns (shoulders, thighs).
+    for (const L of opts.legs || []) {
+      const half = L.r * 1.3, blend = L.blend || 0.12, reach = half * 1.6; let n = 0, m = 0;
+      for (const p of pts) {
+        const dx = Math.abs(p[0] - L.cx);
+        if (p[1] > L.top && dx <= half) {
+          const side = n++ % 2 ? 1 : -1, u = clamp((p[0] - L.cx) / half, -1, 1);
+          p[2] = side * L.off + (rnd() < 0.5 ? -1 : 1) * L.r * Math.sqrt(1 - u * u);
+        } else if (p[1] > L.top - blend && p[1] <= L.top && dx <= reach) {
+          const w = ease((p[1] - (L.top - blend)) / blend) * (1 - Math.max(0, dx - half) / (reach - half));
+          const s = p[2] > 0 ? 1 : p[2] < 0 ? -1 : (m++ % 2 ? 1 : -1), za = Math.abs(p[2]), target = L.off + L.r * 0.6;
+          if (za < target) p[2] = s * (za + (target - za) * w);
+        }
+      }
+    }
     return { pts, animal: true };
   }
 
-  const vaquita = animal([
-    [0.03, 0.53], [0.04, 0.46], [0.08, 0.40], [0.15, 0.355], [0.26, 0.325], [0.40, 0.31], [0.45, 0.305],
-    [0.535, 0.215, 1], [0.555, 0.22, 1], [0.60, 0.32], [0.70, 0.36], [0.80, 0.42], [0.875, 0.46], [0.945, 0.375, 1],
-    [0.985, 0.38, 1], [0.945, 0.5, 1], [0.985, 0.62, 1], [0.945, 0.625, 1], [0.875, 0.54], [0.80, 0.57], [0.70, 0.63],
-    [0.56, 0.68], [0.40, 0.695], [0.32, 0.69], [0.30, 0.78, 1], [0.265, 0.785, 1], [0.24, 0.685], [0.14, 0.66],
-    [0.07, 0.62],
-  ], { extras: [{ x: 0.115, y: 0.47, r: 0.03, n: 24 }], thick: 0.95 });
-
   const rhino = animal([
-    [0.035, 0.505, 1], [0.05, 0.47], [0.078, 0.445],
-    [0.09, 0.43], [0.06, 0.215, 1], [0.13, 0.40],
-    [0.148, 0.39], [0.172, 0.285, 1], [0.195, 0.372],
-    [0.22, 0.35], [0.238, 0.322], [0.247, 0.252, 1], [0.276, 0.306],
-    [0.305, 0.312], [0.355, 0.298], [0.42, 0.268], [0.50, 0.282], [0.58, 0.29],
-    [0.68, 0.276], [0.79, 0.285], [0.875, 0.325], [0.912, 0.375],
-    [0.938, 0.42], [0.936, 0.535, 1], [0.922, 0.45],
-    [0.924, 0.5], [0.914, 0.585], [0.9, 0.7], [0.902, 0.8, 1], [0.842, 0.8, 1],
-    [0.84, 0.7], [0.826, 0.655],
-    [0.814, 0.69], [0.81, 0.778, 1], [0.766, 0.778, 1], [0.77, 0.68], [0.72, 0.665],
-    [0.62, 0.675], [0.545, 0.672],
-    [0.526, 0.69], [0.521, 0.778, 1], [0.477, 0.778, 1], [0.472, 0.7], [0.46, 0.672],
-    [0.454, 0.72], [0.451, 0.8, 1], [0.386, 0.8, 1], [0.386, 0.7], [0.376, 0.622],
-    [0.315, 0.578], [0.245, 0.552], [0.16, 0.545], [0.095, 0.53], [0.058, 0.522],
-  ], { thick: 0.9 });
+    // side-on outline: shoulder hump, belly tucked up in front of the hind legs, and one front and one hind
+    // leg (each the near leg hiding the far one); `legs` below splits each into a near/far pair in depth
+    [0.035, 0.505, 1], [0.05, 0.47], [0.078, 0.445], [0.09, 0.43], [0.06, 0.215, 1], [0.13, 0.4],
+    [0.148, 0.39], [0.172, 0.285, 1], [0.195, 0.372], [0.22, 0.35], [0.238, 0.322], [0.247, 0.252, 1],
+    [0.276, 0.306], [0.305, 0.316], [0.35, 0.285], [0.39, 0.248], [0.435, 0.238], [0.48, 0.258], [0.535, 0.29],
+    [0.6, 0.296], [0.68, 0.28], [0.79, 0.285], [0.875, 0.325], [0.912, 0.375], [0.938, 0.42],
+    [0.936, 0.535, 1], [0.922, 0.45], [0.924, 0.5], [0.914, 0.585], [0.906, 0.7], [0.906, 0.8, 1],
+    [0.832, 0.8, 1], [0.83, 0.7], [0.812, 0.645], [0.775, 0.622], [0.735, 0.615], [0.7, 0.632], [0.64, 0.668],
+    [0.58, 0.686], [0.52, 0.69], [0.47, 0.692], [0.462, 0.72], [0.46, 0.8, 1], [0.384, 0.8, 1], [0.384, 0.7],
+    [0.376, 0.622], [0.315, 0.578], [0.245, 0.552], [0.16, 0.545], [0.095, 0.53], [0.058, 0.522],
+  ], {
+    thick: 0.9,
+    legs: [
+      { cx: 0.422, r: 0.034, top: 0.69, off: 0.09 },    // front pair
+      { cx: 0.869, r: 0.034, top: 0.66, off: 0.09 },    // hind pair
+    ],
+  });
 
-  const shapes = [helix(), tree(), vaquita, cell(), rhino];
+  const shapes = [helix(), tree(), cell(), rhino];
   // Shuffle which point goes where in each shape, so points travel when the shape changes.
   shapes.forEach((s) => {
     for (let i = N - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [s.pts[i], s.pts[j]] = [s.pts[j], s.pts[i]]; }
     let lo = 9, hi = -9; s.pts.forEach((p) => { lo = Math.min(lo, p[1]); hi = Math.max(hi, p[1]); });
     s.yc = (lo + hi) / 2;                            // vertical centre, for placing the shape
+  });
+
+  // ---------- links: each point to its 2 nearest neighbours in the finished shape (if close) ----------
+  // Drawn as thin lines that fade in while the shape forms, tracing strands, branches and outlines.
+  const LINK_K = 2, LINK_MAX = 0.06;                 // neighbours per point; longest link, in shape units
+  shapes.forEach((s) => {
+    const pts = s.pts, seen = new Set(), links = [];
+    for (let i = 0; i < N; i++) {
+      const best = [];                               // [dist2, j], kept sorted, at most LINK_K long
+      const [xi, yi, zi] = pts[i];
+      for (let j = 0; j < N; j++) {
+        if (j === i) continue;
+        const dx = pts[j][0] - xi, dy = pts[j][1] - yi, dz = pts[j][2] - zi, d2 = dx * dx + dy * dy + dz * dz;
+        if (d2 > LINK_MAX * LINK_MAX || (best.length === LINK_K && d2 >= best[LINK_K - 1][0])) continue;
+        best.push([d2, j]); best.sort((p, q) => p[0] - q[0]); if (best.length > LINK_K) best.pop();
+      }
+      for (const [, j] of best) {
+        const key = i < j ? i * N + j : j * N + i;
+        if (!seen.has(key)) { seen.add(key); links.push(i < j ? [i, j] : [j, i]); }
+      }
+    }
+    s.links = links;
   });
 
   // ---------- 3D Ornstein-Uhlenbeck noise per point (stationary N(0,1)) ----------
@@ -300,6 +335,26 @@
     ctx.clearRect(0, 0, W, H);
     const base = narrow ? 0.4 : 0.92;
     const behindText = (x, y) => textRects.some(([l, tt, r, b]) => x > l && x < r && y > tt && y < b);
+    // Links: thin lines under the dots, appearing in the second part of forming (and leaving first on
+    // dissolving); three depth bands so far links are fainter, like the dots. Skipped behind the text.
+    const la = clamp((a - 0.35) / 0.65, 0, 1);
+    if (la > 0 && shape.links) {
+      ctx.lineWidth = 0.6; ctx.strokeStyle = accent;
+      const bands = [[], [], []];
+      for (const [i, j] of shape.links) {
+        const d = (P[i][2] + P[j][2]) / 2;
+        if (!narrow && (behindText(P[i][0], P[i][1]) || behindText(P[j][0], P[j][1]))) continue;
+        bands[d < 0.33 ? 0 : d < 0.66 ? 1 : 2].push(i, j);
+      }
+      const bandAlpha = [0.12, 0.22, 0.34];
+      for (let b = 0; b < 3; b++) {
+        const L = bands[b]; if (!L.length) continue;
+        ctx.globalAlpha = base * la * bandAlpha[b] * (narrow ? 0.5 : 1);
+        ctx.beginPath();
+        for (let n = 0; n < L.length; n += 2) { ctx.moveTo(P[L[n]][0], P[L[n]][1]); ctx.lineTo(P[L[n + 1]][0], P[L[n + 1]][1]); }
+        ctx.stroke();
+      }
+    }
     for (const i of order) {
       const [x, y, d] = P[i];
       const f = behindText(x, y) ? (narrow ? 0.5 : 0.12) : 1;

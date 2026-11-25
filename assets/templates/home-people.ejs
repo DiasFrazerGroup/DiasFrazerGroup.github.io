@@ -19,7 +19,6 @@ const members = items.filter(p => p.group !== "Alumni" && p.group !== "Visitors"
       <div class="photo"><% if (p.photo) { %><img src="<%- p.photo %>" alt="<%= p.name %>"><% } else { %><span class="initials"><%= initials(p.name) %></span><% } %></div>
       <div class="name"><%= p.name %></div>
       <div class="role"><%= p.role %></div>
-      <% if (p.fellowship) { %><div class="fellowship"><%= p.fellowship %></div><% } %>
     </a>
   </div>
 <% } %>

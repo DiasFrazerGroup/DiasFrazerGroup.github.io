@@ -20,7 +20,7 @@ listing:
 
 Mafalda and Jonathan lead the group together at the Centre for Genomic Regulation in Barcelona.
 
-Mafalda is the co-chair of the [Barcelona Collaboratorium for Modelling and Predictive Biology](https://barcelonacollaboratorium.com/) and Jonathan is a senior fellow. All of the group's postdocs and PhD students are Collaboratorium fellows.
+Mafalda is the co-chair of the [Barcelona Collaboratorium for Modelling and Predictive Biology](https://barcelonacollaboratorium.com/) and Jonathan is a senior fellow.
 
 ::: {.leader-links}
 [Jonathan]{.who} [Bluesky](https://bsky.app/profile/jonnyfrazer.bsky.social) [X](https://x.com/Jonnygfrazer) [LinkedIn](https://www.linkedin.com/in/jonathan-frazer-6b1391236/)

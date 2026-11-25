@@ -163,7 +163,7 @@
       if (k > 0) edges.push([k - 1, k]);
     }
     edges.push([nOutline - 1, 0]);
-    for (const e of extras) {                        // e.g. the vaquita's dark eye ring
+    for (const e of extras) {                        // e.g. a dark eye ring
       for (let k = 0; k < e.n; k++) {
         const a = (k / e.n) * TAU;
         pts.push([e.x + e.r * Math.cos(a), e.y + e.r * 0.8 * Math.sin(a), 1]);
@@ -181,40 +181,27 @@
     return { pts, edges, keepAspect: true, label };
   }
 
-  // Vaquita (Phocoena sinus), facing left: blunt head, tall triangular dorsal fin, flukes, dark eye ring.
-  // Small, chubby porpoise: rounded head with no beak, broad low triangular fin set mid-back.
-  const vaquita = silhouette([
-    [0.03, 0.53], [0.04, 0.46], [0.08, 0.40], [0.15, 0.355], [0.26, 0.325], [0.40, 0.31], [0.45, 0.305],
-    [0.535, 0.215, 1], [0.555, 0.22, 1], [0.60, 0.32], [0.70, 0.36], [0.80, 0.42], [0.875, 0.46], [0.945, 0.375, 1],
-    [0.985, 0.38, 1], [0.945, 0.5, 1], [0.985, 0.62, 1], [0.945, 0.625, 1], [0.875, 0.54], [0.80, 0.57], [0.70, 0.63],
-    [0.56, 0.68], [0.40, 0.695], [0.32, 0.69], [0.30, 0.78, 1], [0.265, 0.785, 1], [0.24, 0.685], [0.14, 0.66],
-    [0.07, 0.62],
-  ], [{ x: 0.115, y: 0.47, r: 0.03, n: 10 }], "Vaquita · Phocoena sinus · critically endangered");
-
   // Black rhinoceros (Diceros bicornis), facing left. Head carried fairly high, hooked upper lip,
   // long front horn curving back and a shorter second horn, rounded ears, level back with a slight
   // dip behind the shoulder, sagging belly, four short legs (the far pair a little shorter).
   const rhino = silhouette([
-    [0.035, 0.505, 1], [0.05, 0.47], [0.078, 0.445],                                   // hooked lip, nose
-    [0.09, 0.43], [0.06, 0.215, 1], [0.13, 0.40],                                      // front horn
-    [0.148, 0.39], [0.172, 0.285, 1], [0.195, 0.372],                                      // second horn
-    [0.22, 0.35], [0.238, 0.322], [0.247, 0.252, 1], [0.276, 0.306],                     // forehead, ear
-    [0.305, 0.312], [0.355, 0.298], [0.42, 0.268], [0.50, 0.282], [0.58, 0.29],          // neck, shoulder, back
-    [0.68, 0.276], [0.79, 0.285], [0.875, 0.325], [0.912, 0.375],                         // back, rump
-    [0.938, 0.42], [0.936, 0.535, 1], [0.922, 0.45],                                     // tail
-    [0.924, 0.5], [0.914, 0.585], [0.9, 0.7], [0.902, 0.8, 1], [0.842, 0.8, 1],          // near hind leg
-    [0.84, 0.7], [0.826, 0.655],
-    [0.814, 0.69], [0.81, 0.778, 1], [0.766, 0.778, 1], [0.77, 0.68], [0.72, 0.665],     // far hind leg
-    [0.62, 0.675], [0.545, 0.672],                                                       // belly
-    [0.526, 0.69], [0.521, 0.778, 1], [0.477, 0.778, 1], [0.472, 0.7], [0.46, 0.672],    // far front leg
-    [0.454, 0.72], [0.451, 0.8, 1], [0.386, 0.8, 1], [0.386, 0.7], [0.376, 0.622],       // near front leg
-    [0.315, 0.578], [0.245, 0.552], [0.16, 0.545], [0.095, 0.53], [0.058, 0.522],        // dewlap, jaw, chin
+    // shoulder hump with a dip behind it; belly tucks up into the flank in front of the hind legs; two separate front legs
+    [0.035, 0.505, 1], [0.05, 0.47], [0.078, 0.445], [0.09, 0.43], [0.06, 0.215, 1], [0.13, 0.4],
+    [0.148, 0.39], [0.172, 0.285, 1], [0.195, 0.372], [0.22, 0.35], [0.238, 0.322], [0.247, 0.252, 1],
+    [0.276, 0.306], [0.305, 0.316], [0.35, 0.285], [0.39, 0.248], [0.435, 0.238], [0.48, 0.258], [0.535, 0.29],
+    [0.6, 0.296], [0.68, 0.28], [0.79, 0.285], [0.875, 0.325], [0.912, 0.375], [0.938, 0.42],
+    [0.936, 0.535, 1], [0.922, 0.45], [0.924, 0.5], [0.914, 0.585], [0.9, 0.7], [0.902, 0.8, 1],
+    [0.842, 0.8, 1], [0.84, 0.7], [0.826, 0.655], [0.814, 0.69], [0.81, 0.778, 1], [0.766, 0.778, 1],
+    [0.77, 0.68], [0.735, 0.615], [0.7, 0.632], [0.64, 0.668], [0.58, 0.686], [0.568, 0.684], [0.556, 0.7],
+    [0.552, 0.788, 1], [0.506, 0.788, 1], [0.502, 0.712], [0.478, 0.652], [0.448, 0.712], [0.445, 0.8, 1],
+    [0.386, 0.8, 1], [0.386, 0.7], [0.376, 0.622], [0.315, 0.578], [0.245, 0.552], [0.16, 0.545],
+    [0.095, 0.53], [0.058, 0.522],
   ], [], "Black rhinoceros · Diceros bicornis · critically endangered");
 
   const H_ = helix(); H_.label = "DNA";
   const T_ = tree(); T_.label = "Phylogeny";
   const C_ = cell(); C_.label = "Cell";
-  const shapes = [H_, T_, vaquita, C_, rhino];
+  const shapes = [H_, T_, C_, rhino];
   // Shuffle which point goes where in each shape, so points travel when the shape changes.
   shapes.forEach((s) => {
     const idx = [...Array(N).keys()];
