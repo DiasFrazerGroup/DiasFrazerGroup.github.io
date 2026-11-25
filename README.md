@@ -99,3 +99,7 @@ Custom domain (optional):
 - Check every entry in `data/publications.bib` (only popEVE has been checked against the published paper), or replace it with an export from ORCID or Zotero.
 - Add a 1200×630 image as `assets/img/og-card.png` and set it under `open-graph` in `_quarto.yml`. This is the preview image when someone shares a link.
 - CRG branding. We found no published CRG rule for group websites outside crg.eu, and other CRG groups link back to crg.eu and their official group page, as the footer here does. Before adding the CRG logo, or Severo Ochoa or CERCA acknowledgements, check with CRG Communications (comunicacio@crg.eu). Ask them too whether a site without cookies, analytics or forms needs its own legal notice. This site sets no cookies and has no analytics.
+
+## Visitor statistics
+
+Every page loads a small GoatCounter script (`assets/analytics.html`). It sets no cookies, so no consent banner is needed, and it ignores local previews. The dashboard is at https://diasfrazer.goatcounter.com. To change the account, edit the code in `assets/analytics.html`.
