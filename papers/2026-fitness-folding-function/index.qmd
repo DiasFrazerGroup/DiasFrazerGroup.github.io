@@ -1,8 +1,10 @@
 ---
 title: "From sequences and structures to fitness, folding and function: challenges in the age of AI"
+authors: ["Ezequiel A. Galpern", "Charles W. J. Pugh", "Mafalda Dias", "Jonathan Frazer"]   # from data/publications.bib
 date: 2026-09-24
 status: preprint
 venue: "ChemRxiv · Review"
+thumb: assets/img/logos/chemrxiv.png   # Papers page thumbnail (ChemRxiv logo); falls back to `image` if absent
 summary: "Protein language models and inverse-folding models are now standard tools for predicting what mutations do, but the scores they produce are not quite the quantities biologists want. We review where these models go wrong and the strategies emerging to fix them."
 image: figure.svg
 paper: https://doi.org/10.26434/chemrxiv.15009409/v1

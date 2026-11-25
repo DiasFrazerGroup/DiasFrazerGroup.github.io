@@ -1,6 +1,7 @@
 ---
 title: Research
 description: "We build generative models of life's data, and put them to work."
+body-classes: hide-subtitle   # description kept for search results and link previews, not shown on the page
 ---
 
 Population-scale sequencing, reference genomes for all life on Earth, single-cell atlases and experiments that assay millions of variants: the information to transform how biological data is used in medicine, conservation and agriculture already exists. What is missing are the tools to extract it. We build models, often deep generative and often Bayesian, that turn this data into answers.

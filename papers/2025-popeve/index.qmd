@@ -1,9 +1,11 @@
 ---
 title: "Proteome-wide model for human disease genetics"
+authors: ["Rose Orenbuch", "Courtney A. Shearer", "Aaron W. Kollasch", "Aviv D. Spinner", "Thomas Hopf", "Lood van Niekerk", "Dinko Franceschi", "Mafalda Dias", "Jonathan Frazer", "Debora S. Marks"]   # from data/publications.bib
 date: 2025-11-24
-home: true                  # shown under "Latest papers" on the home page
+home: true                  # shown under "Selected papers" on the home page
 status: published           # preprint | published
 venue: "Nature Genetics"
+thumb: assets/img/covers/natgenet-57-12.jpg   # Papers page thumbnail (Nature Genetics vol 57, issue 12 cover); falls back to `image` if absent
 summary: "popEVE combines evolution across species with human population data to score every possible missense variant on one scale, so that a score means the same thing in every gene. It finds likely causal variants in severe developmental disorders, even without the parents' DNA."
 image: figure1.png
 paper: https://doi.org/10.1038/s41588-025-02400-1

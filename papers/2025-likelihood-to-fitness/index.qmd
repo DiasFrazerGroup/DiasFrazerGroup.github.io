@@ -1,9 +1,11 @@
 ---
 title: "From likelihood to fitness: improving variant effect prediction in protein and genome language models"
+authors: ["Charles W. J. Pugh", "Paulina G. Nuñez-Valencia", "Mafalda Dias", "Jonathan Frazer"]   # from data/publications.bib
 date: 2025-12-01        # NeurIPS 2025 (December). Preprint posted 24 May 2025.
-home: true                  # shown under "Latest papers" on the home page
+home: true                  # shown under "Selected papers" on the home page
 status: published
 venue: "NeurIPS 2025"
+thumb: assets/img/logos/neurips.svg   # Papers page thumbnail (NeurIPS logo); falls back to `image` if absent
 summary: "Large sequence models are used to predict which mutations are harmful, but the biggest models often do worse, because they also learn the family tree of the sequences they were trained on. A simple averaging trick removes this bias, and with it the largest models become the most accurate."
 image: figure1.png
 paper: https://doi.org/10.52202/085713-4359

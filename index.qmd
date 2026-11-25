@@ -1,5 +1,6 @@
 ---
 pagetitle: "Generative models of life's data"
+page-layout: article
 title-block-style: none
 listing:
   - id: latest-news
@@ -17,16 +18,20 @@ listing:
     sort: "date desc"
     max-items: 3
     date-format: "MMM YYYY"
-    fields: [title, date, image, path, status, venue, summary, paper, code, data, outreach]
+    fields: [title, date, image, path, status, venue, authors, summary, paper, code, data, outreach]
+  - id: home-people
+    contents: data/people.yml
+    template: assets/templates/home-people.ejs
+    sort: false
+    fields: [name, group, role, fellowship, photo]
 ---
 
 ```{=html}
 <section class="hero">
-  <h1>Building generative models of life&rsquo;s data, for medicine and conservation.</h1>
-  <p>The Dias &amp; Frazer Group is a research group at the Centre for Genomic Regulation (CRG) in Barcelona, led by Mafalda Dias and Jonathan Frazer.</p>
-  <p>We combine deep learning and Bayesian statistics to model biological data, from protein sequences to single cells and whole populations.</p>
-  <p>Our work is built for immediate use in rare-disease diagnosis, therapeutic discovery and conservation genomics, and we develop the theory and architectures that will enable the next generation of models.</p>
-  <p><a class="hiring" href="join.html#positions">We are hiring three postdocs &rarr;</a></p>
+  <span class="eyebrow">Centre for Genomic Regulation · Barcelona</span>
+  <h1>We build <em>generative</em> models of life&rsquo;s data.</h1>
+  <p>We combine deep learning and Bayesian statistics to model biological data, from protein sequences to single cells and whole populations. Our work is built for immediate use in rare-disease diagnosis, therapeutic discovery and conservation genomics, and we develop the theory and architectures that will enable the next generation of models.</p>
+  <a class="hiring" href="join.html#positions"><span class="dot"></span>We're hiring three postdocs: virtual cells, conservation genomics and rare disease diagnosis <span class="arr">&rarr;</span></a>
 </section>
 <script>
   // The 3D animation (assets/hero3d.js) is the default; add ?hero=2d to the address for the 2D version (assets/hero.js).
@@ -70,11 +75,19 @@ Novel model-building strategies and architectures for biological data.
 :::
 
 ::: {.section-head}
-## Latest papers
+## Selected papers
 [All papers →](papers.qmd)
 :::
 
 ::: {#latest-papers}
+:::
+
+::: {.section-head}
+## People
+[All people →](people.qmd)
+:::
+
+::: {#home-people}
 :::
 
 ::: {.section-head}

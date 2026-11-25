@@ -1,0 +1,27 @@
+```{=html}
+<%
+// Home page: everyone in one photo grid, not split by role. Group leaders first (their shared photo, as on
+// people.qmd), then current members in data/people.yml order. Visitors and alumni are left out (People page only).
+const initials = n => (n || "").split(/\s+/).filter(Boolean).map(w => w[0]).filter((c, i, a) => i === 0 || i === a.length - 1).join("");
+const members = items.filter(p => p.group !== "Alumni" && p.group !== "Visitors");
+%>
+<div class="home-people">
+  <div class="hp-person hp-leaders">
+    <a class="hp-link" href="people.html">
+      <div class="photo"><img src="assets/img/people/dias-frazer.jpg" alt="Mafalda Dias and Jonathan Frazer"></div>
+      <div class="name">Mafalda Dias &amp; Jonathan Frazer</div>
+      <div class="role">Group leaders</div>
+    </a>
+  </div>
+<% for (const p of members) { %>
+  <div class="hp-person">
+    <a class="hp-link" href="people.html">
+      <div class="photo"><% if (p.photo) { %><img src="<%- p.photo %>" alt="<%= p.name %>"><% } else { %><span class="initials"><%= initials(p.name) %></span><% } %></div>
+      <div class="name"><%= p.name %></div>
+      <div class="role"><%= p.role %></div>
+      <% if (p.fellowship) { %><div class="fellowship"><%= p.fellowship %></div><% } %>
+    </a>
+  </div>
+<% } %>
+</div>
+```

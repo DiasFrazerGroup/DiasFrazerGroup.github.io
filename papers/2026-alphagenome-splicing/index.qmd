@@ -1,8 +1,10 @@
 ---
 title: "Beyond coverage tracks: fine-tuning AlphaGenome's splicing heads from scratch"
+authors: ["Miquel Anglada-Girotto", "Jonathan Frazer", "Mafalda Dias"]   # from data/publications.bib
 date: 2026-07-24
 status: blog                # preprint | published | blog
 venue: "Genomics x AI Blog"
+thumb: assets/img/logos/genomicsxai.png   # Papers page thumbnail: a simple Genomics x AI wordmark made for this site (the blog has no logo)
 summary: "AlphaGenome predicts thousands of genomic signals from DNA sequence, but community tools for fine-tuning it only handled coverage tracks. We trained its splicing heads from scratch on new RNA-seq data, share the whole process, bugs and fixes included, and compare two fine-tuning strategies."
 image: figure1.png
 paper: https://doi.org/10.5281/zenodo.21535144

@@ -7,7 +7,7 @@ listing:
   template: assets/templates/papers.ejs
   sort: "date desc"
   date-format: "MMM YYYY"
-  fields: [title, date, image, path, status, venue, summary, paper, code, data, outreach]
+  fields: [title, date, image, thumb, path, status, venue, authors, summary, paper, code, data, outreach]
 ---
 
 ::: {#paper-posts}

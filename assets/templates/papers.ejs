@@ -11,14 +11,19 @@ const cov = (item) => (item.outreach || []).filter(c => c && c.url).map(c => {
 <div class="paper-list">
 <% for (const item of items) { const c = cov(item); const threads = c.filter(x => x.kind === "thread"); const press = c.filter(x => x.kind !== "thread"); %>
   <article class="paper-card" <%= metadataAttrs(item) %>>
-    <a class="paper-fig" href="<%- item.path %>"><% if (item.image) { %><img src="<%- item.image %>" alt="Key figure: <%= item.title %>"><% } %></a>
+    <% // `thumb` (journal cover or preprint/venue logo) wins over the key figure when a paper has one.
+       const thumb = item.thumb, kind = thumb ? (/\/covers\//.test(thumb) ? "cover" : "logo") : "figure"; %>
+    <a class="paper-fig paper-fig--<%= kind %>" href="<%- item.path %>"><% if (thumb) { %><img src="<%- thumb %>" alt="<%= kind === 'cover' ? 'Journal issue cover' : 'Venue logo' %>: <%= item.venue %>"><% } else if (item.image) { %><img src="<%- item.image %>" alt="Key figure: <%= item.title %>"><% } %></a>
     <div>
       <div class="paper-meta">
         <span class="badge-status <%= item.status %>"><%= item.status === "blog" ? "blog post" : item.status %></span>
-        <% if (item.venue) { %><span><%= item.venue %></span><% } %>
+        <% if (item.venue) { const [journal, ...kind] = String(item.venue).split(" · "); %><span class="venue"><span class="journal"><%= journal %></span><% if (kind.length) { %> · <%= kind.join(" · ") %><% } %></span><% } %>
         <span><%= item.date %></span>
       </div>
       <h3><a href="<%- item.path %>"><%= item.title %></a></h3>
+      <% const au = Array.isArray(item.authors) ? item.authors : []; if (au.length) { const shown = au.length > 10 ? au.slice(0, 6) : au; %>
+      <p class="authors"><%= shown.join(", ") %><% if (au.length > 10) { %> and <%= au.length - 6 %> others<% } %></p>
+      <% } %>
       <% if (item.summary) { %><p class="summary"><%= item.summary %></p><% } %>
       <div class="link-row">
         <a class="internal" href="<%- item.path %>">Summary</a>

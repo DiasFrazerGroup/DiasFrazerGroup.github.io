@@ -1,9 +1,11 @@
 ---
 title: "Blending physics-based and inverse folding models to disentangle variant effects on stability and function"
+authors: ["Ezequiel A. Galpern", "Xavier Soler Sanchis", "Charles W. J. Pugh", "Federico Billeci", "Jonathan Frazer", "Mafalda Dias"]   # from data/publications.bib
 date: 2026-08-04
-home: true                  # shown under "Latest papers" on the home page
+home: true                  # shown under "Selected papers" on the home page
 status: preprint
 venue: "bioRxiv"
+thumb: assets/img/logos/biorxiv.png   # Papers page thumbnail (bioRxiv logo); falls back to `image` if absent
 summary: "A mutation can break a protein by making it unstable, or by disrupting what it does while leaving its shape intact. Combining physics with machine learning, we separate the two for every possible mutation, and find that cancer-driving mutations in oncogenes mostly leave proteins stable but disrupt their function."
 image: figure1a.png
 paper: https://doi.org/10.64898/2026.07.30.741764

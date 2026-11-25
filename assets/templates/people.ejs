@@ -1,6 +1,6 @@
 ```{=html}
 <%
-const order = ["Group leaders", "Postdoctoral researchers", "PhD students", "Research staff", "Visitors & students", "Alumni"];
+const order = ["Group leaders", "Postdoctoral researchers", "PhD students", "Research staff", "Visitors & students", "Visitors", "Alumni"];
 const groups = {};
 for (const item of items) { const g = item.group || "Members"; (groups[g] = groups[g] || []).push(item); }
 const keys = order.filter(k => groups[k]).concat(Object.keys(groups).filter(k => !order.includes(k)));

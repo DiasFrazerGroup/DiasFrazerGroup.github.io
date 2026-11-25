@@ -1,8 +1,10 @@
 ---
 title: "Evolution of comparative transcriptomics: biological scales, phylogenetic spans, and modeling frameworks"
+authors: ["Matteo Zambon", "Federica Mantica", "Mafalda Dias", "Jonathan Frazer", "Manuel Irimia"]   # from data/publications.bib
 date: 2025-10-01
 status: published
 venue: "Current Opinion in Genetics & Development · Review"
+thumb: assets/img/covers/cogd-100.jpg   # Papers page thumbnail: Curr Opin Genet Dev cover from vol 100 (Oct 2026), used as a journal cover; the paper itself is in vol 94 (Oct 2025)
 summary: "Comparing gene expression across species shows how molecular evolution shapes differences between organisms. This review follows the field from bulk tissues to single cells, from a few model species to broad sampling of the tree of life, and towards machine-learning models that predict expression from DNA sequence."
 image: figure.svg
 paper: https://doi.org/10.1016/j.gde.2025.102387

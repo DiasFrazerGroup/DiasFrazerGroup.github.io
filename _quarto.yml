@@ -18,8 +18,6 @@ website:
   twitter-card: true
   navbar:
     title: "Dias & Frazer"
-    logo: assets/img/mark.svg
-    logo-alt: "Dias & Frazer Group mark"
     collapse-below: lg
     right:
       - text: Home
@@ -54,11 +52,10 @@ format:
       dark: [default, assets/dark.scss, assets/site.scss]
     respect-user-color-scheme: false   # light is the default (listed first); the toggle switches to dark
     toc: false
-    page-layout: full
     include-after-body: assets/analytics.html   # GoatCounter visitor counts
     smooth-scroll: true
     anchor-sections: false
     link-external-newwindow: false
     title-block-banner: false
     grid:
-      body-width: 760px
+      body-width: 1100px
