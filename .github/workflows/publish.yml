@@ -1,11 +1,10 @@
-# Publishes the site to GitHub Pages. Manual-only while the site is not public.
-# At launch: make the repo public (or use a plan that allows Pages from private repos),
-# set Settings -> Pages -> Source: "GitHub Actions", then uncomment the push trigger below.
+# Publishes the site to GitHub Pages (https://diasfrazergroup.github.io) on every push to main.
+# Pages source: Settings -> Pages -> "GitHub Actions". It can also be run by hand from the Actions tab.
 name: Publish site
 
 on:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

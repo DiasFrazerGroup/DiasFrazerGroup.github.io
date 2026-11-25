@@ -1,0 +1,12 @@
+---
+title: "New preprint: what DNA sequence models know about inheritance"
+date: 2026-11-24
+categories: [Preprint]
+description: "Federico and Miquel show that the internal representations of a sequence-to-function model capture much of the inherited variation in gene expression, including from rare variants."
+---
+
+Our new preprint, led by Federico Billeci and Miquel Anglada-Girotto with Alexander Gusev, introduces EMBHER (Embedding-based Heritability). It asks how much of the inherited variation in gene expression between people can be explained by what a sequence-to-function model, Borzoi, has learned about DNA.
+
+The model's internal embeddings recover much of the heritability explained by genotypes, far more than its final predictions do, and they explain more of the heritability due to rare variants than genotypes do.
+
+Read our [summary](../../papers/2026-embher/index.qmd) or the [preprint](https://doi.org/10.64898/2026.11.23.768687).

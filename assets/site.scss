@@ -553,3 +553,7 @@ html { scroll-behavior: smooth; }
 .leader-links a::after { content: " ↗"; opacity: 0.5; }
 .leader-links a.internal::after { content: " →"; }
 .link-row a, .link-row span.na { white-space: nowrap; }
+
+// Paper pages list their authors in the body ("Authors: ..."); hide the duplicate list Quarto
+// builds from the `authors:` front matter (that field is kept for the paper cards).
+.quarto-title-meta > div:has(> .quarto-title-meta-contents > p:not(.date)) { display: none; }
