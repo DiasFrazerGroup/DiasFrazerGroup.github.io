@@ -25,6 +25,14 @@
   role: PhD student
   photo: assets/img/people/charles-pugh.jpg
 
+- name: Cristina Araiz Sancho
+  email: cristina.araiz@crg.eu
+  group: PhD students
+  role: PhD student
+  photo: assets/img/people/cristina-araiz-sancho.jpg
+  fellowship: "FPI fellow"
+  joint: "Joint PhD with Lars Velten's lab (CRG)"
+
 - name: Federico Billeci
   email: federico.billeci@crg.eu
   group: PhD students
@@ -59,14 +67,6 @@
   role: PhD student
   fellowship: "FPI fellow"
   photo: assets/img/people/xavier-soler-sanchis.jpg
-
-- name: Cristina Araiz Sancho
-  email: cristina.araiz@crg.eu
-  group: PhD students
-  role: PhD student
-  photo: assets/img/people/cristina-araiz-sancho.jpg
-  fellowship: "FPI fellow"
-  joint: "Joint PhD with Lars Velten's lab (CRG)"
 
 - name: Jordi Abante
   group: Visitors
