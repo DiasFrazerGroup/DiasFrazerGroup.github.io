@@ -27,8 +27,8 @@ listing:
   <a class="hiring" href="join.html#positions"><span class="dot"></span>We're hiring three postdocs: virtual cells, conservation genomics and rare disease diagnosis <span class="arr">&rarr;</span></a>
 </section>
 <script>
-  // Experiment: add ?hero=3d to the address to try the 3D animation (assets/hero3d.js).
-  (function () { var s = document.createElement("script"); s.src = /[?&]hero=3d/.test(location.search) ? "assets/hero3d.js" : "assets/hero.js"; document.currentScript.after(s); })();
+  // The 3D animation (assets/hero3d.js) is the default; add ?hero=2d to the address for the 2D version (assets/hero.js).
+  (function () { var s = document.createElement("script"); s.src = /[?&]hero=2d/.test(location.search) ? "assets/hero.js" : "assets/hero3d.js"; document.currentScript.after(s); })();
 </script>
 ```
 

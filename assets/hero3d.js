@@ -1,4 +1,4 @@
-// EXPERIMENT: 3D version of the home-page hero animation (assets/hero.js is the 2D original).
+// Home-page hero animation, 3D version (the default; assets/hero.js is the 2D original, shown with ?hero=2d).
 // Same tiny diffusion model, but every shape is a 3D point cloud with many more points, and the
 // scene turns slowly in perspective, so depth reads from size, brightness and parallax.
 // Shapes: double helix (spinning on its axis), a branching 3D tree, the vaquita, a cell (membrane,
