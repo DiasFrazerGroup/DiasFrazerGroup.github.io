@@ -1,12 +1,14 @@
 # One entry per person. (Mafalda and Jonathan, the group leaders, are written directly in people.qmd.) `group` must be one of:
 #   Postdoctoral researchers | PhD students | Research staff | Visitors & students | Alumni
 # `photo`: put a square-ish JPG (~800px) in assets/img/people/ and reference it as below. Leave empty for an initials tile.
+# `fellowship` (optional): e.g. "Marie Skłodowska-Curie fellow", shown under the role.
 # Links (all optional): website, scholar, orcid, github, bluesky, x, linkedin, email
 # Bios and personal links are optional; each person can add their own by pull request.
 
 - name: Ezequiel Alejandro Galpern
   group: Postdoctoral researchers
   role: Postdoc
+  fellowship: "Marie Skłodowska-Curie fellow"
   photo: assets/img/people/ezequiel-galpern.jpg
 
 - name: Miquel Anglada Girotto
@@ -22,22 +24,27 @@
 - name: Federico Billeci
   group: PhD students
   role: PhD student
+  fellowship: "“la Caixa” INPhINIT fellow"
   photo: assets/img/people/federico-billeci.jpg
 
 - name: Matteo Zambon
   group: PhD students
   role: PhD student
+  fellowship: "EvoMG fellow"
   photo: assets/img/people/matteo-zambon.jpg
 
 - name: Paulina Nuñez Valencia
   group: PhD students
   role: PhD student
+  fellowship: "“la Caixa” INPhINIT fellow"
 
 - name: Samantha Bening
   group: PhD students
   role: PhD student
+  fellowship: "EvoMG fellow"
 
 - name: Xavier Soler Sanchis
   group: PhD students
   role: PhD student
+  fellowship: "FPI fellow"
   photo: assets/img/people/xavier-soler-sanchis.jpg

@@ -1,6 +1,7 @@
 ---
 title: "Blending physics-based and inverse folding models to disentangle variant effects on stability and function"
 date: 2026-08-04
+home: true                  # shown under "Latest papers" on the home page
 status: preprint
 venue: "bioRxiv"
 summary: "A mutation can break a protein by making it unstable, or by disrupting what it does while leaving its shape intact. Combining physics with machine learning, we separate the two for every possible mutation, and find that cancer-driving mutations in oncogenes mostly leave proteins stable but disrupt their function."

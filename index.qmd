@@ -13,6 +13,8 @@ listing:
   - id: latest-papers
     contents: papers/*/index.qmd
     template: assets/templates/papers.ejs
+    include:
+      home: true            # set `home: true` in a paper's front matter to show it here
     sort: "date desc"
     max-items: 2
     date-format: "MMM YYYY"

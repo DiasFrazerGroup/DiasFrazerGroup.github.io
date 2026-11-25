@@ -6,7 +6,7 @@ listing:
   contents: data/people.yml
   template: assets/templates/people.ejs
   sort: false
-  fields: [name, group, role, photo, bio, website, scholar, orcid, github, bluesky, x, linkedin, email]
+  fields: [name, group, role, fellowship, photo, bio, website, scholar, orcid, github, bluesky, x, linkedin, email]
 ---
 
 ::: {.leaders}
