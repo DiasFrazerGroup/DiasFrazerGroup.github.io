@@ -1,7 +1,7 @@
 """Social sharing card (1200x630) shown when a page link is posted on Bluesky, X, LinkedIn, Slack...
 
 Run with any Python that has Pillow and numpy:  python scripts/og_card.py
-Writes assets/img/og-card.png. Colours match assets/dark.scss.
+Writes assets/img/og-card.png. Colours match assets/light.scss (the default theme).
 """
 from pathlib import Path
 import numpy as np
@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 W, H, S = 1200, 630, 2                      # draw at 2x, downsample for smooth edges
-PAPER, INK, MUTED, ACCENT = (13, 16, 21), (228, 231, 236), (138, 147, 163), (108, 176, 255)
+PAPER, INK, MUTED, ACCENT = (245, 240, 230), (20, 23, 28), (95, 103, 115), (29, 99, 196)
 SUPP = "/System/Library/Fonts/Supplemental/"
 
 def font(name, size, index=0):
@@ -36,17 +36,15 @@ for t in np.linspace(0, 1, 18):               # rungs
     x = x0 + (x1 - x0) * t
     ya = yc + amp * np.cos(2 * np.pi * 1.6 * t) * 0.9
     yb = yc + amp * np.cos(2 * np.pi * 1.6 * t + np.pi) * 0.9
-    d.line([(x * S, ya * S), (x * S, yb * S)], fill=(40, 52, 70), width=2 * S)
+    d.line([(x * S, ya * S), (x * S, yb * S)], fill=(214, 206, 190), width=2 * S)
 
 L = 80
 d.text((L * S, 92 * S), "CENTRE FOR GENOMIC REGULATION · BARCELONA", font=font("Georgia.ttf", 19), fill=ACCENT)
 big, big_i = font("Georgia.ttf", 64), font("Georgia Italic.ttf", 64)
 y = 170
-d.text((L * S, y * S), "We build ", font=big, fill=INK)
-w = d.textlength("We build ", font=big) / S
-d.text(((L + w) * S, y * S), "generative", font=big_i, fill=ACCENT)
-d.text((L * S, (y + 80) * S), "models of", font=big, fill=INK)
-d.text((L * S, (y + 160) * S), "life’s data.", font=big, fill=INK)
+d.text((L * S, y * S), "We build generative", font=big, fill=ACCENT)
+d.text((L * S, (y + 80) * S), "models of life’s data", font=big, fill=ACCENT)
+d.text((L * S, (y + 160) * S), "across scales.", font=big, fill=ACCENT)
 d.line([(L * S, 500 * S), ((L + 60) * S, 500 * S)], fill=ACCENT, width=2 * S)
 d.text((L * S, 520 * S), "Dias & Frazer Group", font=font("Georgia.ttf", 30), fill=INK)
 

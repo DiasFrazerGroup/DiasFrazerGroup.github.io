@@ -1,4 +1,5 @@
 ---
+image: assets/img/og-card.png   # link preview card (otherwise Quarto uses the first picture on the page)
 title: Papers
 description: "Recent papers and preprints from the group"
 listing:
