@@ -1,8 +1,10 @@
 ---
 title: "The Biodiversity Cell Atlas: mapping the tree of life at cellular resolution"
+authors: ["Arnau Sebé-Pedrós", "Amos Tanay", "Mara K. N. Lawniczak", "Detlev Arendt", "Stein Aerts", "John Archibald", "Maria Ina Arnone", "Mark Blaxter", "Phillip Cleves", "Susana M. Coelho", "Mafalda Dias", "Casey Dunn", "Anamaria Elek", "Jonathan Frazer", "Toni Gabaldón", "Jesse Gillis", "Xavier Grau-Bové", "Roderic Guigó", "Oliver Hobert", "Jaime Huerta-Cepas", "Manuel Irimia", "Allon Klein", "Harris Lewin", "Christopher J. Lowe", "Heather Marlow", "Jacob M. Musser", "László G. Nagy", "Sebastián R. Najle", "Lior Pachter", "Sadye Paez", "Irene Papatheodorou", "Michael J. Passalacqua", "Nikolaus Rajewsky", "Seung Y. Rhee", "Thomas A. Richards", "Tatjana Sauka-Spengler", "Lauren M. Saunders", "Eve Seuntjens", "Jordi Solana", "Yuyao Song", "Ulrich Technau", "Bo Wang", "Biodiversity Cell Atlas meeting participants"]   # from data/publications.bib
 date: 2025-09-24
 status: published
 venue: "Nature · Perspective"
+thumb: assets/img/covers/nature-645-8082.jpg   # Papers page thumbnail (Nature vol 645, issue 8082 cover); falls back to `image` if absent
 summary: "Cell types are the building blocks of every organism, yet we know little about how they vary across the tree of life. This white paper launches the Biodiversity Cell Atlas, a community effort to build single-cell atlases across eukaryotes, with shared standards so that cells can be compared between species."
 image: figure.svg
 paper: https://doi.org/10.1038/s41586-025-09312-4

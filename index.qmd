@@ -16,9 +16,14 @@ listing:
     include:
       home: true            # set `home: true` in a paper's front matter to show it here
     sort: "date desc"
-    max-items: 2
+    max-items: 3
     date-format: "MMM YYYY"
-    fields: [title, date, image, path, status, venue, summary, paper, code, data, outreach]
+    fields: [title, date, image, path, status, venue, authors, summary, paper, code, data, outreach]
+  - id: home-people
+    contents: data/people.yml
+    template: assets/templates/home-people.ejs
+    sort: false
+    fields: [name, group, role, fellowship, photo]
 ---
 
 ```{=html}
@@ -70,11 +75,19 @@ Novel model-building strategies and architectures for biological data.
 :::
 
 ::: {.section-head}
-## Latest papers
+## Selected papers
 [All papers →](papers.qmd)
 :::
 
 ::: {#latest-papers}
+:::
+
+::: {.section-head}
+## People
+[All people →](people.qmd)
+:::
+
+::: {#home-people}
 :::
 
 ::: {.section-head}

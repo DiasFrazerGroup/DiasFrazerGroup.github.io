@@ -3,6 +3,8 @@ title: Join us
 description: "We are hiring three postdocs."
 ---
 
+![](assets/img/join-building.jpg){.join-photo fig-alt="The Mediterranean seen between two wings of a glass and timber research building in Barcelona, with a reflecting pool and palm trees in front"}
+
 ## Open postdoc positions {#positions}
 
 We have three postdoctoral positions open, one in each of our applied themes. All three involve building new generative and probabilistic models, so strong quantitative skills matter more than a background in the specific biology.

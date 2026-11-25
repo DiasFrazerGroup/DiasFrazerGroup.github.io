@@ -1,5 +1,5 @@
 # One entry per person. (Mafalda and Jonathan, the group leaders, are written directly in people.qmd.) `group` must be one of:
-#   Postdoctoral researchers | PhD students | Research staff | Visitors & students | Alumni
+#   Postdoctoral researchers | PhD students | Research staff | Visitors & students | Visitors | Alumni
 # `photo`: put a square-ish JPG (~800px) in assets/img/people/ and reference it as below. Leave empty for an initials tile.
 # `joint` (optional): e.g. "Joint PhD with Lars Velten's lab (CRG)".
 # `fellowship` (optional): e.g. "Marie Skłodowska-Curie fellow", shown under the role.
@@ -7,28 +7,33 @@
 # Bios and personal links are optional; each person can add their own by pull request.
 
 - name: Ezequiel Alejandro Galpern
+  email: ezequiel.galpern@crg.eu
   group: Postdoctoral researchers
   role: Postdoc
   fellowship: "Marie Skłodowska-Curie fellow"
   photo: assets/img/people/ezequiel-galpern.jpg
 
 - name: Miquel Anglada Girotto
+  email: miquel.anglada@crg.eu
   group: Postdoctoral researchers
   role: Postdoc
   photo: assets/img/people/miquel-anglada-girotto.jpg
 
 - name: Charles Pugh
+  email: charles.pugh@crg.eu
   group: PhD students
   role: PhD student
   photo: assets/img/people/charles-pugh.jpg
 
 - name: Federico Billeci
+  email: federico.billeci@crg.eu
   group: PhD students
   role: PhD student
   fellowship: "“la Caixa” INPhINIT fellow"
   photo: assets/img/people/federico-billeci.jpg
 
 - name: Matteo Zambon
+  email: matteo.zambon@crg.eu
   group: PhD students
   role: PhD student
   fellowship: "EvoMG fellow"
@@ -36,24 +41,42 @@
   photo: assets/img/people/matteo-zambon.jpg
 
 - name: Paulina Nuñez Valencia
+  email: paulina.nunez@crg.eu
   group: PhD students
   role: PhD student
   fellowship: "“la Caixa” INPhINIT fellow"
 
 - name: Samantha Bening
+  email: samantha.bening@crg.eu
   group: PhD students
   role: PhD student
   photo: assets/img/people/samantha-bening.jpg
   fellowship: "EvoMG fellow"
 
 - name: Xavier Soler Sanchis
+  email: xavier.soler@crg.eu
   group: PhD students
   role: PhD student
   fellowship: "FPI fellow"
   photo: assets/img/people/xavier-soler-sanchis.jpg
 
 - name: Cristina Araiz Sancho
+  email: cristina.araiz@crg.eu
   group: PhD students
   role: PhD student
   fellowship: "FPI fellow"
   joint: "Joint PhD with Lars Velten's lab (CRG)"
+
+- name: Jordi Abante
+  group: Visitors
+  role: Professor, University of Barcelona
+  photo: assets/img/people/jordi-abante.jpg
+
+- name: Gabriele Malagoli
+  group: Visitors
+  role: Now postdoc at Human Technopole
+
+- name: Sude Boler
+  group: Visitors
+  role: Now PhD student at the University of Groningen
+  photo: assets/img/people/sude-boler.jpg

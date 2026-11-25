@@ -1,6 +1,7 @@
 ---
 title: People
 description: "Physicists, statisticians, computer scientists and biologists building generative models of life's data."
+body-classes: hide-subtitle   # description kept for search results and link previews, not shown on the page
 listing:
   id: people
   contents: data/people.yml
@@ -18,6 +19,8 @@ listing:
 ### Mafalda Dias & Jonathan Frazer
 
 Mafalda and Jonathan lead the group together at the Centre for Genomic Regulation in Barcelona.
+
+Mafalda is the co-chair of the [Barcelona Collaboratorium for Modelling and Predictive Biology](https://barcelonacollaboratorium.com/).
 
 ::: {.leader-links}
 [Mafalda]{.who} [ORCID](https://orcid.org/0000-0002-1804-8542)
