@@ -13,7 +13,8 @@
   hero.prepend(cv);
   const ctx = cv.getContext("2d");
 
-  const N = 190;
+  const N = window.innerWidth < 760 ? 220 : 420;
+  const K = N / 190;                                  // scale for shapes with hand-set point counts
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const TAU = Math.PI * 2;
 
@@ -40,7 +41,7 @@
         if (k > 0) edges.push([pts.length - 2, pts.length - 1]);
       }
     }
-    const nRung = 16, rest = N - pts.length, per = Math.max(1, Math.floor(rest / nRung));
+    const nRung = 22, rest = N - pts.length, per = Math.max(1, Math.floor(rest / nRung));
     for (let r = 0; r < nRung && pts.length < N; r++) {
       const u = (r + 0.5) / nRung, ph = TAU * turns * u;
       const yA = 0.5 + 0.3 * Math.sin(ph), yB = 0.5 + 0.3 * Math.sin(ph + Math.PI);
@@ -97,16 +98,17 @@
       for (let k = 0; k < n; k++) { const [x, y] = f((k / n) * TAU); pts.push([x, y, z]); if (k > 0) edges.push([pts.length - 2, pts.length - 1]); }
       edges.push([pts.length - 1, s0]);
     }
-    loop(64, (a) => { const w = 1 + 0.05 * Math.sin(3 * a) + 0.03 * Math.sin(5 * a + 1); return [0.5 + 0.42 * w * Math.cos(a), 0.5 + 0.27 * w * Math.sin(a)]; }, 0.85);
-    loop(32, (a) => [0.42 + 0.13 * Math.cos(a), 0.5 + 0.11 * Math.sin(a)], 1);
-    for (let k = 0; k < 10; k++) pts.push([0.45 + 0.025 * gauss(), 0.48 + 0.02 * gauss(), 1]);   // nucleolus
+    loop(Math.round(64 * K), (a) => { const w = 1 + 0.05 * Math.sin(3 * a) + 0.03 * Math.sin(5 * a + 1); return [0.5 + 0.42 * w * Math.cos(a), 0.5 + 0.27 * w * Math.sin(a)]; }, 0.85);
+    loop(Math.round(32 * K), (a) => [0.42 + 0.13 * Math.cos(a), 0.5 + 0.11 * Math.sin(a)], 1);
+    for (let k = 0; k < Math.round(10 * K); k++) pts.push([0.45 + 0.025 * gauss(), 0.48 + 0.02 * gauss(), 1]);   // nucleolus
     for (const [mx, my, r] of [[0.71, 0.37, 0.4], [0.74, 0.62, -0.3], [0.24, 0.67, 0.2]]) {         // mitochondria
-      loop(12, (a) => { const x = 0.065 * Math.cos(a), y = 0.026 * Math.sin(a); return [mx + x * Math.cos(r) - y * Math.sin(r), my + x * Math.sin(r) + y * Math.cos(r)]; }, 0.7);
+      loop(Math.round(12 * K), (a) => { const x = 0.065 * Math.cos(a), y = 0.026 * Math.sin(a); return [mx + x * Math.cos(r) - y * Math.sin(r), my + x * Math.sin(r) + y * Math.cos(r)]; }, 0.7);
     }
     for (const R of [0.175, 0.205]) {                 // ER: two wavy arcs hugging the nucleus
       const s0 = pts.length;
-      for (let k = 0; k < 18; k++) {
-        const a = -1.1 + (2.2 * k) / 17, w = R * (1 + 0.06 * Math.sin(9 * a));
+      const nE = Math.round(18 * K);
+      for (let k = 0; k < nE; k++) {
+        const a = -1.1 + (2.2 * k) / (nE - 1), w = R * (1 + 0.06 * Math.sin(9 * a));
         pts.push([0.42 + w * Math.cos(a) * 1.15, 0.5 + w * Math.sin(a) * 0.95, 0.5]);
         if (k > 0) edges.push([pts.length - 2, pts.length - 1]);
       }
@@ -294,7 +296,7 @@
     const fade = (x, y) => (behindText(x, y) ? (narrow ? 0.5 : 0.14) : 1);
 
     // edges appear as the structure resolves
-    const ea = smooth(0.55, 0.98, a) * 0.38 * base;
+    const ea = smooth(0.55, 0.98, a) * 0.3 * base;
     if (ea > 0.01 && shape.edges.length) {
       ctx.strokeStyle = accent; ctx.lineWidth = 1;
       for (const [i, j] of shape.edges) {
@@ -307,7 +309,7 @@
       const z = shape.pts[i][2] * a + 0.5 * (1 - a);
       ctx.globalAlpha = base * (0.35 + 0.55 * z) * fade(pos[i][0], pos[i][1]);
       ctx.fillStyle = z > 0.55 ? accent : muted;
-      ctx.beginPath(); ctx.arc(pos[i][0], pos[i][1], 1.2 + 1.6 * z, 0, TAU); ctx.fill();
+      ctx.beginPath(); ctx.arc(pos[i][0], pos[i][1], 0.95 + 1.3 * z, 0, TAU); ctx.fill();
     }
     ctx.globalAlpha = 1;
   }
