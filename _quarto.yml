@@ -48,9 +48,9 @@ language:
 format:
   html:
     theme:
-      dark: [default, assets/dark.scss, assets/site.scss]
       light: [default, assets/light.scss, assets/site.scss]
-    respect-user-color-scheme: false   # dark is the default; the toggle switches to light
+      dark: [default, assets/dark.scss, assets/site.scss]
+    respect-user-color-scheme: false   # light is the default (listed first); the toggle switches to dark
     toc: false
     include-after-body: assets/analytics.html   # GoatCounter visitor counts
     smooth-scroll: true
