@@ -22,6 +22,8 @@ website:
     logo-alt: "Dias & Frazer Group mark"
     collapse-below: lg
     right:
+      - text: Home
+        href: index.qmd
       - text: Research
         href: research.qmd
       - text: Papers
