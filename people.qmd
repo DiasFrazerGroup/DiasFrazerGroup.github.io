@@ -33,5 +33,5 @@ Mafalda and Jonathan lead the group together at the Centre for Genomic Regulatio
 :::
 
 ::: placeholder
-Photos still needed for Paulina, Samantha and Cristina. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
+Photos still needed for Paulina and Cristina. Bios and personal links are optional; members add their own in `data/people.yml` (see README).
 :::
