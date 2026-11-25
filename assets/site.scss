@@ -488,7 +488,7 @@ html { scroll-behavior: smooth; }
 .page-layout-full main.content > p, .page-layout-full main.content > ul, .page-layout-full main.content > ol,
 .page-layout-full main.content > section > p, .page-layout-full main.content > section > ul { max-width: 46rem; }
 .hero { padding: 3rem 0 2.5rem; }
-.hero h1 { font-size: clamp(2.1rem, 3.6vw, 3.1rem); font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; color: var(--accent); max-width: 20ch; margin: 0 0 1.6rem; }
+.hero h1 { font-size: clamp(2.1rem, 3.6vw, 3.1rem); font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; color: var(--accent); max-width: 30ch; width: fit-content; margin: 0 0 1.6rem; }
 .hero p { font-size: 1rem; line-height: 1.65; max-width: 34rem; margin-bottom: 0.9rem; }
 .hero a.hiring { display: inline; padding: 0; border: none; border-radius: 0; background: none; color: var(--accent); font-weight: 500; text-decoration: none; }
 .hero a.hiring:hover { text-decoration: underline; }

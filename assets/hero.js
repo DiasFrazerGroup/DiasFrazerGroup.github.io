@@ -337,6 +337,9 @@
     new IntersectionObserver((e) => { visible = e[0].isIntersecting; visible ? start() : stop(); }).observe(hero);
     document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
   }
+  // re-measure once web fonts have loaded (the headline changes width when they swap in)
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { layout(); if (reduceMotion) draw(PH.noise + PH.form + 1); });
+  window.addEventListener("load", () => layout());
   let rt;
   window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { layout(); if (reduceMotion) draw(PH.noise + PH.form + 1); }, 120); });
   new MutationObserver(() => { readColours(); if (reduceMotion) draw(PH.noise + PH.form + 1); })

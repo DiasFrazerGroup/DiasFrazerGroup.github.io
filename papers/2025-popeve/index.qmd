@@ -1,6 +1,7 @@
 ---
 title: "Proteome-wide model for human disease genetics"
 date: 2025-11-24
+home: true                  # shown under "Latest papers" on the home page
 status: published           # preprint | published
 venue: "Nature Genetics"
 summary: "popEVE combines evolution across species with human population data to score every possible missense variant on one scale, so that a score means the same thing in every gene. It finds likely causal variants in severe developmental disorders, even without the parents' DNA."

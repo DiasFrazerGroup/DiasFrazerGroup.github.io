@@ -15,7 +15,7 @@ listing:
     include:
       home: true            # set `home: true` in a paper's front matter to show it here
     sort: "date desc"
-    max-items: 2
+    max-items: 3
     date-format: "MMM YYYY"
     fields: [title, date, image, path, status, venue, summary, paper, code, data, outreach]
 ---
